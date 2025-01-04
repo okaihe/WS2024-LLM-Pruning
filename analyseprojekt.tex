@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+
+% Packages
+\usepackage[a4paper,left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm,footskip=1cm]{geometry}
+\usepackage{xcolor} \usepackage[explicit]{titlesec}
+\usepackage[colorlinks=false]{hyperref} \usepackage{graphicx}
+\usepackage{caption}
+\usepackage[parfill]{parskip}
+\usepackage[ngerman]{babel}
+\usepackage{microtype}
+\usepackage{csquotes}
+\MakeOuterQuote{"}
+
+% Settings
+\hypersetup{pdfborder=0 0 0} \definecolor{FomBlue}{HTML}{00998A}
+\linespread{1.20}
+
+% Section heading styling
+\titleformat{\subsection} {\bfseries} {\thesubsection} {1em} {#1}
+[{\titlerule[0.2pt]}] \titlespacing{\subsection} {0em} {3.3em} {0.8em}
+
+% Title page
+
+\title{
+    \includegraphics[width=5cm]{images/logo.png}
+    \\
+    \vspace{1cm}
+    \textbf{Big-Data-Analyseprojekt}\\ \bigskip \large Analyse der Auswirkungen
+    verschiedener Pruning-Methoden an \emph{Large Language Models}
+}
+\author{Kai Daniel Herbst und Sebastian Viet}
+\date{Oktober 2024 - März 2025}
+
+
+% Document
+\begin{document}
+\begin{sloppypar}
+	\maketitle
+	\thispagestyle{empty}
+
+	\newpage
+	\setcounter{page}{1}
+	\pagenumbering{Roman}
+
+	\renewcommand{\contentsname}{Inhaltsverzeichnis}
+	\tableofcontents
+
+	\newpage
+	\setcounter{page}{1}
+	\pagenumbering{arabic}
+
+    \include{sections/einleitung}
+    \include{sections/theorie}
+    \include{sections/methodik}
+    \include{sections/ergebnisse}
+    \include{sections/diskussion}
+\end{sloppypar}
+\end{document}
