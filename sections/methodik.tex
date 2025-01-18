@@ -1,5 +1,167 @@
 \section{Methodik}
 
-Hier kommt alles zur Methodik hin!
+\subsection{Entwicklungsumgebung}
+
+Da sowohl das Pruning von Large Language Models als auch die anschließende
+Evaluierung der geprunten Modelle erhebliche Rechenressourcen erfordern, wurde
+entschieden, diese Prozesse auf einem leistungsstarken Server in der Cloud
+durchzuführen. Insbesondere das Testen der resultierenden Modelle stellt eine
+hohe Belastung für die verfügbaren Ressourcen dar und ist auf herkömmlicher
+Hardware nicht effizient durchzuführen. Zu diesen Zweck wurden EC2-Instanzen des
+Cloud-Providers AWS (Amazon Web Services) aus der \emph{g}-Instanzfamilie
+verwendet. Diese Instanzfamilie ist speziell auf rechenintensive Anwendungen
+ausgelegt und bietet GPUs (Graphics Processing Units), die für parallele
+Berechnungen optimiert sind und den Einsatz von CUDA, dem von \emph{NVIDIA}
+entwickelten Toolkit zur Verwendung von GPUs in allgemeinen Rechenaufgaben,
+ermöglichen.
+
+Im Detail wurden Instanzen des Typs \emph{gd4n.xlarge} verwendet, die mit 16 GiB
+Hauptspeicher, einem leistungsstarken Prozessor der \emph{Intel Xeon Family}
+sowie einer \emph{NVIDIA T4 Tensor Core} Grafikeinheit ausgestattet sind. Für
+den Start der Instanzen wurde das speziell auf Deep-Learning-Anwendungen
+zugeschnittene \emph{Deep Learning OSS Nvidia Driver AMI GPU PyTorch 2.5.1
+	(Ubuntu 22.04) 20241208} Ubuntu-Image verwendet. In diesem Image ist das
+benötigte Python-Package \emph{PyTorch} bereits vorinstalliert und ist
+zusätzlich mit \emph{CUDA} ausgestattet.
+
+Verwendet wurden im Detail Instanzen des Types \emph{gd4n.xlarge}, die mit 16GiB
+Hauptspeicher, einem physischen Prozessor der \emph{Intel Xeon Family} und einer
+\emph{NVIDIA T4 Tensor Core} Grafikeinheit kommen. Gestartet wurden die
+Instanzen mit dem \emph{Deep Learning OSS Nvidia Driver AMI GPU PyTorch 2.5.1
+	(Ubuntu 22.04) 20241208} Ubuntu Image, das bereits das benötigte Python-Package
+\emph{PyTorch} vorinstalliert hat. Diese, auf Deep Learning ausgerichteten,
+Images haben neben PyTorch bereits \emph{CUDA} vorinstalliert und ermöglichen so
+einen einfachen Start in das Arbeiten mit Programmen, die die GPU benötigen.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|p{3cm}|p{12cm}|}
+		\hline
+		\multicolumn{2}{|c|}{\textbf{Verwendete EC2-Instanz}}                 \\
+		\hline
+		Instanz-Typ   & gd4n.xlarge                                           \\
+		\hline
+		Hauptspeicher & 16GiB                                                 \\
+		\hline
+		vCPU          & 4                                                     \\
+		\hline
+		Clock Speed   & 2.5GHz                                                \\
+		\hline
+		GPU           & nvidia t4 tensor core                                 \\
+		\hline
+		CPU           & Intel Xeon Family                                     \\
+		\hline
+		AMI           & Deep Learning OSS Nvidia Driver AMI GPU PyTorch 2.5.1 \\
+		\hline
+		AMI-ID        & ami-0fa5e5fd27b3e163a                                 \\
+		\hline
+	\end{tabular}
+	\caption{Attribute der verwendeten Hardware}
+\end{table}
+
+Nachdem über SSH (Secure Shell) mit der jeweiligen Instanz verbunde wurde,
+wurde zunächst die vorinstallierte PyTorch-Umgebung gestartet und
+anschließenden das Repository des verwendeten Frameworks geklont.
+
+\vspace{1em}
+\begin{lstlisting}
+$ source activate pytorch
+$ git clone https://github.com/horseee/LLM-Pruner.git
+\end{lstlisting}
+
+Da die auf dem Image vorinstallierte PyTorch-Umgebung mit dem
+Conda-Package-Manager bereitgestellt wird, wurden die im Repository in der
+\emph{requirements.txt}-Datei angebenen Package über Conda installiert.
+
+\vspace{1em}
+\begin{lstlisting}
+$ conda install transformers sentencepiece datasets wandb ...
+\end{lstlisting}
+
+Damit ist die Versuchsumgebung identisch zu der in dieser Arbeit verwendeten
+Umgebung.
+
+\subsection{Verwendetes Large Language Model}
+
+Aufgrund von finanziellen und zeitlichen Einschränkungen wurde für diese Analyse
+das TinyLlama-Modell (\emph{TinyLlama/TinyLlama-1.1B-Chat-v1.0}) als Basismodell
+gewählt. Mit 1,1 Milliarden Parametern ist es im Vergleich zu modernen, größeren
+Modellen wie \emph{Llama 3.1} – das mit 405 Milliarden Parametern deutlich
+umfangreicher ist – relativ klein. Das verwendete TinyLlama wurde auf einem
+Datensatz von drei Milliarden Token vortrainiert und basiert auf der gleichen
+Architektur wie die \emph{Llama 2}-Modelle. Diese Wahl ermöglichte es, innerhalb
+der verfügbaren Ressourcen eine Analyse durchzuführen, während gleichzeitig die
+Komplexität des Modells berücksichtigt wurde.
+
+Der nachfolgende Auszug zeigt die detailierte Architektur des Modells:
+
+\vspace{1em}
+\begin{lstlisting}
+LlamaModel(
+  (embed_tokens): Embedding(32000, 2048)
+  (layers): ModuleList(
+    (0-21): 22 x LlamaDecoderLayer(
+      (self_attn): LlamaSdpaAttention(
+        (q_proj): Linear(in_features=2048, out_features=2048, bias=False)
+        (k_proj): Linear(in_features=2048, out_features=256, bias=False)
+        (v_proj): Linear(in_features=2048, out_features=256, bias=False)
+        (o_proj): Linear(in_features=2048, out_features=2048, bias=False)
+        (rotary_emb): LlamaRotaryEmbedding()
+      )
+      (mlp): LlamaMLP(
+        (gate_proj): Linear(in_features=2048, out_features=5632, bias=False)
+        (up_proj): Linear(in_features=2048, out_features=5632, bias=False)
+        (down_proj): Linear(in_features=5632, out_features=2048, bias=False)
+        (act_fn): SiLU()
+      )
+      (input_layernorm): LlamaRMSNorm((2048,), eps=1e-05)
+      (post_attention_layernorm): LlamaRMSNorm((2048,), eps=1e-05)
+    )
+  )
+  (norm): LlamaRMSNorm((2048,), eps=1e-05)
+  (rotary_emb): LlamaRotaryEmbedding()
+)
+\end{lstlisting}
+
+Die Architektur besteht aus einer Embedding-Schicht, über die die
+Eingabesequenzen in Vektoren der Dimension 2048 umwandelt werden. Die
+Token-Embeddings basieren auf einem Vokabular von 32.000 Wörtern. Darauf folgt
+eine Modul-Liste mit 22 LlamaDecoderLayer, die jeweils aus mehreren Submodulen
+bestehen. Die Decoder-Schicht enthält einen Self-Attention-Mechanismus
+(LlamaSdpaAttention).
+
+Um die grundlegenden Funktionen der ersten und letzten Schichten nicht zu
+beeinflussen, wurden sowohl im Attention-Abschnitt als auch im MLP-Abschnitt
+ausschließlich die Layer 4 bis 18 für das Pruning verwendet. Die Schichten der
+Architektur außerhalb des Decoder-Layers wie bspw. die Embedding-Schichten
+werden grundsätzlich nicht berührt, da sie für die Umwandlung der Texteingaben
+in die korrekte Repräsentation nötig sind.
+
+\subsection{Pruning}
+
+Das nachfolgende Kapitel beinhaltet die Vorgehensweise und verwendeten
+Technologien, die für das Pruning des TinyLlama-Modells verwendet wurde.
+
+\subsubsection{Framework}
+
+Für die Durchführung des Prunings standen zwei Frameworks zur Auswahl.
+\emph{LLM-Pruner} und \emph{Wanda} (Pruning by Weights and Activations). Während
+der LLM-Pruner nur das im vorherigen Kapitel beschriebene strukturierte Pruning
+unterstützt, setzt die Wanda-Methode auf unstrukturiertes Pruning.
+
+\subsubsection{Fine-Tuning}
+
+Für das nach dem Pruning stattfindende Fine-Tuning wird vom LLM-Pruner
+\emph{PEFT} (Parameter-Efficient Fine-Tuning) verwendet. PEFT stellt eine
+Methode dar, um große vortrainierte Modelle an spezifische Aufgaben anzupassen,
+ohne den gesamten Parameterraum des Modells zu optimieren. Stattdessen wird nur
+ein kleinerer Teil der Parameter während des Trainings modifiziert.
+
+In den Evaluierungen der Modelle, die direkt im Anschluss an das Pruning
+durchgeführt wurden, hat sich bereits gezeigt, dass über die Pruning-Methode
+\emph{Taylor} die vielversprechendsten Ergebnisse erzielt werden konnte. Diese
+geprunten Modelle konnten die höchsten Werte in den Evaluierungen erreichen. Das
+rechen- und kostenintensive Fine-Tuning wurde daher nur für die Modelle
+durchgeführt, die zu 30\% und 40\% mit der \emph{Taylor}-Methode geprunt wurden.
 
 \newpage

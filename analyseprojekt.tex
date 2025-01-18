@@ -9,15 +9,25 @@
 \usepackage[ngerman]{babel}
 \usepackage{microtype}
 \usepackage{csquotes}
-\MakeOuterQuote{"}
+\usepackage{color}
+\usepackage{csquotes}
+\usepackage{listings}
+
+\lstset{
+    basicstyle=\ttfamily\scriptsize,
+    % basicstyle=\ttfamily\small,
+    frame=lines,
+    framesep=2pt,
+    xleftmargin=0pt,
+    xrightmargin=0pt,
+    numberstyle=\tiny,
+    numbers=left,
+}
+
 
 % Settings
 \hypersetup{pdfborder=0 0 0} \definecolor{FomBlue}{HTML}{00998A}
 \linespread{1.20}
-
-% Section heading styling
-\titleformat{\subsection} {\bfseries} {\thesubsection} {1em} {#1}
-[{\titlerule[0.2pt]}] \titlespacing{\subsection} {0em} {3.3em} {0.8em}
 
 % Title page
 
@@ -49,10 +59,13 @@
 	\setcounter{page}{1}
 	\pagenumbering{arabic}
 
-    \include{sections/einleitung}
-    \include{sections/theorie}
-    \include{sections/methodik}
-    \include{sections/ergebnisse}
-    \include{sections/diskussion}
+	Ziel: 3600 Wörter
+
+	\include{sections/einleitung}
+	\include{sections/theorie}
+	\include{sections/methodik}
+	\include{sections/ergebnisse}
+	\include{sections/diskussion}
+
 \end{sloppypar}
 \end{document}
