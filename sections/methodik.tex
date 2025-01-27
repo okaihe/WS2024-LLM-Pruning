@@ -1,5 +1,16 @@
 \section{Methodik}
 
+\subsection{Literaturrecherche}
+
+\subsection{Arbeitsorganisation}
+
+Für die Zusammenarbeit und Organisation der anstehenden Aufgaben und zu
+verfassenden Kapitel wurde das Notizenprogramm \emph{Notion} verwendet. Notion
+erlaubt das Erstellen kollaborativer Notizbücher, die parallel von mehreren
+Personen bearbeitet werden können. Über die Datenbankfunktion lassen sich sowohl
+Meilensteinpläne als auch Task-Boards erstellen, die zur Planung der Arbeit
+verwendet wurden.
+
 \subsection{Entwicklungsumgebung}
 
 Da sowohl das Pruning von Large Language Models als auch die anschließende
@@ -33,7 +44,7 @@ Instanzen mit dem \emph{Deep Learning OSS Nvidia Driver AMI GPU PyTorch 2.5.1
 Images haben neben PyTorch bereits \emph{CUDA} vorinstalliert und ermöglichen so
 einen einfachen Start in das Arbeiten mit Programmen, die die GPU benötigen.
 
-\begin{table}[h!]
+\begin{table}[ht!]
 	\centering
 	\begin{tabular}{|p{3cm}|p{12cm}|}
 		\hline
@@ -142,12 +153,119 @@ in die korrekte Repräsentation nötig sind.
 Das nachfolgende Kapitel beinhaltet die Vorgehensweise und verwendeten
 Technologien, die für das Pruning des TinyLlama-Modells verwendet wurde.
 
-\subsubsection{Framework}
+\subsubsection{Verwendetes Framework}
 
-Für die Durchführung des Prunings standen zwei Frameworks zur Auswahl.
-\emph{LLM-Pruner} und \emph{Wanda} (Pruning by Weights and Activations). Während
-der LLM-Pruner nur das im vorherigen Kapitel beschriebene strukturierte Pruning
-unterstützt, setzt die Wanda-Methode auf unstrukturiertes Pruning.
+Für die Durchführung des Prunings standen zwei Frameworks zur Auswahl:
+\emph{LLM-Pruner} und \emph{Wanda} (Pruning by Weights and Activations). Während
+der \emph{LLM-Pruner} ausschließlich das im vorherigen Kapitel beschriebene
+strukturierte Pruning unterstützt, bietet \emph{Wanda} zusätzlich die
+Möglichkeit, unstrukturiertes Pruning durchzuführen. Trotz dieser zusätzlichen
+Funktionalität wurde für die Umsetzung dieser Untersuchung aus verschiedenen
+Gründen ausschließlich der \emph{LLM-Pruner} verwendet.
+
+Ein wesentlicher Faktor für diese Entscheidung war die Aktualität der Projekte.
+Die letzten Updates im \emph{Wanda}-Projekt wurden Ende 2023 vorgenommen. Dies
+lag zum Zeitpunkt des Verfassens dieser Arbeit bereits mehr als ein Jahr zurück.
+Im Gegensatz dazu wird der \emph{LLM-Pruner} weiterhin aktiv weiterentwickelt,
+was eine aktuellere und besser unterstützte Basis bietet. Ein weiterer wichtiger
+Aspekt ist die Unterstützung spezifischer Modelle. Während beim
+\emph{LLM-Pruner} explizit die Kompatibilität mit dem \emph{TinyLlama}-Modell
+hervorgehoben wird, fehlt eine solche Aussage im Fall von \emph{Wanda}. Es ist
+zwar anzunehmen, dass die Methoden von \emph{Wanda} aufgrund der Unterstützung
+von \emph{Llama-2} – dessen Architektur dem \emph{TinyLlama} ähnlich ist –
+ebenfalls auf das \emph{TinyLlama}-Modell anwendbar sein könnten. Allerdings
+bleibt dies ungewiss, da eine direkte Unterstützung nicht garantiert wird.
+
+Ein weiterer entscheidender Punkt war, dass trotz mehrerer Versuche mit
+\emph{Wanda} kein erfolgreiches Pruning durchgeführt werden konnte. Angesichts
+dieser Schwierigkeiten und unter Berücksichtigung der bereits genannten
+Argumente fiel die Entscheidung, sich ausschließlich auf den \emph{LLM-Pruner}
+zu fokussieren.
+
+\subsection{Durchführung des Prunings}
+
+Das Pruning wurde, wie bereits erläutert, anhand des \emph{TinyLlama}-Modells
+getestet und untersucht. Dabei wurden drei unterschiedliche Pruning-Ratios
+gewählt, um die Auswirkungen verschiedener Verkleinerungsgrade des Modells zu
+analysieren. Da das \emph{LLM-Pruner}-Projekt bereits eigene Ergebnisse für das
+\emph{TinyLlama}-Modell mit einer Pruning-Ratio von 20\% veröffentlicht hatte,
+wurde dieses Verhältnis in der vorliegenden Untersuchung nicht erneut evaluiert.
+Stattdessen wurden die bereits existierenden Ergebnisse mit den Verhältnissen
+von 30\%, 40\% und schließlich 70\% verglichen. Obwohl eine Verkleinerung um 70\%
+bei einem ohnehin bereits kompakten Modell wie \emph{TinyLlama} als
+unrealistisch erscheint, wurde dennoch im Rahmen der Untersuchung überprüft,
+welche Ergebnisse das Modell bei einer solch extremen Reduktion in den Tests
+liefert.
+
+Das Pruning erfolgt stets über den folgenden Befehl, der ausgeführt werden kann,
+sobald sich im LLM-Pruner-Repository auf der höchsten Ebene befindet:
+
+\vspace{1em}
+\begin{lstlisting}
+$ python llama3.py
+    --base_model TinyLlama/TinyLlama-1.1B-Chat-v1.0
+    --pruning_ratio [PRUNING_RATIO]
+    --device cuda
+    --eval_device cuda
+    --block_wise
+    --block_mlp_layer_start [START_MLP_LAYER]
+    --block_mlp_layer_end [END_MLP_LAYER]
+    --block_attention_layer_start [START_ATTENTION_LAYER]
+    --block_attention_layer_end [END_ATTENTION_LAYER]
+    --save_ckpt_log_name [SAVE_PATH]
+    --pruner_type [PRUNER_TYPE]
+    [--taylor param_first]
+    --save_model
+    --max_seq_len 2048
+    --test_after_train
+\end{lstlisting}
+
+Für das Pruning des \emph{TinyLlama}-Modells wurde das Skript \emph{llama3.py}
+verwendet, das speziell für das Pruning von \emph{Llama3}-Modellen entwickelt
+wurde. In dieser Untersuchung diente stets das zuvor beschriebene Modell
+\emph{TinyLlama/TinyLlama-1.1B-Chat-v1.0} als \emph{base\_model}. Wie bereits
+erwähnt, wurden für die Pruning-Ratio die Verhältnisse 0.3, 0.5 und 0.7
+ausgewählt, um unterschiedliche Stufen der Modellreduktion zu analysieren.
+
+Alle Prozesse wurden in einer CUDA-fähigen Umgebung ausgeführt, weshalb die
+Anweisung, die GPU für die Berechnungen zu verwenden, stets mitgegeben wurde.
+Von den insgesamt 22 verfügbaren MLP- und Attention-Layern des Modells wurden
+für das Pruning jeweils die Layer vier bis 18 berücksichtigt.
+
+Bezüglich der verfügbaren Pruner-Typen bot der \emph{LLM-Pruner} vier
+verschiedene Optionen an: \emph{Taylor}, \emph{L1}, \emph{L2} und \emph{random}.
+Jede dieser vier Methoden wurde für jede der drei gewählten Pruning-Ratios
+getestet und evaluiert, um ihre jeweiligen Auswirkungen auf die Modellleistung
+zu untersuchen.
+
+Zusätzlich wurde bei allen Experimenten das Argument \emph{\-\-test\_after\_train}
+verwendet. Dadurch wurde nach jedem Pruning automatisch die Perplexity des
+Modells ermittelt, basierend auf den beiden Testdatensätzen \emph{wikidata2} und
+\emph{ptb} (\emph{Penn Treebank}).
+
+Um das TinyLlama-Modell zu 30\% mit der \emph{Taylor}-Methode zu prunen sieht
+der Befehl demnach beispielhaft wie folgt aus:
+
+\vspace{1em}
+\begin{lstlisting}
+$ python llama3.py 
+    --base_model TinyLlama/TinyLlama-1.1B-Chat-v1.0
+    --pruning_ratio 0.3
+    --device cuda
+    --eval_device cuda
+    --block_wise
+    --block_mlp_layer_start 4
+    --block_mlp_layer_end 18
+    --block_attention_layer_start 4
+    --block_attention_layer_end 18
+    --save_ckpt_log_name tinyllama_30_0616_prune_log
+    --pruner_type taylor
+    --taylor param_first
+    --save_model
+    --max_seq_len 2048
+    --test_after_train
+\end{lstlisting}
+
 
 \subsubsection{Fine-Tuning}
 
