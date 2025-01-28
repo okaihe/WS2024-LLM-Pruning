@@ -182,7 +182,7 @@ dieser Schwierigkeiten und unter Berücksichtigung der bereits genannten
 Argumente fiel die Entscheidung, sich ausschließlich auf den \emph{LLM-Pruner}
 zu fokussieren.
 
-\subsection{Durchführung des Prunings}
+\subsubsection{Durchführung des Prunings}
 
 Das Pruning wurde, wie bereits erläutert, anhand des \emph{TinyLlama}-Modells
 getestet und untersucht. Dabei wurden drei unterschiedliche Pruning-Ratios
@@ -266,8 +266,7 @@ $ python llama3.py
     --test_after_train
 \end{lstlisting}
 
-
-\subsubsection{Fine-Tuning}
+\subsection{Fine-Tuning}
 
 Für das nach dem Pruning stattfindende Fine-Tuning wird vom LLM-Pruner
 \emph{PEFT} (Parameter-Efficient Fine-Tuning) verwendet. PEFT stellt eine
@@ -281,5 +280,100 @@ durchgeführt wurden, hat sich bereits gezeigt, dass über die Pruning-Methode
 geprunten Modelle konnten die höchsten Werte in den Evaluierungen erreichen. Das
 rechen- und kostenintensive Fine-Tuning wurde daher nur für die Modelle
 durchgeführt, die zu 30\% und 40\% mit der \emph{Taylor}-Methode geprunt wurden.
+
+--------------------------- BEFEHL EINFÜGEN! ---------------------------------
+
+
+\subsection{Evaluierung der Modelle}
+
+Als Basis jeglicher durchgeführter Tests dienten jeweils die Ergebnisse des
+selbst durchgeführten Benchmarks des TinyLlama-Basismodells. Alle erhobenen
+Werte und Ergebnisse werden in Relation dazu bewertet.
+
+\subsubsection{Modell-Benchmarks}
+
+Die Modelle, die durch das Pruning und das anschließende Fine-Tuning entstanden
+sind, wurden anschließend auf ihre verbliebenen Fähigkeiten hin untersucht. Zu
+diesem Zweck wurden sie anhand verschiedener Datensätze evaluiert, die jeweils
+unterschiedliche Aspekte der Leistungsfähigkeit von LLMs testen. Welche
+spezifischen Aspekte dabei geprüft wurden, wurde bereits in den vorherigen
+Abschnitten detailliert beschrieben.
+
+\begin{itemize}
+	\item{\emph{openbookqa}}
+	\item{\emph{winogrande}}
+	\item{\emph{hellaswag}}
+	\item{\emph{arc\_challenge}}
+	\item{\emph{boolq}}
+\end{itemize}
+
+Die Evaluierung anhand dieser Datensätze wurde, wie beim Pruning, mit dem immer
+gleichen Befehl - angepasst an das jeweilige Modell - durchgeführt.
+
+\vspace{1em}
+\begin{lstlisting}
+$ export PYTHONPATH='.'
+$ python lm-evaluation-harness/main.py
+    --model hf-causal-experimental
+    --model_args checkpoint=[PATH_TO_MODEL]/pytorch_model.bin,
+            config_pretrained=TinyLlama/TinyLlama-1.1B-Chat-v1.0
+    --tasks openbookqa,winogrande,hellaswag,arc_challenge,boolq
+    --device cuda:0
+    --no_cache
+    --output_path [PATH_TO_RESULTS]
+\end{lstlisting}
+
+
+Wie im Befehl ersichtlich, wurde das \emph{lm-evaluation-harness}-Framework von
+OpenAI verwendet, das bereits im Repository enthalten ist. Dieses Framework
+dient der Evaluierung von Sprachmodellen anhand verschiedener Benchmarks bzw.
+\emph{Tasks}. Durch die Nutzung des Frameworks in Kombination mit den
+definierten \emph{Tasks} wird eine standardisierte Bewertung der Modelle
+ermöglicht, was wiederum den Vergleich unterschiedlicher Modelle erleichtert.
+
+Das Argument \emph{--model hf-causal-experimental} wird übergeben, um die
+Nutzung der GPU während der Tests zu gewährleisten. Zusätzlich ist die Angabe
+des Pfads zum geprunten bzw. nachtrainierten Modell erforderlich, ebenso wie die
+Grundarchitektur des Basismodells. Die im Befehl spezifizierten \emph{Tasks}
+entsprechen dabei den zuvor beschriebenen.
+
+Ein beispielhafter Aufruf zur Evaluierung des Modells, das zu 30\% geprunt wurde,
+sieht wie folgt aus:
+
+\vspace{1em}
+\begin{lstlisting}
+$ export PYTHONPATH='.'
+$ python lm-evaluation-harness/main.py
+    --model hf-causal-experimental
+    --model_args checkpoint=prune_log/tinyllama_30_0418_l1_prune_log/pytorch_model.bin,
+        config_pretrained=TinyLlama/TinyLlama-1.1B-Chat-v1.0
+    --tasks openbookqa,winogrande,hellaswag,arc_challenge,boolq
+    --device cuda:0
+    --no_cache
+    --output_path results/tinyllama_30_0418_l1
+\end{lstlisting}
+
+\subsubsection{Modellperfomance}
+
+Neben den verbliebenen Fähigkeiten des geprunten LLMs soll zusätzlich dessen
+Performance getestet werden. Die Messung der Performance erfolgt durch die
+Durchführung der zuvor beschriebenen Benchmarks. Während dieser Tests werden
+sowohl die benötigte Zeit als auch der in Anspruch genommene Speicher
+berücksichtigt, um eine Bewertung der Effizienz des Modells zu ermöglichen.
+
+Für diese Messungen wird der in der \emph{zsh}-Shell integrierte
+\emph{time}-Befehl verwendet, der sowohl Angaben zur verbrauchten Zeit als auch
+zum genutzten Speicher liefert. Um diese Daten zu erfassen, wird der
+\emph{time}-Befehl einfach den zuvor beschriebenen Befehlen zur Durchführung der
+Benchmarks vorangestellt. Ein entsprechender Aufruf zur Messung der Performance
+sieht wie folgt aus:
+
+\vspace{1em}
+\begin{lstlisting}
+$ export PYTHONPATH='.'
+$ time python lm-evaluation-harness/main.py
+    --model hf-causal-experimental
+    ...
+\end{lstlisting}
 
 \newpage

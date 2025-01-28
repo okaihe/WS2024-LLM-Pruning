@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.22)  27 JAN 2025 22:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.22)  28 JAN 2025 23:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -404,7 +404,7 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
 \c@lstlisting=\count304
-<images/logo.png, id=56, 770.88pt x 770.88pt>
+<images/logo.png, id=68, 770.88pt x 770.88pt>
 File: images/logo.png Graphic file (type png)
 <use images/logo.png>
 Package pdftex.def Info: images/logo.png  used on input line 49.
@@ -463,17 +463,17 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [5{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [6] [7] [8] [9])
+ [5{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [6] [7] [8] [9] [10])
 \openout2 = `sections/ergebnisse.aux'.
 
- (./sections/ergebnisse.tex [10
+ (./sections/ergebnisse.tex [11
 
 
 
 ])
 \openout2 = `sections/diskussion.aux'.
 
- (./sections/diskussion.tex [11
+ (./sections/diskussion.tex [12
 
 
 
@@ -483,21 +483,21 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `analyseprojekt.out' has not changed.
-(rerunfilecheck)             Checksum: 4C5635D1D3B635A155E8F0EA6C05E3AF;1706.
+(rerunfilecheck)             Checksum: 3C8802EF0D1886F1366160A7D5F7D3B8;2186.
  ) 
 Here is how much of TeX's memory you used:
- 16490 strings out of 474116
- 265736 string characters out of 5743682
+ 16539 strings out of 474116
+ 266430 string characters out of 5743682
  1958187 words of memory out of 5000000
- 38434 multiletter control sequences out of 15000+600000
- 569234 words of font info for 125 fonts, out of 8000000 for 9000
+ 38443 multiletter control sequences out of 15000+600000
+ 569866 words of font info for 131 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,10n,79p,1203b,2184s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
-Output written on analyseprojekt.pdf (13 pages, 139507 bytes).
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
+Output written on analyseprojekt.pdf (14 pages, 153115 bytes).
 PDF statistics:
- 249 PDF objects out of 1000 (max. 8388607)
- 217 compressed objects within 3 object streams
- 91 named destinations out of 1000 (max. 500000)
- 30318 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 303 PDF objects out of 1000 (max. 8388607)
+ 268 compressed objects within 3 object streams
+ 120 named destinations out of 1000 (max. 500000)
+ 32390 words of extra memory for PDF output out of 35830 (max. 10000000)
 

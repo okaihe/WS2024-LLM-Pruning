@@ -8,7 +8,10 @@
 \contentsline {subsection}{\numberline {3.4}Verwendetes Large Language Model}{5}{subsection.3.4}%
 \contentsline {subsection}{\numberline {3.5}Pruning}{6}{subsection.3.5}%
 \contentsline {subsubsection}{\numberline {3.5.1}Verwendetes Framework}{6}{subsubsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.6}Durchführung des Prunings}{7}{subsection.3.6}%
-\contentsline {subsubsection}{\numberline {3.6.1}Fine-Tuning}{8}{subsubsection.3.6.1}%
-\contentsline {section}{\numberline {4}Ergebnisse}{10}{section.4}%
-\contentsline {section}{\numberline {5}Diskussion}{11}{section.5}%
+\contentsline {subsubsection}{\numberline {3.5.2}Durchführung des Prunings}{7}{subsubsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.6}Fine-Tuning}{8}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Evaluierung der Modelle}{9}{subsection.3.7}%
+\contentsline {subsubsection}{\numberline {3.7.1}Modell-Benchmarks}{9}{subsubsection.3.7.1}%
+\contentsline {subsubsection}{\numberline {3.7.2}Modellperfomance}{10}{subsubsection.3.7.2}%
+\contentsline {section}{\numberline {4}Ergebnisse}{11}{section.4}%
+\contentsline {section}{\numberline {5}Diskussion}{12}{section.5}%
