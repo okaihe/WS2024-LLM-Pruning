@@ -33,11 +33,11 @@ dargestellt:
 			\textbf{Pruning Ratio}      & \textbf{Method} & \textbf{WikiText2} &
 			\textbf{PTB}                & \textbf{BoolQ}  & \textbf{HellaSwag} &
 			\textbf{WinoGrande}         & \textbf{ARC-c}  & \textbf{OBQA}      &
-			\textbf{Average}                                                         \\
+			\textbf{Average}                                                             \\
 			\midrule
-			\multirow{1}{*}{Pruned 0\%} & --              & /                  & / &
+			\multirow{1}{*}{Pruned 0\%} & --              & 7.97               & 20.76 &
 			61.31                       & 46.15           & 60.30              &
-			30.12                       & 24.20           & 39,58                    \\
+			30.12                       & 24.20           & 39,58                        \\
 			\midrule
 		\end{tabular}}
 	\caption{Evaluierung des Basismodells}
@@ -58,6 +58,46 @@ Problem dar.
 
 \newpage
 
+\subsection{Tatsächliche Anzahl geprunter Parameter}
+
+Anhand der Zusammenfassungen, die nach dem Aufruf der beschriebenen Kommandos
+vom \emph{LLM-Pruner} in der Konsole ausgegeben wurden, lässt sich schnell
+erkennen, dass die im Befehl angegebene Menge an zu prunenden Parametern bzw.
+das definierte Verhältnis nicht exakt so vom \emph{LLM-Pruner} umgesetzt wird.
+
+Ein Beispiel verdeutlicht dies: Bei einer angegebenen Pruning-Ratio von
+\emph{30\%} wäre zu erwarten, dass nach dem Pruning noch \emph{70\%} der
+ursprünglichen Parameter des Basismodells erhalten bleiben. Tatsächlich sind es
+in diesem Fall jedoch \emph{83,78\%}, also \emph{13,78\%} mehr als ursprünglich
+vorgesehen.
+
+Noch deutlicher wird diese Abweichung bei einer Pruning-Ratio von \emph{70\%}.
+Hier sollten theoretisch nur noch \emph{30\%} der Parameter im Modell
+verbleiben, tatsächlich sind es jedoch noch \emph{63,16\%}, was einer Differenz
+von \emph{33,16\%} entspricht.
+
+Diese Diskrepanz muss bei der Interpretation der nachfolgenden Ergebnisse
+berücksichtigt werden, da die angegebenen Verhältnisse nicht mit den
+tatsächlichen übereinstimmen.
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{c | c c | c }
+		\toprule
+		\textbf{Specified pruning ratio} & \textbf{\#Parameters before}
+		                                 & \textbf{\#Parameters after}  & \textbf{Ratio}           \\
+		\midrule
+		30\%                             & 1100048384                   & 921651200      & 83.78\% \\
+		40\%                             & 1100048384                   & 873224192      & 79.38\% \\
+		70\%                             & 1100048384                   & 694827008      & 63.16\% \\
+		\midrule
+	\end{tabular}
+	\caption{Anzahl der vorhandenen Parameter nach dem Pruning}
+	\label{tab:parameters}
+\end{table}
+
+\newpage
+
 \subsection{Evaluierung Pruning zu 30\%}
 
 \begin{table}[h]
@@ -67,40 +107,178 @@ Problem dar.
 			\toprule
 			\textbf{Pruning Ratio}       & \textbf{Method} & \textbf{WikiText2} &
 			\textbf{PTB}                 & \textbf{BoolQ}  & \textbf{HellaSwag} &
-			\textbf{WinoGrande}          & \textbf{ARC-c}  & \textbf{OBQA}      & \textbf{Average}                           \\
+			\textbf{WinoGrande}          & \textbf{ARC-c}  & \textbf{OBQA}      & \textbf{Average}   \\
 			\midrule
 
-			\multirow{1}{*}{Pruned 0\%}  & --              & /                  & /                & 61.31 & 46.15 & 60.30 &
-			30.12                        & 24.20           & 39,58                                                           \\
+			\multirow{1}{*}{Pruned 0\%}  & --              & 7.97               & 20.76
+			                             & 61.31           & 46.15              & 60.30            &
+			30.12                        & 24.20           & 39,58                                   \\
 
 			\midrule
 
 			\multirow{4}{*}{Pruned 30\%} & Taylor          & 15.19              & 43.19
 			                             & 55.50           & 37.90
 			                             & 54.22           &
-			24.66                        & 23.20           & 39.10                                                           \\
+			24.66                        & 23.20           & 39.10                                   \\
 
 			                             & L1              & 281.63             & 4992.16
 			                             & 46.54           & 28.53
 			                             & 48.46           &
-			21.33                        & 14.00           & 31.77                                                           \\
+			21.33                        & 14.00           & 31.77                                   \\
 
 
 			                             & L2              & 42.19              & 167.51
 			                             & 60.89           & 35.97
 			                             & 54.30           &
-			22.95                        & 18.40           & 38.50                                                           \\
+			22.95                        & 18.40           & 38.50                                   \\
 
 
 			                             & Random          & 40.89              & 166.21
 			                             & 59.63           & 33.18
 			                             & 53.99           &
-			20.99                        & 18.00           & 37.17                                                           \\
+			20.99                        & 18.00           & 37.17                                   \\
 			\midrule
 		\end{tabular}}
-	\caption{Evaluierung 30\% Pruning}
+	\caption{Evaluierungen bis 30\% Pruning}
 	\label{tab:pruning30}
 \end{table}
 
+\newpage
+
+\subsection{Evaluierung Pruning zu 40\%}
+
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{
+		\begin{tabular}{l l | c c | c c c c c | r}
+			\toprule
+			\textbf{Pruning Ratio}       & \textbf{Method} & \textbf{WikiText2} &
+			\textbf{PTB}                 & \textbf{BoolQ}  & \textbf{HellaSwag} &
+			\textbf{WinoGrande}          & \textbf{ARC-c}  & \textbf{OBQA}      & \textbf{Average} \\
+			\midrule
+
+			\multirow{1}{*}{Pruned 0\%}  & --              & 7.97               & 20.76
+			                             & 61.31           & 46.15              & 60.30
+			                             & 30.12           & 24.20              & 39,58            \\
+
+			\midrule
+
+			\multirow{4}{*}{Pruned 30\%} & Taylor          & 15.19              & 43.19
+			                             & 55.50           & 37.90              & 54.22
+			                             & 24.66           & 23.20              & 39.10            \\
+
+			                             & L1              & 281.63             & 4992.16
+			                             & 46.54           & 28.53              & 48.46
+			                             & 21.33           & 14.00              & 31.77            \\
+
+
+			                             & L2              & 42.19              & 167.51
+			                             & 60.89           & 35.97              & 54.30
+			                             & 22.95           & 18.40              & 38.50            \\
+
+
+			                             & Random          & 40.89              & 166.21
+			                             & 59.63           & 33.18              & 53.99
+			                             & 20.99           & 18.00              & 37.17            \\
+			\midrule
+
+			\multirow{4}{*}{Pruned 40\%} & Taylor          & 18.43              & 53.33
+			                             & 59.39           & 34.84              & 52.88
+			                             & 23.55           & 18.80              & 37.89            \\
+
+			                             & L1              & 441.35             & 14000.87
+			                             & 48.99           & 28.13              & 49.96
+			                             & 21.42           & 14.80              & 32.66            \\
+
+
+			                             & L2              & 86.23              & 229.87
+			                             & 60.83           & 34.18              & 51.62
+			                             & 21.08           & 19.60              & 37.59            \\
+
+
+			                             & Random          & 86.91              & 364.46
+			                             & 57.89           & 30.82              & 52.33
+			                             & 20.56           & 17.00              & 35.72            \\
+			\midrule
+		\end{tabular}}
+	\caption{Evaluierungen bis 40\% Pruning}
+	\label{tab:pruning40}
+\end{table}
 
 \newpage
+
+\subsection{Evaluierung Pruning zu 70\%}
+
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{
+		\begin{tabular}{l l | c c | c c c c c | r}
+			\toprule
+			\textbf{Pruning Ratio}       & \textbf{Method} & \textbf{WikiText2} &
+			\textbf{PTB}                 & \textbf{BoolQ}  & \textbf{HellaSwag} &
+			\textbf{WinoGrande}          & \textbf{ARC-c}  & \textbf{OBQA}      & \textbf{Average} \\
+			\midrule
+			\multirow{1}{*}{Pruned 0\%}  & --              & 7.97               & 20.76
+			                             & 61.31           & 46.15              & 60.30
+			                             & 30.12           & 24.20              & 39,58            \\
+
+			\midrule
+			\multirow{4}{*}{Pruned 30\%} & Taylor          & 15.19              & 43.19
+			                             & 55.50           & 37.90              & 54.22
+			                             & 24.66           & 23.20              & 39.10            \\
+
+			                             & L1              & 281.63             & 4992.16
+			                             & 46.54           & 28.53              & 48.46
+			                             & 21.33           & 14.00              & 31.77            \\
+
+
+			                             & L2              & 42.19              & 167.51
+			                             & 60.89           & 35.97              & 54.30
+			                             & 22.95           & 18.40              & 38.50            \\
+
+
+			                             & Random          & 40.89              & 166.21
+			                             & 59.63           & 33.18              & 53.99
+			                             & 20.99           & 18.00              & 37.17            \\
+			\midrule
+			\multirow{4}{*}{Pruned 40\%} & Taylor          & 18.43              & 53.33
+			                             & 59.39           & 34.84              & 52.88
+			                             & 23.55           & 18.80              & 37.89            \\
+
+			                             & L1              & 441.35             & 14000.87
+			                             & 48.99           & 28.13              & 49.96
+			                             & 21.42           & 14.80              & 32.66            \\
+
+
+			                             & L2              & 86.23              & 229.87
+			                             & 60.83           & 34.18              & 51.62
+			                             & 21.08           & 19.60              & 37.59            \\
+
+
+			                             & Random          & 86.91              & 364.46
+			                             & 57.89           & 30.82              & 52.33
+			                             & 20.56           & 17.00              & 35.72            \\
+
+			\midrule
+			\multirow{4}{*}{Pruned 70\%} & Taylor          & 83.25              & 274.04
+			                             & 52.39           & 28.43              & 48.70
+			                             & 19.11           & 17.00              & 33.12            \\
+
+			                             & L1              & 37762.14           & 11607.13
+			                             & 46.91           & 25.98              & 50.43
+			                             & 20.39           & 16.40              & 32.02            \\
+
+
+			                             & L2              & 394.08             & 783.72
+			                             & 60.49           & 26.84              & 51.62
+			                             & 20.31           & 13.20              & 34.49            \\
+
+
+			                             & Random          & 4138.65            & 4074.48
+			                             & 54.74           & 26.64              & 51.38
+			                             & 20.99           & 14.20              & 33.59            \\
+			\midrule
+		\end{tabular}}
+	\caption{Evaluierungen bis 70\% Pruning}
+	\label{tab:pruning70}
+\end{table}

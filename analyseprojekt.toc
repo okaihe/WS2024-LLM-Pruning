@@ -15,5 +15,8 @@
 \contentsline {subsubsection}{\numberline {3.7.2}Modellperfomance}{10}{subsubsection.3.7.2}%
 \contentsline {section}{\numberline {4}Ergebnisse}{11}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Evaluierung Basismodell}{11}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Evaluierung Pruning zu 30\%}{12}{subsection.4.2}%
-\contentsline {section}{\numberline {5}Diskussion}{13}{section.5}%
+\contentsline {subsection}{\numberline {4.2}Tatsächliche Anzahl geprunter Parameter}{12}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Evaluierung Pruning zu 30\%}{13}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Evaluierung Pruning zu 40\%}{14}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Evaluierung Pruning zu 70\%}{15}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Diskussion}{16}{section.5}%
