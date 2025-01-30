@@ -14,4 +14,6 @@
 \contentsline {subsubsection}{\numberline {3.7.1}Modell-Benchmarks}{9}{subsubsection.3.7.1}%
 \contentsline {subsubsection}{\numberline {3.7.2}Modellperfomance}{10}{subsubsection.3.7.2}%
 \contentsline {section}{\numberline {4}Ergebnisse}{11}{section.4}%
-\contentsline {section}{\numberline {5}Diskussion}{12}{section.5}%
+\contentsline {subsection}{\numberline {4.1}Evaluierung Basismodell}{11}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Evaluierung Pruning zu 30\%}{12}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Diskussion}{13}{section.5}%

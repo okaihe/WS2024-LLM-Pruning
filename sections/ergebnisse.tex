@@ -1,5 +1,104 @@
 \section{Ergebnisse}
 
-Hier kommt alles zu den Ergebnissen hin!
+Im folgenden Kapitel werden die Ergebnisse der Evaluierungen und Tests der
+geprunten sowie teilweise anschließend trainierten Modelle vorgestellt. Dabei
+liegt der Fokus insbesondere auf den ermittelten Perplexity-Werten sowie den
+Ergebnissen der Tests mit dem \emph{lm-evaluation-harness}-Framework. Die
+verschiedenen Pruning-Stufen und die dabei verwendeten Methoden werden einzeln
+analysiert, bevor abschließend ein umfassender Gesamtüberblick über die
+Ergebnisse gegeben wird.
+
+\subsection{Evaluierung Basismodell}
+
+Um eine Vergleichsbasis zu schaffen, muss zunächst das Basismodell in allen
+Tests evaluiert werden. Als Basismodell dient hierbei das
+\emph{TinyLlama}-Modell (\emph{TinyLlama/TinyLlama-1.1B-Chat-v1.0}). Die
+Darstellung der Ergebnisse orientiert sich an den vom \emph{LLM-Pruner} für
+andere Modelle bereitgestellten Resultaten, um eine einheitliche
+Vergleichbarkeit zu ermöglichen.
+
+Die Spalte \emph{Average} gibt den Durchschnitt der getesteten \emph{Tasks}
+wieder. Die Ergebnisse für \emph{WikiText2} und \emph{PTB} werden dabei nicht in
+diese Berechnung einbezogen, da bei diesen Benchmarks ein niedrigerer Score eine
+bessere Leistung des Modells widerspiegelt.
+
+Die zusammengefassten Ergebnisse sind in der folgenden Tabelle
+dargestellt:
+
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{
+		\begin{tabular}{l l | c c | c c c c c | r}
+			\toprule
+			\textbf{Pruning Ratio}      & \textbf{Method} & \textbf{WikiText2} &
+			\textbf{PTB}                & \textbf{BoolQ}  & \textbf{HellaSwag} &
+			\textbf{WinoGrande}         & \textbf{ARC-c}  & \textbf{OBQA}      & \textbf{Average}                           \\
+			\midrule
+			\multirow{1}{*}{Pruned 0\%} & --              & /                  & /                & 61.31 & 46.15 & 60.30 &
+			30.12                       & 24.20           & 39,58                                                           \\
+			\midrule
+		\end{tabular}}
+	\caption{Evaluierung des Basismodells}
+	\label{tab:pruning}
+\end{table}
+
+
+Wie hier zu erkennen ist, weist das Basismodell bereits einen vergleichsweise
+niedrigen Score von \emph{39,58} auf. Zum Vergleich: In den Ergebnissen des
+\emph{LLM-Pruners} für das Modell \emph{Llama7B} ergibt sich ein
+Durchschnittswert von \emph{68,59}. Allerdings wurden in diesen Tests noch
+weitere \emph{Tasks} berücksichtigt, die in der vorliegenden Analyse nicht
+enthalten sind.
+
+Da sich diese Untersuchung jedoch auf die relative Verschlechterung im Vergleich
+zum Basismodell konzentriert, stellt der niedrigere Ausgangswert hier kein
+Problem dar.
+
+\newpage
+
+\subsection{Evaluierung Pruning zu 30\%}
+
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{
+		\begin{tabular}{l l | c c | c c c c c | r}
+			\toprule
+			\textbf{Pruning Ratio}       & \textbf{Method} & \textbf{WikiText2} &
+			\textbf{PTB}                 & \textbf{BoolQ}  & \textbf{HellaSwag} &
+			\textbf{WinoGrande}          & \textbf{ARC-c}  & \textbf{OBQA}      & \textbf{Average} \\
+			\midrule
+
+			\multirow{1}{*}{Pruned 0\%} & --              & /                  & /                & 61.31 & 46.15 & 60.30 &
+			30.12                       & 24.20           & 39,58                                                           \\
+
+            \midrule
+
+			\multirow{4}{*}{Pruned 30\%} & Taylor          & 15.19              & 43.19
+			                             & 55.50           & 37.90
+			                             & 54.22           &
+			24.66                        & 23.20           & 39.10                                 \\
+
+			                             & L1              & 281.63             & 4992.16
+			                             & 46.54           & 28.53
+			                             & 48.46           &
+			21.33                        & 14.00           & 31.77                                 \\
+
+
+			                             & L2              & 42.19              & 167.51
+			                             & 60.89           & 35.97
+			                             & 54.30           &
+			22.95                        & 18.40           & 38.50                                 \\
+
+
+			                             & Random          & 40.89              & 166.21
+			                             & 59.63           & 33.18
+			                             & 53.99           &
+			20.99                        & 18.00           & 37.17                                 \\
+			\midrule
+		\end{tabular}}
+	\caption{Evaluierung 30\% Pruning}
+	\label{tab:pruning30}
+\end{table}
+
 
 \newpage

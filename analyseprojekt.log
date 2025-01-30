@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.22)  28 JAN 2025 23:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.22)  29 JAN 2025 23:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -293,35 +293,61 @@ File: lstmisc.sty 2024/02/21 1.10 (Carsten Heinz)
 File: listings.cfg 2024/02/21 1.10 listings configuration
 ))
 Package: listings 2024/02/21 1.10 (Carsten Heinz)
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip54
+\multirow@cntb=\count297
+\multirow@dima=\skip55
+\bigstrutjot=\dimen174
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen175
+\lightrulewidth=\dimen176
+\cmidrulewidth=\dimen177
+\belowrulesep=\dimen178
+\belowbottomsep=\dimen179
+\aboverulesep=\dimen180
+\abovetopsep=\dimen181
+\cmidrulesep=\dimen182
+\cmidrulekern=\dimen183
+\defaultaddspace=\dimen184
+\@cmidla=\count298
+\@cmidlb=\count299
+\@aboverulesep=\dimen185
+\@belowrulesep=\dimen186
+\@thisruleclass=\count300
+\@lastruleclass=\count301
+\@thisrulewidth=\dimen187
+)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'ngerman'.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count297
+\l__color_backend_stack_int=\count302
 \l__pdf_internal_box=\box55
 ) (./analyseprojekt.aux (./sections/einleitung.aux) (./sections/theorie.aux) (./sections/methodik.aux) (./sections/ergebnisse.aux) (./sections/diskussion.aux))
 \openout1 = `analyseprojekt.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -359,16 +385,16 @@ LaTeX Font Info:    ... okay on input line 46.
 
 (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count298
-\scratchdimen=\dimen174
+\scratchcounter=\count303
+\scratchdimen=\dimen188
 \scratchbox=\box56
-\nofMPsegments=\count299
-\nofMParguments=\count300
+\nofMPsegments=\count304
+\nofMParguments=\count305
 \everyMPshowfont=\toks24
-\MPscratchCnt=\count301
-\MPscratchDim=\dimen175
-\MPnumerator=\count302
-\makeMPintoPDFobject=\count303
+\MPscratchCnt=\count306
+\MPscratchDim=\dimen189
+\MPnumerator=\count307
+\makeMPintoPDFobject=\count308
 \everyMPtoPDFconversion=\toks25
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -376,7 +402,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 46.
+Package hyperref Info: Link coloring OFF on input line 48.
  (./analyseprojekt.out) (./analyseprojekt.out)
 \@outlinefile=\write3
 \openout3 = `analyseprojekt.out'.
@@ -384,35 +410,35 @@ Package hyperref Info: Link coloring OFF on input line 46.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \microtypecontext on input line 46.
-Package microtype Info: Applying patch `item' on input line 46.
-Package microtype Info: Applying patch `toc' on input line 46.
-Package microtype Info: Applying patch `eqnum' on input line 46.
-Package microtype Info: Applying patch `footnote' on input line 46.
-Package microtype Info: Applying patch `verbatim' on input line 46.
+LaTeX Info: Redefining \microtypecontext on input line 48.
+Package microtype Info: Applying patch `item' on input line 48.
+Package microtype Info: Applying patch `toc' on input line 48.
+Package microtype Info: Applying patch `eqnum' on input line 48.
+Package microtype Info: Applying patch `footnote' on input line 48.
+Package microtype Info: Applying patch `verbatim' on input line 48.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 46.
+LaTeX Info: Redefining \showhyphens on input line 48.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-\c@lstlisting=\count304
-<images/logo.png, id=68, 770.88pt x 770.88pt>
+\c@lstlisting=\count309
+<images/logo.png, id=76, 770.88pt x 770.88pt>
 File: images/logo.png Graphic file (type png)
 <use images/logo.png>
-Package pdftex.def Info: images/logo.png  used on input line 49.
+Package pdftex.def Info: images/logo.png  used on input line 51.
 (pdftex.def)             Requested size: 142.26378pt x 142.25769pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 49.
+(Font)              <14.4> on input line 51.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 49.
+(Font)              <7> on input line 51.
  [1
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./images/logo.png>] (./analyseprojekt.toc
@@ -430,7 +456,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.64 	\include{sections/einleitung}
+l.66 	\include{sections/einleitung}
                                     [1]
 \openout2 = `sections/einleitung.aux'.
 
@@ -470,10 +496,10 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 
 
-])
+] [12])
 \openout2 = `sections/diskussion.aux'.
 
- (./sections/diskussion.tex [12
+ (./sections/diskussion.tex [13
 
 
 
@@ -483,21 +509,21 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `analyseprojekt.out' has not changed.
-(rerunfilecheck)             Checksum: 3C8802EF0D1886F1366160A7D5F7D3B8;2186.
+(rerunfilecheck)             Checksum: AC3CD2CF64712674EA30F8372A189E3C;2562.
  ) 
 Here is how much of TeX's memory you used:
- 16539 strings out of 474116
- 266430 string characters out of 5743682
- 1958187 words of memory out of 5000000
- 38443 multiletter control sequences out of 15000+600000
- 569866 words of font info for 131 fonts, out of 8000000 for 9000
+ 16694 strings out of 474116
+ 268975 string characters out of 5743682
+ 1957187 words of memory out of 5000000
+ 38575 multiletter control sequences out of 15000+600000
+ 570291 words of font info for 136 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,79p,1203b,2184s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,79p,1203b,2186s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
-Output written on analyseprojekt.pdf (14 pages, 153115 bytes).
+Output written on analyseprojekt.pdf (15 pages, 160169 bytes).
 PDF statistics:
- 303 PDF objects out of 1000 (max. 8388607)
- 268 compressed objects within 3 object streams
- 120 named destinations out of 1000 (max. 500000)
- 32390 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 320 PDF objects out of 1000 (max. 8388607)
+ 284 compressed objects within 3 object streams
+ 125 named destinations out of 1000 (max. 500000)
+ 32406 words of extra memory for PDF output out of 35830 (max. 10000000)
 

@@ -141,6 +141,10 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.cfg
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.cfg
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/multirow/multirow.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/multirow/multirow.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/booktabs/booktabs.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/booktabs/booktabs.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT ./analyseprojekt.aux
