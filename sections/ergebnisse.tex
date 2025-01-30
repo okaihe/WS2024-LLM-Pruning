@@ -32,10 +32,12 @@ dargestellt:
 			\toprule
 			\textbf{Pruning Ratio}      & \textbf{Method} & \textbf{WikiText2} &
 			\textbf{PTB}                & \textbf{BoolQ}  & \textbf{HellaSwag} &
-			\textbf{WinoGrande}         & \textbf{ARC-c}  & \textbf{OBQA}      & \textbf{Average}                           \\
+			\textbf{WinoGrande}         & \textbf{ARC-c}  & \textbf{OBQA}      &
+			\textbf{Average}                                                         \\
 			\midrule
-			\multirow{1}{*}{Pruned 0\%} & --              & /                  & /                & 61.31 & 46.15 & 60.30 &
-			30.12                       & 24.20           & 39,58                                                           \\
+			\multirow{1}{*}{Pruned 0\%} & --              & /                  & / &
+			61.31                       & 46.15           & 60.30              &
+			30.12                       & 24.20           & 39,58                    \\
 			\midrule
 		\end{tabular}}
 	\caption{Evaluierung des Basismodells}
@@ -65,35 +67,35 @@ Problem dar.
 			\toprule
 			\textbf{Pruning Ratio}       & \textbf{Method} & \textbf{WikiText2} &
 			\textbf{PTB}                 & \textbf{BoolQ}  & \textbf{HellaSwag} &
-			\textbf{WinoGrande}          & \textbf{ARC-c}  & \textbf{OBQA}      & \textbf{Average} \\
+			\textbf{WinoGrande}          & \textbf{ARC-c}  & \textbf{OBQA}      & \textbf{Average}                           \\
 			\midrule
 
-			\multirow{1}{*}{Pruned 0\%} & --              & /                  & /                & 61.31 & 46.15 & 60.30 &
-			30.12                       & 24.20           & 39,58                                                           \\
+			\multirow{1}{*}{Pruned 0\%}  & --              & /                  & /                & 61.31 & 46.15 & 60.30 &
+			30.12                        & 24.20           & 39,58                                                           \\
 
-            \midrule
+			\midrule
 
 			\multirow{4}{*}{Pruned 30\%} & Taylor          & 15.19              & 43.19
 			                             & 55.50           & 37.90
 			                             & 54.22           &
-			24.66                        & 23.20           & 39.10                                 \\
+			24.66                        & 23.20           & 39.10                                                           \\
 
 			                             & L1              & 281.63             & 4992.16
 			                             & 46.54           & 28.53
 			                             & 48.46           &
-			21.33                        & 14.00           & 31.77                                 \\
+			21.33                        & 14.00           & 31.77                                                           \\
 
 
 			                             & L2              & 42.19              & 167.51
 			                             & 60.89           & 35.97
 			                             & 54.30           &
-			22.95                        & 18.40           & 38.50                                 \\
+			22.95                        & 18.40           & 38.50                                                           \\
 
 
 			                             & Random          & 40.89              & 166.21
 			                             & 59.63           & 33.18
 			                             & 53.99           &
-			20.99                        & 18.00           & 37.17                                 \\
+			20.99                        & 18.00           & 37.17                                                           \\
 			\midrule
 		\end{tabular}}
 	\caption{Evaluierung 30\% Pruning}
