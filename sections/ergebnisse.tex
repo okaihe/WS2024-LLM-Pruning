@@ -1,4 +1,4 @@
-\section{Ergebnisse}
+\section{Ergebnisse}\label{ergebnisse}
 
 Im folgenden Kapitel werden die Ergebnisse der Evaluierungen und Tests der
 geprunten sowie teilweise anschließend trainierten Modelle vorgestellt. Dabei
@@ -8,7 +8,7 @@ verschiedenen Pruning-Stufen und die dabei verwendeten Methoden werden einzeln
 analysiert, bevor abschließend ein umfassender Gesamtüberblick über die
 Ergebnisse gegeben wird.
 
-\subsection{Evaluierung Basismodell}
+\subsection{Evaluierung Basismodell}\label{evaluation-basemodel}
 
 Um eine Vergleichsbasis zu schaffen, muss zunächst das Basismodell in allen
 Tests evaluiert werden. Als Basismodell dient hierbei das
@@ -58,18 +58,18 @@ Problem dar.
 
 \newpage
 
-\subsection{Tatsächliche Anzahl geprunter Parameter}
+\subsection{Tatsächliche Anzahl geprunter Parameter}\label{param_count}
 
 Anhand der Zusammenfassungen, die nach dem Aufruf der beschriebenen Kommandos
 vom \emph{LLM-Pruner} in der Konsole ausgegeben wurden, lässt sich schnell
 erkennen, dass die im Befehl angegebene Menge an zu prunenden Parametern bzw.
 das definierte Verhältnis nicht exakt so vom \emph{LLM-Pruner} umgesetzt wird.
 
-Ein Beispiel verdeutlicht dies: Bei einer angegebenen Pruning-Ratio von
-\emph{30\%} wäre zu erwarten, dass nach dem Pruning noch \emph{70\%} der
-ursprünglichen Parameter des Basismodells erhalten bleiben. Tatsächlich sind es
-in diesem Fall jedoch \emph{83,78\%}, also \emph{13,78\%} mehr als ursprünglich
-vorgesehen.
+Am Beispiel des \emph{30\%}-Prunings sieht dies wie folgt aus: Bei einer
+angegebenen Pruning-Ratio von \emph{30\%} wäre zu erwarten, dass nach dem
+Pruning noch \emph{70\%} der ursprünglichen Parameter des Basismodells erhalten
+bleiben. Tatsächlich sind es in diesem Fall jedoch \emph{83,78\%}, also
+\emph{13,78\%} mehr als ursprünglich vorgesehen.
 
 Noch deutlicher wird diese Abweichung bei einer Pruning-Ratio von \emph{70\%}.
 Hier sollten theoretisch nur noch \emph{30\%} der Parameter im Modell
@@ -98,8 +98,15 @@ tatsächlichen übereinstimmen.
 
 \newpage
 
-\subsection{Evaluierung Pruning zu 30\%}
+\subsection{Evaluierung Pruning zu 30\%}\label{evaluation-30}
 
+In Tabelle \ref{tab:pruning30} sind die Ergebnisse der geprunten Modelle sowie
+die des Basismodells dargestellt. Getestet wurden – wie in Kapitel
+\ref{methodik} beschrieben – die \emph{Tasks} BoolQ, HellaSwag, WinoGrande,
+Arc-Challenge und OpenBookQA. Zusätzlich wurde die \emph{Perplexity} anhand der
+Datensätze WikiText2 und PTB ermittelt.
+
+\vspace{1em}
 \begin{table}[h]
 	\centering
 	\resizebox{\textwidth}{!}{
@@ -112,41 +119,67 @@ tatsächlichen übereinstimmen.
 
 			\multirow{1}{*}{Pruned 0\%}  & --              & 7.97               & 20.76
 			                             & 61.31           & 46.15              & 60.30            &
-			30.12                        & 24.20           & 39,58                                   \\
+			30.12                        & 24.20           & 39.58                                   \\
 
 			\midrule
 
 			\multirow{4}{*}{Pruned 30\%} & Taylor          & 15.19              & 43.19
-			                             & 55.50           & 37.90
-			                             & 54.22           &
-			24.66                        & 23.20           & 39.10                                   \\
+			                             & 55.50           & 37.90              & 54.22
+			                             & 24.66           & 23.20              & 39.10              \\
 
 			                             & L1              & 281.63             & 4992.16
-			                             & 46.54           & 28.53
-			                             & 48.46           &
-			21.33                        & 14.00           & 31.77                                   \\
+			                             & 46.54           & 28.53              & 48.46
+			                             & 21.33           & 14.00              & 31.77              \\
 
 
 			                             & L2              & 42.19              & 167.51
-			                             & 60.89           & 35.97
-			                             & 54.30           &
-			22.95                        & 18.40           & 38.50                                   \\
+			                             & 60.89           & 35.97              & 54.30
+			                             & 22.95           & 18.40              & 38.50              \\
 
 
 			                             & Random          & 40.89              & 166.21
-			                             & 59.63           & 33.18
-			                             & 53.99           &
-			20.99                        & 18.00           & 37.17                                   \\
+			                             & 59.63           & 33.18              & 53.99
+			                             & 20.99           & 18.00              & 37.17              \\
 			\midrule
 		\end{tabular}}
 	\caption{Evaluierungen bis 30\% Pruning}
 	\label{tab:pruning30}
 \end{table}
 
+Es ist wichtig zu beachten, dass die tatsächliche Anzahl an Parametern im
+Vergleich zum Basismodell nur um \emph{16,22\%} reduziert wurde – und nicht, wie
+ursprünglich erwartet, um volle \emph{30\%}. Die Tests wurden unmittelbar nach
+dem Pruning durchgeführt, ohne dass ein erneutes Fine-Tuning erfolgte.
+
+Betrachtet man ausschließlich die Ergebnisse der \emph{Tasks} und deren
+Durchschnittswerte, so schneiden die \emph{Taylor}- und \emph{L2}-Methoden am
+besten ab, da ihre Werte am nächsten an denen des Basismodells liegen.
+Allerdings zeigt sich bei der \emph{L2}-Methode eine deutlich höhere und damit
+schlechtere \emph{Perplexity} in beiden Datensätzen im Vergleich zur
+\emph{Taylor}-Methode. Hervorzuheben ist dennoch, dass sie in der
+\emph{BoolQ}-Task um \emph{5,39} Prozentpunkte besser abgeschnitten hat als die
+\emph{Taylor}-Methode.
+
+Die \emph{Random}-Methode weist mit dessen Resultaten Ähnlichkeiten zu der
+\emph{L2}-Methode auf und schneidet somit ebenfalls schlechter als
+\emph{Taylor}-Methode ab. Hier sind somit keine weiteren Auffälligkeiten
+Hervorzuheben.
+
+Am schlechtesten hat die \emph{L1}-Methode abgeschnitten: Das daraus
+resultierende Modell weist extrem schlechte \emph{Perplexity}-Werte auf, und
+auch der Durchschnitt der \emph{Tasks} liegt im Vergleich zu den anderen
+Methoden deutlich niedriger.
+
 \newpage
 
 \subsection{Evaluierung Pruning zu 40\%}
 
+In Tabelle \ref{tab:pruning40} sind die Inhalte der Tabelle
+\ref{tab:pruning30} ergänzt um die Ergebnisse der Tests zu den Modellen, die mit
+der Angabe \emph{40\%} geprunt wurden zu sehen. Es wurden erneut jeweils die
+vier möglichen Methoden angewendet und getestet.
+
+\vspace{1em}
 \begin{table}[h]
 	\centering
 	\resizebox{\textwidth}{!}{

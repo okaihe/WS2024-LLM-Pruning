@@ -1,22 +1,23 @@
 \babel@toc {ngerman}{}\relax 
-\contentsline {section}{\numberline {1}Einleitung}{2}{section.1}%
-\contentsline {section}{\numberline {2}Theorie}{3}{section.2}%
-\contentsline {section}{\numberline {3}Methodik}{4}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Literaturrecherche}{4}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Arbeitsorganisation}{4}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Entwicklungsumgebung}{4}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Verwendetes Large Language Model}{5}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Pruning}{6}{subsection.3.5}%
-\contentsline {subsubsection}{\numberline {3.5.1}Verwendetes Framework}{6}{subsubsection.3.5.1}%
-\contentsline {subsubsection}{\numberline {3.5.2}Durchführung des Prunings}{7}{subsubsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.6}Fine-Tuning}{8}{subsection.3.6}%
-\contentsline {subsection}{\numberline {3.7}Evaluierung der Modelle}{9}{subsection.3.7}%
-\contentsline {subsubsection}{\numberline {3.7.1}Modell-Benchmarks}{9}{subsubsection.3.7.1}%
-\contentsline {subsubsection}{\numberline {3.7.2}Modellperfomance}{10}{subsubsection.3.7.2}%
-\contentsline {section}{\numberline {4}Ergebnisse}{11}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Evaluierung Basismodell}{11}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Tatsächliche Anzahl geprunter Parameter}{12}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Evaluierung Pruning zu 30\%}{13}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Evaluierung Pruning zu 40\%}{14}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Evaluierung Pruning zu 70\%}{15}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Diskussion}{16}{section.5}%
+\contentsline {section}{\numberline {1}Einleitung}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Forschungsfragen}{1}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Theorie}{2}{section.2}%
+\contentsline {section}{\numberline {3}Methodik}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Literaturrecherche}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Arbeitsorganisation}{3}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Entwicklungsumgebung}{3}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Verwendetes Large Language Model}{4}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Pruning}{5}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Verwendetes Framework}{5}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Durchführung des Prunings}{6}{subsubsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.6}Fine-Tuning}{7}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Evaluierung der Modelle}{8}{subsection.3.7}%
+\contentsline {subsubsection}{\numberline {3.7.1}Modell-Benchmarks}{8}{subsubsection.3.7.1}%
+\contentsline {subsubsection}{\numberline {3.7.2}Modellperfomance}{9}{subsubsection.3.7.2}%
+\contentsline {section}{\numberline {4}Ergebnisse}{10}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Evaluierung Basismodell}{10}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Tatsächliche Anzahl geprunter Parameter}{11}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Evaluierung Pruning zu 30\%}{12}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Evaluierung Pruning zu 40\%}{13}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Evaluierung Pruning zu 70\%}{14}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Diskussion}{15}{section.5}%

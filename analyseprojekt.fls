@@ -218,6 +218,7 @@ OUTPUT sections/einleitung.aux
 INPUT ./sections/einleitung.tex
 INPUT ./sections/einleitung.tex
 INPUT sections/einleitung.tex
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT ./sections/theorie.tex
 INPUT ./sections/theorie.tex
 OUTPUT sections/theorie.aux
@@ -230,7 +231,6 @@ OUTPUT sections/methodik.aux
 INPUT ./sections/methodik.tex
 INPUT ./sections/methodik.tex
 INPUT sections/methodik.tex
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm
