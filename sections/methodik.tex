@@ -278,10 +278,24 @@ In den Evaluierungen der Modelle, die direkt im Anschluss an das Pruning
 durchgeführt wurden, hat sich bereits gezeigt, dass über die Pruning-Methode
 \emph{Taylor} die vielversprechendsten Ergebnisse erzielt werden konnte. Diese
 geprunten Modelle konnten die höchsten Werte in den Evaluierungen erreichen. Das
-rechen- und kostenintensive Fine-Tuning wurde daher nur für die Modelle
-durchgeführt, die zu 30\% und 40\% mit der \emph{Taylor}-Methode geprunt wurden.
+rechen- und kostenintensive Fine-Tuning wurde daher nur testweise für das Modell
+durchgeführt, das zu 30\% mit der \emph{Taylor}-Methode geprunt wurden.
 
---------------------------- BEFEHL EINFÜGEN! ---------------------------------
+Verwendet wurde dafür das im \emph{LLM-Pruner} vorhandene Skript
+\emph{post\_training.py} über den folgenden Befehl:
+
+\vspace{1em}
+\begin{lstlisting}
+$ python post_training.py 
+    --prune_model prune_log/tinyllama_30_0418_prune_log/pytorch_model.bin
+    --data_path yahma/alpaca-cleaned \
+    --lora_r 8 \
+    --num_epochs 2 \ 
+    --learning_rate 1e-4 \ 
+    --batch_size 64 \
+    --output_dir tune_log/tinyllama_30_tuned \ 
+    --wandb_project tinyllama_30_tune
+\end{lstlisting}
 
 
 \subsection{Evaluierung der Modelle}
