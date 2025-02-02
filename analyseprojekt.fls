@@ -191,14 +191,14 @@ INPUT ./images/logo.png
 INPUT ./images/logo.png
 INPUT ./images/logo.png
 INPUT ./images/logo.png
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT ./analyseprojekt.toc
 INPUT ./analyseprojekt.toc
 INPUT analyseprojekt.toc
@@ -272,6 +272,7 @@ INPUT ./analyseprojekt.out
 INPUT ./analyseprojekt.out
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb
