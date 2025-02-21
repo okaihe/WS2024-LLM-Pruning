@@ -60,21 +60,21 @@ Problem dar.
 
 \subsection{Tatsächliche Anzahl geprunter Parameter}\label{param_count}
 
-Anhand der Zusammenfassungen, die nach dem Aufruf der beschriebenen Kommandos
-vom \emph{LLM-Pruner} in der Konsole ausgegeben wurden, lässt sich schnell
-erkennen, dass die im Befehl angegebene Menge an zu prunenden Parametern bzw.
-das definierte Verhältnis nicht exakt so vom \emph{LLM-Pruner} umgesetzt wird.
+Anhand der Modellevaluierungen, die nach dem dem Pruning über das
+Evaluierungsskript erstellt wurden, lässt sich schnell erkennen, dass die im
+Befehl angegebene Menge an zu prunenden Parametern bzw. das definierte
+Verhältnis nicht exakt so vom \emph{LLM-Pruner} umgesetzt wird.
 
 Am Beispiel des \emph{30\%}-Prunings sieht dies wie folgt aus: Bei einer
 angegebenen Pruning-Ratio von \emph{30\%} wäre zu erwarten, dass nach dem
 Pruning noch \emph{70\%} der ursprünglichen Parameter des Basismodells erhalten
-bleiben. Tatsächlich sind es in diesem Fall jedoch \emph{83,78\%}, also
-\emph{13,78\%} mehr als ursprünglich vorgesehen.
+bleiben. Tatsächlich sind es in diesem Fall jedoch \emph{73,06\%}, also
+\emph{3,06\%} mehr als ursprünglich vorgesehen.
 
 Noch deutlicher wird diese Abweichung bei einer Pruning-Ratio von \emph{70\%}.
 Hier sollten theoretisch nur noch \emph{30\%} der Parameter im Modell
-verbleiben, tatsächlich sind es jedoch noch \emph{63,16\%}, was einer Differenz
-von \emph{33,16\%} entspricht.
+verbleiben, tatsächlich sind es jedoch noch \emph{55,08\%}, was einer Differenz
+von \emph{25,08\%} entspricht.
 
 Diese Diskrepanz muss bei der Interpretation der nachfolgenden Ergebnisse
 berücksichtigt werden, da die angegebenen Verhältnisse nicht mit den
@@ -84,16 +84,15 @@ tatsächlichen übereinstimmen.
 	\centering
 	\begin{tabular}{c | c c | c }
 		\toprule
-		\textbf{Specified pruning ratio} & \textbf{\#Parameters before}
-		                                 & \textbf{\#Parameters after}  & \textbf{Ratio}           \\
+		\textbf{Specified ratio} & \textbf{\#Parameters before} & \textbf{\#Parameters after} & \textbf{Actual ratio} \\
 		\midrule
-		30\%                             & 1100048384                   & 921651200      & 83.78\% \\
-		40\%                             & 1100048384                   & 873224192      & 79.38\% \\
-		70\%                             & 1100048384                   & 694827008      & 63.16\% \\
+		30\%                     & 1261.53 Mio                  & 921.65 Mio                  & 73.06\%               \\
+		40\%                     & 1261.53 Mio                  & 873.22 Mio                  & 69.21\%               \\
+		70\%                     & 1261.53 Mio                  & 694.83 Mio                  & 55,08\%               \\
 		\midrule
 	\end{tabular}
 	\caption{Anzahl der vorhandenen Parameter nach dem Pruning}
-	\label{tab:parameters}
+	\label{tab:actualparameters}
 \end{table}
 
 \newpage
@@ -176,6 +175,14 @@ resultierende Modell weist extrem schlechte \emph{Perplexity}-Werte auf, und
 auch der Durchschnitt der \emph{Tasks} liegt im Vergleich zu den anderen
 Methoden deutlich niedriger.
 
+In der letzten Zeile der Tabelle sind zusätzlich die Ergebnisse des
+nachtrainierten Taylor-Modells zu sehen. Leider konnten hier nicht ähnliche
+Ergebnisse wie in der Dokumentation des \emph{LLM-Pruners} erzielt werden. Nach
+einem dreistündigen Post-Training ist der Durchschnittswert von 39,85 auf 37,79
+gesunken. Das Modell hat damit nach dem Post-Training schlechtere Ergebnisse
+geliefert als davor. Allein in den Evaluierungsaufgaben \emph{HellaSwag} und
+\emph{ARC-c} konnte eine leichte Steigerung erzielt werden.
+
 \newpage
 
 \subsection{Evaluierung Pruning zu 40\%}
@@ -190,6 +197,7 @@ vier möglichen Methoden angewendet und getestet.
 	\centering
 	\resizebox{\textwidth}{!}{
 		\begin{tabular}{l l | c c | c c c c c | r}
+			\toprule
 			\toprule
 			\textbf{Pruning Ratio}       & \textbf{Method} & \textbf{WikiText2} &
 			\textbf{PTB}                 & \textbf{BoolQ}  & \textbf{HellaSwag} &
@@ -222,7 +230,7 @@ vier möglichen Methoden angewendet und getestet.
 			\midrule
 			Pruned 30\% (tuned)          & Taylor          & /                  & /
 			                             & 45.75           & 39.29              & 56.67
-			                             & 25.26           & 22.00              & 37.79              \\
+			                             & 25.26           & 22.00              & 37.79            \\
 			\midrule
 
 			\multirow{4}{*}{Pruned 40\%} & Taylor          & 18.43              & 53.33
@@ -242,11 +250,14 @@ vier möglichen Methoden angewendet und getestet.
 			                             & Random          & 86.91              & 364.46
 			                             & 57.89           & 30.82              & 52.33
 			                             & 20.56           & 17.00              & 35.72            \\
-			\midrule
+			\bottomrule
+			\bottomrule
 		\end{tabular}}
 	\caption{Evaluierungen bis 40\% Pruning}
 	\label{tab:pruning40}
 \end{table}
+
+Auch hier zeigt sich, dass die Taylor-Methode die vielversprechendsten Ergebnisse erzielt.
 
 \newpage
 
@@ -256,6 +267,7 @@ vier möglichen Methoden angewendet und getestet.
 	\centering
 	\resizebox{\textwidth}{!}{
 		\begin{tabular}{l l | c c | c c c c c | r}
+			\toprule
 			\toprule
 			\textbf{Pruning Ratio}       & \textbf{Method} & \textbf{WikiText2} &
 			\textbf{PTB}                 & \textbf{BoolQ}  & \textbf{HellaSwag} &
@@ -285,7 +297,7 @@ vier möglichen Methoden angewendet und getestet.
 			\midrule
 			Pruned 30\% (tuned)          & Taylor          & /                  & /
 			                             & 45.75           & 39.29              & 56.67
-			                             & 25.26           & 22.00              & 37.79              \\
+			                             & 25.26           & 22.00              & 37.79            \\
 
 			\midrule
 			\multirow{4}{*}{Pruned 40\%} & Taylor          & 18.43              & 53.33
@@ -325,7 +337,31 @@ vier möglichen Methoden angewendet und getestet.
 			                             & 54.74           & 26.64              & 51.38
 			                             & 20.99           & 14.20              & 33.59            \\
 			\bottomrule
+			\bottomrule
 		\end{tabular}}
 	\caption{Evaluierungen bis 70\% Pruning}
 	\label{tab:pruning70}
+\end{table}
+
+\newpage
+\subsection{Speicherverbrauch}
+
+
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{
+		\begin{tabular}{l | c c | c c | c }
+			\toprule
+			\toprule
+			\textbf{Pruning ratio} & \textbf{Computation Complexity} & \textbf{Ratio} & \textbf{GPU Memory Requirement} & \textbf{Ratio} & \textbf{Ratio Parameters} \\
+			\midrule
+			Pruned 0\%             & 77.32 GMac                      & 100\%          & 2427.31 MiB                     & 100\%          & 100\%                     \\
+			Pruned 30\%            & 54.8 GMac                       & 70.87\%        & 1793.30 MiB                     & 73,86\%        & 73.06\%                   \\
+			Pruned 40\%            & 51.7 GMac                       & 66.86\%        & 1709.30 MiB                     & 70,31\%        & 69.21\%                   \\
+			Pruned 70\%            & 40.28 GMac                      & 52,09\%        & 1337.05 MiB                     & 55,08\%        & 55,08\%                   \\
+			\bottomrule
+			\bottomrule
+		\end{tabular}}
+	\caption{Speicheransprüche nach dem Pruning}
+	\label{tab:memory}
 \end{table}

@@ -165,6 +165,9 @@ INPUT sections/ergebnisse.aux
 INPUT ./sections/diskussion.aux
 INPUT ./sections/diskussion.aux
 INPUT sections/diskussion.aux
+INPUT ./sections/fazit.aux
+INPUT ./sections/fazit.aux
+INPUT sections/fazit.aux
 OUTPUT analyseprojekt.aux
 INPUT /usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -252,6 +255,12 @@ OUTPUT sections/diskussion.aux
 INPUT ./sections/diskussion.tex
 INPUT ./sections/diskussion.tex
 INPUT sections/diskussion.tex
+INPUT ./sections/fazit.tex
+INPUT ./sections/fazit.tex
+OUTPUT sections/fazit.aux
+INPUT ./sections/fazit.tex
+INPUT ./sections/fazit.tex
+INPUT sections/fazit.tex
 INPUT analyseprojekt.aux
 INPUT ./sections/einleitung.aux
 INPUT ./sections/einleitung.aux
@@ -268,6 +277,9 @@ INPUT sections/ergebnisse.aux
 INPUT ./sections/diskussion.aux
 INPUT ./sections/diskussion.aux
 INPUT sections/diskussion.aux
+INPUT ./sections/fazit.aux
+INPUT ./sections/fazit.aux
+INPUT sections/fazit.aux
 INPUT ./analyseprojekt.out
 INPUT ./analyseprojekt.out
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
