@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.22)  22 FEB 2025 22:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.22)  22 FEB 2025 23:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -322,59 +322,66 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count300
 \@lastruleclass=\count301
 \@thisrulewidth=\dimen187
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count302
+\float@exts=\toks26
+\float@box=\box55
+\@float@everytoks=\toks27
+\@floatcapt=\box56
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
  (/usr/local/texlive/2024/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count302
+\lrq@indent=\count303
  (/usr/local/texlive/2024/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 )) (/usr/local/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 )
-\c@tabx@nest=\count303
-\c@listtotal=\count304
-\c@listcount=\count305
-\c@liststart=\count306
-\c@liststop=\count307
-\c@citecount=\count308
-\c@citetotal=\count309
-\c@multicitecount=\count310
-\c@multicitetotal=\count311
-\c@instcount=\count312
-\c@maxnames=\count313
-\c@minnames=\count314
-\c@maxitems=\count315
-\c@minitems=\count316
-\c@citecounter=\count317
-\c@maxcitecounter=\count318
-\c@savedcitecounter=\count319
-\c@uniquelist=\count320
-\c@uniquename=\count321
-\c@refsection=\count322
-\c@refsegment=\count323
-\c@maxextratitle=\count324
-\c@maxextratitleyear=\count325
-\c@maxextraname=\count326
-\c@maxextradate=\count327
-\c@maxextraalpha=\count328
-\c@abbrvpenalty=\count329
-\c@highnamepenalty=\count330
-\c@lownamepenalty=\count331
-\c@maxparens=\count332
-\c@parenlevel=\count333
-\blx@tempcnta=\count334
-\blx@tempcntb=\count335
-\blx@tempcntc=\count336
-\c@blx@maxsection=\count337
-\blx@maxsegment@0=\count338
-\blx@notetype=\count339
-\blx@parenlevel@text=\count340
-\blx@parenlevel@foot=\count341
-\blx@sectionciteorder@0=\count342
-\blx@sectionciteorderinternal@0=\count343
-\blx@entrysetcounter=\count344
-\blx@biblioinstance=\count345
+\c@tabx@nest=\count304
+\c@listtotal=\count305
+\c@listcount=\count306
+\c@liststart=\count307
+\c@liststop=\count308
+\c@citecount=\count309
+\c@citetotal=\count310
+\c@multicitecount=\count311
+\c@multicitetotal=\count312
+\c@instcount=\count313
+\c@maxnames=\count314
+\c@minnames=\count315
+\c@maxitems=\count316
+\c@minitems=\count317
+\c@citecounter=\count318
+\c@maxcitecounter=\count319
+\c@savedcitecounter=\count320
+\c@uniquelist=\count321
+\c@uniquename=\count322
+\c@refsection=\count323
+\c@refsegment=\count324
+\c@maxextratitle=\count325
+\c@maxextratitleyear=\count326
+\c@maxextraname=\count327
+\c@maxextradate=\count328
+\c@maxextraalpha=\count329
+\c@abbrvpenalty=\count330
+\c@highnamepenalty=\count331
+\c@lownamepenalty=\count332
+\c@maxparens=\count333
+\c@parenlevel=\count334
+\blx@tempcnta=\count335
+\blx@tempcntb=\count336
+\blx@tempcntc=\count337
+\c@blx@maxsection=\count338
+\blx@maxsegment@0=\count339
+\blx@notetype=\count340
+\blx@parenlevel@text=\count341
+\blx@parenlevel@foot=\count342
+\blx@sectionciteorder@0=\count343
+\blx@sectionciteorderinternal@0=\count344
+\blx@entrysetcounter=\count345
+\blx@biblioinstance=\count346
 \labelnumberwidth=\skip56
 \labelalphawidth=\skip57
 \biblabelsep=\skip58
@@ -386,9 +393,9 @@ Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 \blx@bcfin=\read3
 \blx@bcfout=\write3
 \blx@langwohyphens=\language90
-\c@mincomprange=\count346
-\c@maxcomprange=\count347
-\c@mincompwidth=\count348
+\c@mincomprange=\count347
+\c@maxcomprange=\count348
+\c@mincompwidth=\count349
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/blx-dm.def
@@ -398,74 +405,74 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'ext-authoryear-icomp.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count349
-\c@savedafterword=\count350
-\c@annotator=\count351
-\c@savedannotator=\count352
-\c@author=\count353
-\c@savedauthor=\count354
-\c@bookauthor=\count355
-\c@savedbookauthor=\count356
-\c@commentator=\count357
-\c@savedcommentator=\count358
-\c@editor=\count359
-\c@savededitor=\count360
-\c@editora=\count361
-\c@savededitora=\count362
-\c@editorb=\count363
-\c@savededitorb=\count364
-\c@editorc=\count365
-\c@savededitorc=\count366
-\c@foreword=\count367
-\c@savedforeword=\count368
-\c@holder=\count369
-\c@savedholder=\count370
-\c@introduction=\count371
-\c@savedintroduction=\count372
-\c@namea=\count373
-\c@savednamea=\count374
-\c@nameb=\count375
-\c@savednameb=\count376
-\c@namec=\count377
-\c@savednamec=\count378
-\c@translator=\count379
-\c@savedtranslator=\count380
-\c@shortauthor=\count381
-\c@savedshortauthor=\count382
-\c@shorteditor=\count383
-\c@savedshorteditor=\count384
-\c@labelname=\count385
-\c@savedlabelname=\count386
-\c@institution=\count387
-\c@savedinstitution=\count388
-\c@lista=\count389
-\c@savedlista=\count390
-\c@listb=\count391
-\c@savedlistb=\count392
-\c@listc=\count393
-\c@savedlistc=\count394
-\c@listd=\count395
-\c@savedlistd=\count396
-\c@liste=\count397
-\c@savedliste=\count398
-\c@listf=\count399
-\c@savedlistf=\count400
-\c@location=\count401
-\c@savedlocation=\count402
-\c@organization=\count403
-\c@savedorganization=\count404
-\c@origlocation=\count405
-\c@savedoriglocation=\count406
-\c@origpublisher=\count407
-\c@savedorigpublisher=\count408
-\c@publisher=\count409
-\c@savedpublisher=\count410
-\c@language=\count411
-\c@savedlanguage=\count412
-\c@origlanguage=\count413
-\c@savedoriglanguage=\count414
-\c@pageref=\count415
-\c@savedpageref=\count416
+\c@afterword=\count350
+\c@savedafterword=\count351
+\c@annotator=\count352
+\c@savedannotator=\count353
+\c@author=\count354
+\c@savedauthor=\count355
+\c@bookauthor=\count356
+\c@savedbookauthor=\count357
+\c@commentator=\count358
+\c@savedcommentator=\count359
+\c@editor=\count360
+\c@savededitor=\count361
+\c@editora=\count362
+\c@savededitora=\count363
+\c@editorb=\count364
+\c@savededitorb=\count365
+\c@editorc=\count366
+\c@savededitorc=\count367
+\c@foreword=\count368
+\c@savedforeword=\count369
+\c@holder=\count370
+\c@savedholder=\count371
+\c@introduction=\count372
+\c@savedintroduction=\count373
+\c@namea=\count374
+\c@savednamea=\count375
+\c@nameb=\count376
+\c@savednameb=\count377
+\c@namec=\count378
+\c@savednamec=\count379
+\c@translator=\count380
+\c@savedtranslator=\count381
+\c@shortauthor=\count382
+\c@savedshortauthor=\count383
+\c@shorteditor=\count384
+\c@savedshorteditor=\count385
+\c@labelname=\count386
+\c@savedlabelname=\count387
+\c@institution=\count388
+\c@savedinstitution=\count389
+\c@lista=\count390
+\c@savedlista=\count391
+\c@listb=\count392
+\c@savedlistb=\count393
+\c@listc=\count394
+\c@savedlistc=\count395
+\c@listd=\count396
+\c@savedlistd=\count397
+\c@liste=\count398
+\c@savedliste=\count399
+\c@listf=\count400
+\c@savedlistf=\count401
+\c@location=\count402
+\c@savedlocation=\count403
+\c@organization=\count404
+\c@savedorganization=\count405
+\c@origlocation=\count406
+\c@savedoriglocation=\count407
+\c@origpublisher=\count408
+\c@savedorigpublisher=\count409
+\c@publisher=\count410
+\c@savedpublisher=\count411
+\c@language=\count412
+\c@savedlanguage=\count413
+\c@origlanguage=\count414
+\c@savedoriglanguage=\count415
+\c@pageref=\count416
+\c@savedpageref=\count417
 \shorthandwidth=\skip64
 \shortjournalwidth=\skip65
 \shortserieswidth=\skip66
@@ -489,19 +496,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
-\c@textcitecount=\count417
-\c@textcitetotal=\count418
-\c@textcitemaxnames=\count419
-\c@biburlbigbreakpenalty=\count420
-\c@biburlbreakpenalty=\count421
-\c@biburlnumpenalty=\count422
-\c@biburlucpenalty=\count423
-\c@biburllcpenalty=\count424
+\c@textcitecount=\count418
+\c@textcitetotal=\count419
+\c@textcitemaxnames=\count420
+\c@biburlbigbreakpenalty=\count421
+\c@biburlbreakpenalty=\count422
+\c@biburlnumpenalty=\count423
+\c@biburlucpenalty=\count424
+\c@biburllcpenalty=\count425
 \biburlbigskip=\muskip17
 \biburlnumskip=\muskip18
 \biburlucskip=\muskip19
 \biburllcskip=\muskip20
-\c@smartand=\count425
+\c@smartand=\count426
 )
 Package biblatex Info: Trying to load bibliography style 'ext-authoryear-icomp'...
 Package biblatex Info: ... file 'ext-authoryear-icomp.bbx' found.
@@ -520,8 +527,8 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count426
-\c@bbx:relatedtotal=\count427
+\c@bbx:relatedcount=\count427
+\c@bbx:relatedtotal=\count428
 )
 \extbl@this@introcitewidth=\skip78
 \introcitewidth=\skip79
@@ -592,8 +599,8 @@ Package biblatex Info: Document encoding is UTF8 ....
 Package: expl3 2024-02-20 L3 programming layer (loader) 
  (/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count428
-\l__pdf_internal_box=\box55
+\l__color_backend_stack_int=\count429
+\l__pdf_internal_box=\box57
 ))
 Package biblatex Info: ... and expl3
 (biblatex)             2024-02-20 L3 programming layer (loader) 
@@ -604,32 +611,36 @@ Package: xparse 2024-02-18 L3 Experimental document command parser
 )
 Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
 ))
+(./scripts/modsBiblatex2018.tex
+Package biblatex Info: Delimiter 'nametitledelim' in context 'bib' already defined, overwriting on input line 5.
+Package biblatex Info: Delimiter 'nametitledelim' in context 'biblist' already defined, overwriting on input line 5.
+Package biblatex Info: Delimiter 'multinamedelim' in context '' already defined, overwriting on input line 16.
+)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'ngerman'.
- (./analyseprojekt.aux (./sections/einleitung.aux) (./sections/theorie.aux)
-(./sections/methodik.aux) (./sections/ergebnisse.aux) (./sections/diskussion.aux) (./sections/fazit.aux))
+ (./analyseprojekt.aux (./sections/einleitung.aux) (./sections/theorie.aux) (./sections/methodik.aux) (./sections/ergebnisse.aux) (./sections/diskussion.aux) (./sections/fazit.aux))
 \openout1 = `analyseprojekt.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -667,51 +678,52 @@ LaTeX Font Info:    ... okay on input line 83.
 
 (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count429
+\scratchcounter=\count430
 \scratchdimen=\dimen188
-\scratchbox=\box56
-\nofMPsegments=\count430
-\nofMParguments=\count431
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count432
+\scratchbox=\box58
+\nofMPsegments=\count431
+\nofMParguments=\count432
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count433
 \MPscratchDim=\dimen189
-\MPnumerator=\count433
-\makeMPintoPDFobject=\count434
-\everyMPtoPDFconversion=\toks27
+\MPnumerator=\count434
+\makeMPintoPDFobject=\count435
+\everyMPtoPDFconversion=\toks29
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 83.
+Package hyperref Info: Link coloring OFF on input line 94.
  (./analyseprojekt.out) (./analyseprojekt.out)
 \@outlinefile=\write4
 \openout4 = `analyseprojekt.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \microtypecontext on input line 83.
-Package microtype Info: Applying patch `item' on input line 83.
-Package microtype Info: Applying patch `toc' on input line 83.
-Package microtype Info: Applying patch `eqnum' on input line 83.
-Package microtype Info: Applying patch `footnote' on input line 83.
-Package microtype Info: Applying patch `verbatim' on input line 83.
+LaTeX Info: Redefining \microtypecontext on input line 94.
+Package microtype Info: Applying patch `item' on input line 94.
+Package microtype Info: Applying patch `toc' on input line 94.
+Package microtype Info: Applying patch `eqnum' on input line 94.
+Package microtype Info: Applying patch `footnote' on input line 94.
+Package microtype Info: Applying patch `verbatim' on input line 94.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 83.
+LaTeX Info: Redefining \showhyphens on input line 94.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-\c@lstlisting=\count435
+\c@lstlisting=\count436
 Package biblatex Info: Trying to load language 'ngerman'...
 Package biblatex Info: ... file 'ngerman.lbx' found.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/lbx/ngerman.lbx
@@ -734,22 +746,22 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'analyseprojekt.bbl' found.
  (./analyseprojekt.bbl)
-Package biblatex Info: Reference section=0 on input line 83.
-Package biblatex Info: Reference segment=0 on input line 83.
-<images/logo.png, id=100, 770.88pt x 770.88pt>
+Package biblatex Info: Reference section=0 on input line 94.
+Package biblatex Info: Reference segment=0 on input line 94.
+<images/logo.png, id=128, 770.88pt x 770.88pt>
 File: images/logo.png Graphic file (type png)
 <use images/logo.png>
-Package pdftex.def Info: images/logo.png  used on input line 86.
+Package pdftex.def Info: images/logo.png  used on input line 97.
 (pdftex.def)             Requested size: 113.81102pt x 113.80379pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 86.
+(Font)              <14.4> on input line 97.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 86.
-LaTeX Font Info:    Calculating math sizes for size <14> on input line 91.
+(Font)              <7> on input line 97.
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 102.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14> on input line 91.
+(Font)              <14> on input line 102.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9.79996> on input line 91.
+(Font)              <9.79996> on input line 102.
  [1
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./images/logo.png>] (./analyseprojekt.toc
@@ -759,34 +771,40 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 3.
-)
+ [1])
 \tf@toc=\write5
 \openout5 = `analyseprojekt.toc'.
 
- [1]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 111.
+ [2]
+\openout2 = `sections/einleitung.aux'.
 
+ (./sections/einleitung.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.112 	\include{sections/einleitung}
-                                     [1]
-\openout2 = `sections/einleitung.aux'.
+l.44 	\item I
+             nwiefern [1
 
- (./sections/einleitung.tex) [2
-
-]
+]) [2]
 \openout2 = `sections/theorie.aux'.
 
- (./sections/theorie.tex [3
+ (./sections/theorie.tex
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 15.
+ [3
 
 
 
-])
+] [4] [5] [6{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+<images/pruning.png, id=261, 1169.36874pt x 856.19875pt>
+File: images/pruning.png Graphic file (type png)
+<use images/pruning.png>
+Package pdftex.def Info: images/pruning.png  used on input line 145.
+(pdftex.def)             Requested size: 409.71692pt x 299.9876pt.
+ [7 <./images/pruning.png>] [8] [9] [10])
 \openout2 = `sections/methodik.aux'.
 
- (./sections/methodik.tex [4
+ (./sections/methodik.tex [11
 
 
 
@@ -803,54 +821,54 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [5{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [6] [7] [8] [9] [10])
+ [12] [13] [14] [15] [16] [17] [18] [19])
 \openout2 = `sections/ergebnisse.aux'.
 
- (./sections/ergebnisse.tex [11
+ (./sections/ergebnisse.tex [20
 
 
 
-] [12] [13] [14] [15]) [16]
+] [21] [22] [23] [24] [25]) [26]
 \openout2 = `sections/diskussion.aux'.
 
- (./sections/diskussion.tex [17
+ (./sections/diskussion.tex [27
 
 
 
 ])
 \openout2 = `sections/fazit.aux'.
 
- (./sections/fazit.tex) [18
+ (./sections/fazit.tex) [28
 
 
 
-] [19
+] [29
 
 
-] (./analyseprojekt.aux (./sections/einleitung.aux) (./sections/theorie.aux) (./sections/methodik.aux) (./sections/ergebnisse.aux) (./sections/diskussion.aux) (./sections/fazit.aux))
+] [30] [31] (./analyseprojekt.aux (./sections/einleitung.aux) (./sections/theorie.aux) (./sections/methodik.aux) (./sections/ergebnisse.aux) (./sections/diskussion.aux) (./sections/fazit.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `analyseprojekt.out' has not changed.
-(rerunfilecheck)             Checksum: 01449A59ABABD64FFF083313C01D8983;3587.
+(rerunfilecheck)             Checksum: A158752C5D9026B46F8CFA64B92AE015;5240.
 Package logreq Info: Writing requests to 'analyseprojekt.run.xml'.
 \openout1 = `analyseprojekt.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24405 strings out of 474116
- 426919 string characters out of 5743682
- 1958187 words of memory out of 5000000
- 46126 multiletter control sequences out of 15000+600000
- 571908 words of font info for 154 fonts, out of 8000000 for 9000
+ 24682 strings out of 474116
+ 432553 string characters out of 5743682
+ 1963187 words of memory out of 5000000
+ 46298 multiletter control sequences out of 15000+600000
+ 573890 words of font info for 177 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 75i,11n,81p,1203b,2369s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
-Output written on analyseprojekt.pdf (21 pages, 238025 bytes).
+ 75i,11n,81p,1203b,2505s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
+Output written on analyseprojekt.pdf (34 pages, 1681928 bytes).
 PDF statistics:
- 444 PDF objects out of 1000 (max. 8388607)
- 389 compressed objects within 4 object streams
- 158 named destinations out of 1000 (max. 500000)
- 36550 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 649 PDF objects out of 1000 (max. 8388607)
+ 574 compressed objects within 6 object streams
+ 210 named destinations out of 1000 (max. 500000)
+ 38659 words of extra memory for PDF output out of 42996 (max. 10000000)
 

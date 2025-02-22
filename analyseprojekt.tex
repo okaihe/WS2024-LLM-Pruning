@@ -3,7 +3,8 @@
 % Packages
 \usepackage[a4paper,left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm,footskip=1cm]{geometry}
 \usepackage{xcolor} \usepackage[explicit]{titlesec}
-\usepackage[colorlinks=false]{hyperref} \usepackage{graphicx}
+\usepackage[colorlinks=false]{hyperref}
+\usepackage{graphicx}
 \usepackage{caption}
 \usepackage[parfill]{parskip}
 \usepackage[ngerman]{babel}
@@ -14,6 +15,12 @@
 \usepackage{listings}
 \usepackage{multirow}
 \usepackage{booktabs}
+\usepackage{float}
+
+\newcommand{\langde}[1]{%
+   \ifde\selectlanguage{ngerman}#1\fi}
+\newcommand{\langen}[1]{%
+   \ifen\selectlanguage{english}#1\fi}
 
 \usepackage[
     backend=biber,
@@ -35,10 +42,14 @@
 ]{biblatex}
 
 \DeclareInnerCiteDelims{footcite}{\bibopenparen}{\bibcloseparen}
+
+
 \DeclareFieldFormat[article,book,inbook,incollection,inproceedings]{year}{\mkbibparens{#1}:} 
 \DefineBibliographyStrings{ngerman}{
    andothers = {{et\,al\adddot}},
 }
+
+\input{scripts/modsBiblatex2018.tex}
 
 \addbibresource{literatur.bib}
 
@@ -56,7 +67,7 @@
 
 % Settings
 \hypersetup{pdfborder=0 0 0} \definecolor{FomBlue}{HTML}{00998A}
-\linespread{1.20}
+\linespread{1.50}
 
 % Title page
 
@@ -107,7 +118,6 @@
 	\setcounter{page}{1}
 	\pagenumbering{arabic}
 
-    \autocites[Vgl.][S. 1 - 2]{Lu2024}[S. 4 - 9]{Cheng2024}
 
 	\include{sections/einleitung}
 	\include{sections/theorie}

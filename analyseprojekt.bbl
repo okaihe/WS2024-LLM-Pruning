@@ -19,7 +19,7 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
-    \entry{Cheng2024}{article}{}
+    \entry{cheng2024survey}{online}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=3938da89ea669ec404e5c2d993a2453f}{%
            family={Cheng},
@@ -52,8 +52,7 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{arXiv}
-      \field{note}{Version 2, abgerufen am 08.02.2025}
+      \field{note}{Version 2 vom 09.08.2024, abgerufen am 08.02.2025}
       \field{title}{A Survey on Deep Neural Network Pruning: Taxonomy, Comparison, Analysis, and Recommendations}
       \field{year}{2024}
       \verb{urlraw}
@@ -63,7 +62,440 @@
       \verb https://arxiv.org/pdf/2308.06767
       \endverb
     \endentry
-    \entry{Lu2024}{misc}{}
+    \entry{clark2019boolq}{online}{}
+      \name{author}{6}{}{%
+        {{un=1,uniquepart=given,hash=9edd3110f9350150b9a22ef5b7d45d25}{%
+           family={Clark},
+           familyi={C\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=8dde73b4194f5bc4230c4808f3fc1534}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Kenton},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a45784fe7163b45f11d166564f5d24b6}{%
+           family={Chang},
+           familyi={C\bibinitperiod},
+           given={Ming-Wei},
+           giveni={M\bibinithyphendelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3b03c511a57b349562f0fc708a8d326d}{%
+           family={Kwiatkowski},
+           familyi={K\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b8bbd832353d6b8ffa73123369d39d55}{%
+           family={Collins},
+           familyi={C\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b92aa283415413bb8d2a1548716d0c7d}{%
+           family={Toutanova},
+           familyi={T\bibinitperiod},
+           given={Kristina},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c1ceb9d5bc557fdfa21d98503e2755df}
+      \strng{fullhash}{c56855207299b41d43b8f38555f3fc9a}
+      \strng{bibnamehash}{c56855207299b41d43b8f38555f3fc9a}
+      \strng{authorbibnamehash}{c56855207299b41d43b8f38555f3fc9a}
+      \strng{authornamehash}{c1ceb9d5bc557fdfa21d98503e2755df}
+      \strng{authorfullhash}{c56855207299b41d43b8f38555f3fc9a}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{vom 24.05.2019, entnommen am 21.02.2025}
+      \field{title}{BoolQ: Exploring the Surprising Difficulty of Natural Yes/No Questions}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/1905.10044
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/1905.10044
+      \endverb
+    \endentry
+    \entry{clark2019arc}{online}{}
+      \name{author}{7}{}{%
+        {{un=1,uniquepart=given,hash=2db5de0aa2d8b8effcc6e63e976b4edb}{%
+           family={Clark},
+           familyi={C\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=e05993c491a54758f5b26dbc089efa24}{%
+           family={Cowhey},
+           familyi={C\bibinitperiod},
+           given={Isaak},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=24a50614f7ed5b3e1d70594a0e2c2a2a}{%
+           family={Etzioni},
+           familyi={E\bibinitperiod},
+           given={Oren},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d52b94839fda8bece4ad0c811146f04f}{%
+           family={Khot},
+           familyi={K\bibinitperiod},
+           given={Tushar},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a9e0631f7cb86b51f2dbfd908c164960}{%
+           family={Sabharwal},
+           familyi={S\bibinitperiod},
+           given={Ashish},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=295b73860bf51e24333e651d5d7c1239}{%
+           family={Schoenick},
+           familyi={S\bibinitperiod},
+           given={Carissa},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=21dbac8bb4ba1ed555216a1d80595c20}{%
+           family={Tafjord},
+           familyi={T\bibinitperiod},
+           given={Oyvind},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ef66ff8cd1985c9e315ecbec8907c0ba}
+      \strng{fullhash}{fb25b7452c9ced9e6fcd18591c3ac7de}
+      \strng{bibnamehash}{fb25b7452c9ced9e6fcd18591c3ac7de}
+      \strng{authorbibnamehash}{fb25b7452c9ced9e6fcd18591c3ac7de}
+      \strng{authornamehash}{ef66ff8cd1985c9e315ecbec8907c0ba}
+      \strng{authorfullhash}{fb25b7452c9ced9e6fcd18591c3ac7de}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{vom 14.03.2018, abgerufen am 21.02.2025}
+      \field{title}{Think you have Solved Question Answering? Try ARC, the AI2 Reasoning Challenge}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/1803.05457
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/1803.05457
+      \endverb
+    \endentry
+    \entry{he2023structured}{online}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=50d6886fd5f9ff662258a7a8245adc9f}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={Yang},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7b338677fdfa7cdcbb77d681d10a9e0b}{%
+           family={Xiao},
+           familyi={X\bibinitperiod},
+           given={Lingao},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7245b874a5a3b0c7a17a19f4916508f0}
+      \strng{fullhash}{7245b874a5a3b0c7a17a19f4916508f0}
+      \strng{bibnamehash}{7245b874a5a3b0c7a17a19f4916508f0}
+      \strng{authorbibnamehash}{7245b874a5a3b0c7a17a19f4916508f0}
+      \strng{authornamehash}{7245b874a5a3b0c7a17a19f4916508f0}
+      \strng{authorfullhash}{7245b874a5a3b0c7a17a19f4916508f0}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Version 2 vom 30.11.2023, abgerufen am 30.01.2025}
+      \field{title}{Structured Pruning for Deep Convolutional Neural Networks: A Survey}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/2303.00566
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/2303.00566
+      \endverb
+    \endentry
+    \entry{hu2024slm}{online}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=dd52a244f7dacbbe5e17a3c1b980e904}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Mengya\bibnamedelima Mia},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=af1f6890b49ac6de6ee9af944bdf1990}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Rui},
+           giveni={R\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=1e26b5837fb43e3cf72b188984ee8877}{%
+           family={Lei},
+           familyi={L\bibinitperiod},
+           given={Deren},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5f1ba190046c755a348e0c9d5f1d3e1f}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yaxi},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=331bf7dced49d10c4c6ca7710edd5a3e}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Mingyu},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8458392fca4a18bf1decf9bc322fe204}{%
+           family={Ching},
+           familyi={C\bibinitperiod},
+           given={Emily},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e94999849238729db9b15dd8cc6cd329}{%
+           family={Kamal},
+           familyi={K\bibinitperiod},
+           given={Eslam},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=280fb0f40ee2ee7b1c446e42c8cb2ce8}{%
+           family={Deng},
+           familyi={D\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3173cef1ba7aaface2c1dd1e5b0285ad}
+      \strng{fullhash}{6c07b4b9269da35222e3507c6593b723}
+      \strng{bibnamehash}{6c07b4b9269da35222e3507c6593b723}
+      \strng{authorbibnamehash}{6c07b4b9269da35222e3507c6593b723}
+      \strng{authornamehash}{3173cef1ba7aaface2c1dd1e5b0285ad}
+      \strng{authorfullhash}{6c07b4b9269da35222e3507c6593b723}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Version 1 vom 22.08.2024, abgerufen am 29.01.2025}
+      \field{title}{SLM Meets LLM: Balancing Latency, Interpretability and Consistency in Hallucination Detection}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/2408.12748
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/2408.12748
+      \endverb
+    \endentry
+    \entry{huang2024hallucination}{online}{}
+      \name{author}{11}{}{%
+        {{un=0,uniquepart=base,hash=ebcb470ee777cbc56984a83379d29819}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Lei},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=33dec5c759c85b22701f20add36a7ce5}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Weijiang},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5df07c6cefaf645fc4f245d14e3b69d6}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Weitao},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1a3b6b1d786ba9037182438c6555736d}{%
+           family={Zhong},
+           familyi={Z\bibinitperiod},
+           given={Weihong},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ab3ff7c90017062cb61e7267dbcc7094}{%
+           family={Feng},
+           familyi={F\bibinitperiod},
+           given={Zhangyin},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2f100a4fbc0bb09e5c0e70e9a4af36a9}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Haotian},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e81e723c604d2cd99bd2504278a0adcd}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Qianglong},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=646c35577faa04835231d176405ee262}{%
+           family={Peng},
+           familyi={P\bibinitperiod},
+           given={Weihua},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4594292cf0c840c87461b4f0e43a3d84}{%
+           family={Feng},
+           familyi={F\bibinitperiod},
+           given={Xiaocheng},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1b651c40ade9404b1c43c1786d1a7466}{%
+           family={Qin},
+           familyi={Q\bibinitperiod},
+           given={Bing},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=df4100f4c9320162410d3ddcc9257d55}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Ting},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bbcc439f02d17e95e0090171778c1ed2}
+      \strng{fullhash}{f8c4e1e0196ecf27c8fd439fe69f4465}
+      \strng{bibnamehash}{f8c4e1e0196ecf27c8fd439fe69f4465}
+      \strng{authorbibnamehash}{f8c4e1e0196ecf27c8fd439fe69f4465}
+      \strng{authornamehash}{bbcc439f02d17e95e0090171778c1ed2}
+      \strng{authorfullhash}{f8c4e1e0196ecf27c8fd439fe69f4465}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Version 2 vom 19.11.2024, abgerufen am 29.01.2025}
+      \field{title}{A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/2311.05232
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/2311.05232
+      \endverb
+    \endentry
+    \entry{kelbert2023llm}{online}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=fa4a91023f0bf8f78bbb38dcd98bcec3}{%
+           family={Kelbert},
+           familyi={K\bibinitperiod},
+           given={Patricia},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f719847015a2a8859c5aa18be0d19f2d}{%
+           family={Siebert},
+           familyi={S\bibinitperiod},
+           given={Julien},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4eee556e49e789d389abb055be1c3389}{%
+           family={Jöckel},
+           familyi={J\bibinitperiod},
+           given={Lisa},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2b6a07b4e707f826b0473ab1021544c6}
+      \strng{fullhash}{2b6a07b4e707f826b0473ab1021544c6}
+      \strng{bibnamehash}{2b6a07b4e707f826b0473ab1021544c6}
+      \strng{authorbibnamehash}{2b6a07b4e707f826b0473ab1021544c6}
+      \strng{authornamehash}{2b6a07b4e707f826b0473ab1021544c6}
+      \strng{authorfullhash}{2b6a07b4e707f826b0473ab1021544c6}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{abgerufen am 29.01.2025}
+      \field{title}{Was sind Large Language Models? Und was ist bei der Nutzung von KI-Sprachmodellen zu beachten?}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.iese.fraunhofer.de/blog/large-language-models-ki-sprachmodelle/
+      \endverb
+      \verb{url}
+      \verb https://www.iese.fraunhofer.de/blog/large-language-models-ki-sprachmodelle/
+      \endverb
+    \endentry
+    \entry{li2022random}{online}{}
+      \name{author}{6}{}{%
+        {{un=1,uniquepart=given,hash=08662729fa958c632a10ef8553fb7e24}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yawei},
+           giveni={Y\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=f93496456a0f09614ea4601eb8c47548}{%
+           family={Adamczewski},
+           familyi={A\bibinitperiod},
+           given={Kamil},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=4d5a1ec375736c19dc1665edb1bb6fee}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Wen},
+           giveni={W\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=afe9ac72b7653e55e48e0f402c384dee}{%
+           family={Gu},
+           familyi={G\bibinitperiod},
+           given={Shuhang},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=740c788a36355395a6809932b5f84ab5}{%
+           family={Timofte},
+           familyi={T\bibinitperiod},
+           given={Radu},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d3bc7b9be5061411a87f19fcdf39499c}{%
+           family={Van\bibnamedelima Gool},
+           familyi={V\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={Luc},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{10881a6a46c531e11b96196795f6c2be}
+      \strng{fullhash}{8576695480418e5a497c7c510a19a768}
+      \strng{bibnamehash}{8576695480418e5a497c7c510a19a768}
+      \strng{authorbibnamehash}{8576695480418e5a497c7c510a19a768}
+      \strng{authornamehash}{10881a6a46c531e11b96196795f6c2be}
+      \strng{authorfullhash}{8576695480418e5a497c7c510a19a768}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{vom 11.05.2022, abgerufen am 02.02.2025}
+      \field{title}{Revisiting Random Channel Pruning for Neural Network Compression}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/2205.05676
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/2205.05676
+      \endverb
+    \endentry
+    \entry{lu2024taxonomy}{online}{}
       \name{author}{6}{}{%
         {{un=0,uniquepart=base,hash=1d1fb06f744e43890d04aa354a1016ed}{%
            family={Lu},
@@ -71,18 +503,18 @@
            given={Qinghua},
            giveni={Q\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=c10b260d67a13ae922e9d8c5819ce74d}{%
+        {{un=1,uniquepart=given,hash=c10b260d67a13ae922e9d8c5819ce74d}{%
            family={Zhu},
            familyi={Z\bibinitperiod},
            given={Liming},
            giveni={L\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=268fd6e7a95a4d5d0ad195cf0a184d4c}{%
+           givenun=1}}%
+        {{un=1,uniquepart=given,hash=268fd6e7a95a4d5d0ad195cf0a184d4c}{%
            family={Xu},
            familyi={X\bibinitperiod},
            given={Xiwei},
            giveni={X\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
         {{un=0,uniquepart=base,hash=4ea6157adaa214ea9a0734bb53dd8492}{%
            family={Liu},
            familyi={L\bibinitperiod},
@@ -114,10 +546,498 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://arxiv.org/pdf/2305.05352v6}}
       \field{note}{Version 1 vom 22.01.2024, abgerufen am 29.01.2025}
       \field{title}{A TAXONOMY OF FOUNDATION MODEL BASED SYSTEMS THROUGH THE LENS OF SOFTWARE ARCHITECTURE}
       \field{year}{2024}
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/2305.05352v6
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/2305.05352v6
+      \endverb
+    \endentry
+    \entry{mihaylov2018armor}{online}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=2760810ac53a3b0afd0d63a8af2b52e3}{%
+           family={Mihaylov},
+           familyi={M\bibinitperiod},
+           given={Todor},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=2db5de0aa2d8b8effcc6e63e976b4edb}{%
+           family={Clark},
+           familyi={C\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=d52b94839fda8bece4ad0c811146f04f}{%
+           family={Khot},
+           familyi={K\bibinitperiod},
+           given={Tushar},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a9e0631f7cb86b51f2dbfd908c164960}{%
+           family={Sabharwal},
+           familyi={S\bibinitperiod},
+           given={Ashish},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c2098b000143966bf72291aa3f75a6bf}
+      \strng{fullhash}{931ec28762f5f984c6d2ceda0de42130}
+      \strng{bibnamehash}{931ec28762f5f984c6d2ceda0de42130}
+      \strng{authorbibnamehash}{931ec28762f5f984c6d2ceda0de42130}
+      \strng{authornamehash}{c2098b000143966bf72291aa3f75a6bf}
+      \strng{authorfullhash}{931ec28762f5f984c6d2ceda0de42130}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{vom 08.09.2018, abgerufen am 22.02.2025}
+      \field{title}{Can a Suit of Armor Conduct Electricity? A New Dataset for Open Book Question Answering}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://export.arxiv.org/pdf/1809.02789v1.pdf
+      \endverb
+      \verb{url}
+      \verb https://export.arxiv.org/pdf/1809.02789v1.pdf
+      \endverb
+    \endentry
+    \entry{minaee2024survey}{online}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=f993317037a8a70ad4d9c6555a09d89a}{%
+           family={Minaee},
+           familyi={M\bibinitperiod},
+           given={Shervin},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a2d359b12ca2fadf0b40136a73f021bb}{%
+           family={Mikolov},
+           familyi={M\bibinitperiod},
+           given={Tomas},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4d149ba87a2d2a021964e70640ae4577}{%
+           family={Nikzad},
+           familyi={N\bibinitperiod},
+           given={Narjes},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b43c56cc12552e1a9f3d0f2ab2aa5603}{%
+           family={Chenaghlu},
+           familyi={C\bibinitperiod},
+           given={Meysam},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d5670b2600fea169724521e252d9d09d}{%
+           family={Socher},
+           familyi={S\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=73d7725e7b8c19a7a179442f898f8a48}{%
+           family={Amatriain},
+           familyi={A\bibinitperiod},
+           given={Xavier},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=159bca5607e3797666654a2e3022978a}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Jianfeng},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{282d2822c451f1ff8aa7b3792fca8189}
+      \strng{fullhash}{d1123ac7e4314d0953c1b12b854801ba}
+      \strng{bibnamehash}{d1123ac7e4314d0953c1b12b854801ba}
+      \strng{authorbibnamehash}{d1123ac7e4314d0953c1b12b854801ba}
+      \strng{authornamehash}{282d2822c451f1ff8aa7b3792fca8189}
+      \strng{authorfullhash}{d1123ac7e4314d0953c1b12b854801ba}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Version 6 vom 20.02.2024, abgerufen am 29.01.2025}
+      \field{title}{Large Language Models: A Survey}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/2402.06196
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/2402.06196
+      \endverb
+    \endentry
+    \entry{naveed2024overview}{online}{}
+      \name{author}{9}{}{%
+        {{un=0,uniquepart=base,hash=66796972e59bdd4e8082c5a76a167cd3}{%
+           family={Naveed},
+           familyi={N\bibinitperiod},
+           given={Humza},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f3e8487979c3d5c449bbcd133489fccd}{%
+           family={Khan},
+           familyi={K\bibinitperiod},
+           given={Asad\bibnamedelima Ullah},
+           giveni={A\bibinitperiod\bibinitdelim U\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=224492545ce925352b2ba75589d4918b}{%
+           family={Qiu},
+           familyi={Q\bibinitperiod},
+           given={Shi},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9ca76bee9609e8d3c02e31fd684a0295}{%
+           family={Saquib},
+           familyi={S\bibinitperiod},
+           given={Muhammad},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=636b14101269d849fb13e7d49a7cec3e}{%
+           family={Anwar},
+           familyi={A\bibinitperiod},
+           given={Saeed},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9b188d486913142cb26c6acb66a85531}{%
+           family={Usman},
+           familyi={U\bibinitperiod},
+           given={Muhammad},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dae51cf934e0ef7645c0d9bad7d37367}{%
+           family={Akhtar},
+           familyi={A\bibinitperiod},
+           given={Naveed},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2f11f27ecdb1aa875cfab05fcff91ac9}{%
+           family={Barnes},
+           familyi={B\bibinitperiod},
+           given={Nick},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e66ddb661075e1ec2d86e6cc0fa46aef}{%
+           family={Mian},
+           familyi={M\bibinitperiod},
+           given={Ajmal},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6d0432fbdcdf05ad565c1a341dd32732}
+      \strng{fullhash}{9e8e98f44f054db22f151b28c36131eb}
+      \strng{bibnamehash}{9e8e98f44f054db22f151b28c36131eb}
+      \strng{authorbibnamehash}{9e8e98f44f054db22f151b28c36131eb}
+      \strng{authornamehash}{6d0432fbdcdf05ad565c1a341dd32732}
+      \strng{authorfullhash}{9e8e98f44f054db22f151b28c36131eb}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Version 10 vom 17.10.2024, abgerufen am 29.01.2025}
+      \field{title}{A Comprehensive Overview of Large Language Models}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/2307.06435
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/2307.06435
+      \endverb
+    \endentry
+    \entry{sakaguchi2019winogrande}{online}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=2ef5282e419ad154ce7123ca203eb5df}{%
+           family={Sakaguchi},
+           familyi={S\bibinitperiod},
+           given={Keisuke},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aeba30798273c8a631cf1c9fb001f55e}{%
+           family={Le\bibnamedelima Bras},
+           familyi={L\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Ronan},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=20df713d546ee2c6e80616045b46e401}{%
+           family={Bhagavaula},
+           familyi={B\bibinitperiod},
+           given={Chandra},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=64d48b2f4b0370b6692c87cfc65f19b9}{%
+           family={Choi},
+           familyi={C\bibinitperiod},
+           given={Yejin},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{328e26211848d93f2e5b84ef76dec9d5}
+      \strng{fullhash}{2a5f6a5553fe09a03247bbc349429696}
+      \strng{bibnamehash}{2a5f6a5553fe09a03247bbc349429696}
+      \strng{authorbibnamehash}{2a5f6a5553fe09a03247bbc349429696}
+      \strng{authornamehash}{328e26211848d93f2e5b84ef76dec9d5}
+      \strng{authorfullhash}{2a5f6a5553fe09a03247bbc349429696}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Version 2 vom 21.11.2019, abgerufen am 22.02.2025}
+      \field{title}{WINOGRANDE: An Adversarial Winograd Schema Challenge at Scale}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/1907.10641
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/1907.10641
+      \endverb
+    \endentry
+    \entry{sakai2022structured}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=be277c772a1e533e2e76679c117c16fd}{%
+           family={Sakai},
+           familyi={S\bibinitperiod},
+           given={Yasufumi},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a5d10295bd31767fc33709c63627841c}{%
+           family={Eto},
+           familyi={E\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=986bc098c35452edfbc5710e9d3c456e}{%
+           family={Teranishi},
+           familyi={T\bibinitperiod},
+           given={Yuta},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a7fd238b4bde1aebdecdeb676354f345}
+      \strng{fullhash}{a7fd238b4bde1aebdecdeb676354f345}
+      \strng{bibnamehash}{a7fd238b4bde1aebdecdeb676354f345}
+      \strng{authorbibnamehash}{a7fd238b4bde1aebdecdeb676354f345}
+      \strng{authornamehash}{a7fd238b4bde1aebdecdeb676354f345}
+      \strng{authorfullhash}{a7fd238b4bde1aebdecdeb676354f345}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Advances in Information Technology}
+      \field{number}{3}
+      \field{title}{Structured Pruning for Deep Neural Networks with Adaptive Pruning Rate Derivation Based on Connection Sensitivity and Loss Function}
+      \field{volume}{13}
+      \field{year}{2022}
+      \field{pages}{295\bibrangedash 300}
+      \range{pages}{6}
+    \endentry
+    \entry{vadera2022methods}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b523893b9ad9d6b9afd2f7bab251addd}{%
+           family={Vadera},
+           familyi={V\bibinitperiod},
+           given={Sunil},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cf24be46cdcf69f2c11e207df4d0f4df}{%
+           family={Ameen},
+           familyi={A\bibinitperiod},
+           given={Salem},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3d4484a3b641e21f52c2964adc2761f4}
+      \strng{fullhash}{3d4484a3b641e21f52c2964adc2761f4}
+      \strng{bibnamehash}{3d4484a3b641e21f52c2964adc2761f4}
+      \strng{authorbibnamehash}{3d4484a3b641e21f52c2964adc2761f4}
+      \strng{authornamehash}{3d4484a3b641e21f52c2964adc2761f4}
+      \strng{authorfullhash}{3d4484a3b641e21f52c2964adc2761f4}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Access}
+      \field{note}{abgerufen am 18.02.2025}
+      \field{title}{Methods for Pruning Deep Neural Networks}
+      \field{volume}{10}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9795013
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9795013
+      \endverb
+    \endentry
+    \entry{wang2025adapt}{online}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=a50fe23b037ab59fddd69da525ac6c8b}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Boyao},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=831f24760397af13941a5027ba822566}{%
+           family={Pan},
+           familyi={P\bibinitperiod},
+           given={Rui},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8c28275e8cfabdf529772f268821a42e}{%
+           family={Diao},
+           familyi={D\bibinitperiod},
+           given={Shizhe},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f325edf9a2c37a451ab4352e9c82ad2a}{%
+           family={Pan},
+           familyi={P\bibinitperiod},
+           given={Xingyuan},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=723de253168077cb6f2149e17b12204b}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Jipeng},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dccd79bf13cee6f34da2f6964908ae84}{%
+           family={Pi},
+           familyi={P\bibinitperiod},
+           given={Renjie},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=55926e2ed0c54f92266d978954a4cdc3}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Tong},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f12fabab0a6e007db21b8d988c2331a4}
+      \strng{fullhash}{5991c34c7d3b599e8f50bafbe0398745}
+      \strng{bibnamehash}{5991c34c7d3b599e8f50bafbe0398745}
+      \strng{authorbibnamehash}{5991c34c7d3b599e8f50bafbe0398745}
+      \strng{authornamehash}{f12fabab0a6e007db21b8d988c2331a4}
+      \strng{authorfullhash}{5991c34c7d3b599e8f50bafbe0398745}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{vom 05.02.2025, abgerufen am 08.02.2025}
+      \field{title}{Adapt-Pruner: Adaptive structural pruning for efficient small language Model Training}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/2502.03460v1
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/2502.03460v1
+      \endverb
+    \endentry
+    \entry{zellers2019hellaswag}{online}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=560f431bda2e90c8056046656d2b7f8b}{%
+           family={Zellers},
+           familyi={Z\bibinitperiod},
+           given={Rowan},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c32ace2a5a2590ef3542c3713e05925d}{%
+           family={Holtzman},
+           familyi={H\bibinitperiod},
+           given={Ari},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4cc4ca13eda1b8380f1589532b8e33ae}{%
+           family={Bisk},
+           familyi={B\bibinitperiod},
+           given={Yonatan},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=396c6ddedb6f986906fc3e4994d19974}{%
+           family={Farhadi},
+           familyi={F\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=64d48b2f4b0370b6692c87cfc65f19b9}{%
+           family={Choi},
+           familyi={C\bibinitperiod},
+           given={Yejin},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e05dc940235129beef8f8ca25a386705}
+      \strng{fullhash}{f6687d08ef441f6ce2eb6407dc46b06e}
+      \strng{bibnamehash}{f6687d08ef441f6ce2eb6407dc46b06e}
+      \strng{authorbibnamehash}{f6687d08ef441f6ce2eb6407dc46b06e}
+      \strng{authornamehash}{e05dc940235129beef8f8ca25a386705}
+      \strng{authorfullhash}{f6687d08ef441f6ce2eb6407dc46b06e}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{vom 19.05.2019, abgerufen am 21.02.2021}
+      \field{title}{HellaSwag: Can a Machine Really Finish Your Sentence?}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/1905.07830
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/1905.07830
+      \endverb
+    \endentry
+    \entry{zhu2022prune}{online}{}
+      \name{author}{2}{}{%
+        {{un=1,uniquepart=given,hash=d69a2bac4c935fdb0ac600d4b1d5d60c}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=5a75b429a7eb88510d2178abc1842b82}{%
+           family={Gupta},
+           familyi={G\bibinitperiod},
+           given={Suyog},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a5150f8e36d69ca1e361af6530eeb3dc}
+      \strng{fullhash}{a5150f8e36d69ca1e361af6530eeb3dc}
+      \strng{bibnamehash}{a5150f8e36d69ca1e361af6530eeb3dc}
+      \strng{authorbibnamehash}{a5150f8e36d69ca1e361af6530eeb3dc}
+      \strng{authornamehash}{a5150f8e36d69ca1e361af6530eeb3dc}
+      \strng{authorfullhash}{a5150f8e36d69ca1e361af6530eeb3dc}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Version 2 vom 13.11.2017, abgerufen am 08.02.2025}
+      \field{title}{To prune, or not to prune: exploring the efficacy of pruning for model compression}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/1710.01878
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/1710.01878
+      \endverb
     \endentry
   \enddatalist
 \endrefsection
