@@ -1,0 +1,125 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{Cheng2024}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=3938da89ea669ec404e5c2d993a2453f}{%
+           family={Cheng},
+           familyi={C\bibinitperiod},
+           given={Hongrong},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=65a6d2d755deef911f45c4634c09bdde}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Miao},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3b41be9785cf572ff38427b40393464f}{%
+           family={Shi},
+           familyi={S\bibinitperiod},
+           given={Javen\bibnamedelima Qinfeng},
+           giveni={J\bibinitperiod\bibinitdelim Q\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{800e34ef87c3e3b7bb2d812c2cf21d5c}
+      \strng{fullhash}{800e34ef87c3e3b7bb2d812c2cf21d5c}
+      \strng{bibnamehash}{800e34ef87c3e3b7bb2d812c2cf21d5c}
+      \strng{authorbibnamehash}{800e34ef87c3e3b7bb2d812c2cf21d5c}
+      \strng{authornamehash}{800e34ef87c3e3b7bb2d812c2cf21d5c}
+      \strng{authorfullhash}{800e34ef87c3e3b7bb2d812c2cf21d5c}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv}
+      \field{note}{Version 2, abgerufen am 08.02.2025}
+      \field{title}{A Survey on Deep Neural Network Pruning: Taxonomy, Comparison, Analysis, and Recommendations}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/2308.06767
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/2308.06767
+      \endverb
+    \endentry
+    \entry{Lu2024}{misc}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=1d1fb06f744e43890d04aa354a1016ed}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Qinghua},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c10b260d67a13ae922e9d8c5819ce74d}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Liming},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=268fd6e7a95a4d5d0ad195cf0a184d4c}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Xiwei},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4ea6157adaa214ea9a0734bb53dd8492}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yue},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4ae2acd2b75c048ed13c08ebfc75e822}{%
+           family={Xing},
+           familyi={X\bibinitperiod},
+           given={Zhenchang},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f42be51b18acc9d06c06516a449485ce}{%
+           family={Whittle},
+           familyi={W\bibinitperiod},
+           given={Jon},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d9d89f45361ed6733f4fc3ab9b21b728}
+      \strng{fullhash}{3314faea0e9fb7b929808dd02283268a}
+      \strng{bibnamehash}{3314faea0e9fb7b929808dd02283268a}
+      \strng{authorbibnamehash}{3314faea0e9fb7b929808dd02283268a}
+      \strng{authornamehash}{d9d89f45361ed6733f4fc3ab9b21b728}
+      \strng{authorfullhash}{3314faea0e9fb7b929808dd02283268a}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://arxiv.org/pdf/2305.05352v6}}
+      \field{note}{Version 1 vom 22.01.2024, abgerufen am 29.01.2025}
+      \field{title}{A TAXONOMY OF FOUNDATION MODEL BASED SYSTEMS THROUGH THE LENS OF SOFTWARE ARCHITECTURE}
+      \field{year}{2024}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
