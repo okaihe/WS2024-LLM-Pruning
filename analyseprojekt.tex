@@ -1,7 +1,15 @@
 \documentclass[12pt]{article}
 
 % Packages
-\usepackage[a4paper,left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm,footskip=1cm]{geometry}
+\usepackage[a4paper,
+            bindingoffset=0.2in,
+            left=4cm,
+            right=2cm,
+            top=3cm,
+            bottom=3cm,
+            footskip=1cm,
+            footnotesep=1cm
+            ]{geometry}
 \usepackage{xcolor} \usepackage[explicit]{titlesec}
 \usepackage[colorlinks=false]{hyperref}
 \usepackage{graphicx}
@@ -16,6 +24,7 @@
 \usepackage{multirow}
 \usepackage{booktabs}
 \usepackage{float}
+
 
 \newcommand{\langde}[1]{%
    \ifde\selectlanguage{ngerman}#1\fi}
@@ -42,8 +51,6 @@
 ]{biblatex}
 
 \DeclareInnerCiteDelims{footcite}{\bibopenparen}{\bibcloseparen}
-
-
 \DeclareFieldFormat[article,book,inbook,incollection,inproceedings]{year}{\mkbibparens{#1}:} 
 \DefineBibliographyStrings{ngerman}{
    andothers = {{et\,al\adddot}},
@@ -93,23 +100,40 @@
 % Document
 \begin{document}
 \begin{sloppypar}
-	\maketitle
-	\thispagestyle{empty}
-	\vfill
+        \newgeometry{
+            bindingoffset = 0.2in,
+            left = 2cm,
+            right = 2cm,
+            top = 2cm,
+            bottom = 3cm,
+            footskip = 2cm
+        }
+        \maketitle
+        \thispagestyle{empty}
+        \vfill
 
-	{\fontsize{14pt}{18pt}\selectfont
-		\begin{center}
-			\begin{tabular}{ l @{\hspace{3cm}} l }
-				Gutachter: & Prof. Dr. Rüdiger Buchkremer \\
-				Zeitraum:  & 01.09.2024 - 28.02.2025      \\
-				Semester:  & 3333 dp                      \\
-				Modul:     & Big-Data-Analyseprojekt
-			\end{tabular}
-		\end{center}
-	}
+        {\fontsize{14pt}{18pt}\selectfont
+            \begin{center}
+                \begin{tabular}{ l @{\hspace{3cm}} l }
+                    Gutachter: & Prof. Dr. Rüdiger Buchkremer \\
+                    Zeitraum:  & 01.09.2024 - 28.02.2025      \\
+                    Semester:  & 3                            \\
+                    Modul:     & Big-Data-Analyseprojekt
+                \end{tabular}
+            \end{center}
+        }
+        \clearpage
+        \restoregeometry
 	\newpage
 	\setcounter{page}{1}
 	\pagenumbering{Roman}
+
+    \listoffigures
+    \newpage
+
+    \listoftables
+    \newpage
+
 
 	\renewcommand{\contentsname}{Inhaltsverzeichnis}
 	\tableofcontents

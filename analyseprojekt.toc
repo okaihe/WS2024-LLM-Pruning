@@ -6,27 +6,28 @@
 \contentsline {subsection}{\numberline {2.2}Effizienzoptimierung mittels Pruning}{4}{subsection.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.1}Strukturelles Pruning}{4}{subsubsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.2}Unstrukturelles Pruning}{5}{subsubsection.2.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.3}Adaptive Pruning Verfahren}{5}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.3}Adaptive Pruning Verfahren}{6}{subsubsection.2.2.3}%
 \contentsline {subsubsection}{\numberline {2.2.4}Weitere Möglichkeiten der Kategorisierung von Pruning}{6}{subsubsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.3}Bewertungskriterien}{8}{subsection.2.3}%
-\contentsline {section}{\numberline {3}Methodik}{11}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Literaturrecherche}{11}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Arbeitsorganisation}{11}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Entwicklungsumgebung}{11}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Verwendetes Large Language Model}{13}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Pruning}{14}{subsection.3.5}%
-\contentsline {subsubsection}{\numberline {3.5.1}Verwendetes Framework}{14}{subsubsection.3.5.1}%
-\contentsline {subsubsection}{\numberline {3.5.2}Durchführung des Prunings}{15}{subsubsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.6}Fine-Tuning}{16}{subsection.3.6}%
-\contentsline {subsection}{\numberline {3.7}Evaluierung der Modelle}{17}{subsection.3.7}%
-\contentsline {subsubsection}{\numberline {3.7.1}Modell-Benchmarks}{17}{subsubsection.3.7.1}%
-\contentsline {subsubsection}{\numberline {3.7.2}Modellperfomance}{19}{subsubsection.3.7.2}%
-\contentsline {section}{\numberline {4}Ergebnisse}{20}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Evaluierung Basismodell}{20}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Tatsächliche Anzahl geprunter Parameter}{21}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Evaluierung Pruning zu 30\%}{22}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Evaluierung Pruning zu 40\%}{24}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Evaluierung Pruning zu 70\%}{25}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Rechenanforderungen}{26}{subsection.4.6}%
-\contentsline {section}{\numberline {5}Diskussion}{27}{section.5}%
-\contentsline {section}{\numberline {6}Fazit}{28}{section.6}%
+\contentsline {subsection}{\numberline {2.3}Bewertungskriterien}{9}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Methodik}{12}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Literaturrecherche}{12}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Arbeitsorganisation}{12}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Entwicklungsumgebung}{12}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Verwendetes Large Language Model}{14}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Pruning}{15}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Verwendetes Framework}{15}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Durchführung des Prunings}{16}{subsubsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.6}Fine-Tuning}{18}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Evaluierung der Modelle}{19}{subsection.3.7}%
+\contentsline {subsubsection}{\numberline {3.7.1}Modell-Benchmarks}{19}{subsubsection.3.7.1}%
+\contentsline {subsubsection}{\numberline {3.7.2}Speicherverbrauch und Rechenleistung}{20}{subsubsection.3.7.2}%
+\contentsline {section}{\numberline {4}Ergebnisse}{22}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Evaluierung Basismodell}{22}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Tatsächliche Anzahl geprunter Parameter}{24}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Evaluierung der reduzierten Modelle}{25}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Evaluierung Pruning zu 30\%}{25}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Evaluierung Pruning zu 40\%}{27}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Evaluierung Pruning zu 70\%}{28}{subsubsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.4}Rechenanforderungen}{29}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Diskussion}{30}{section.5}%
+\contentsline {section}{\numberline {6}Fazit}{31}{section.6}%

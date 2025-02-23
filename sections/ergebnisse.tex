@@ -1,8 +1,8 @@
 \section{Ergebnisse}\label{ergebnisse}
 
 Im folgenden Kapitel werden die Ergebnisse der Evaluierungen und Tests der
-geprunten sowie teilweise anschließend trainierten Modelle vorgestellt. Dabei
-liegt der Fokus insbesondere auf den ermittelten Perplexity-Werten sowie den
+geprunten sowie teilweise anschließend trainierten Modelle vorgestellt. Der
+Fokus liegt dabei insbesondere auf den ermittelten Perplexity-Werten sowie den
 Ergebnissen der Tests mit dem \emph{lm-evaluation-harness}-Framework. Die
 verschiedenen Pruning-Stufen und die dabei verwendeten Methoden werden einzeln
 analysiert, bevor abschließend ein umfassender Gesamtüberblick über die
@@ -15,20 +15,20 @@ Tests evaluiert werden. Als Basismodell dient hierbei das
 \emph{TinyLlama}-Modell (\emph{TinyLlama/TinyLlama-1.1B-Chat-v1.0}). Die
 Darstellung der Ergebnisse orientiert sich an den vom \emph{LLM-Pruner} für
 andere Modelle bereitgestellten Resultaten, um eine einheitliche
-Vergleichbarkeit zu ermöglichen.
+Vergleichbarkeit zu gewährleisten.
 
 Die Spalte \emph{Average} gibt den Durchschnitt der getesteten \emph{Tasks}
 wieder. Die Ergebnisse für \emph{WikiText2} und \emph{PTB} werden dabei nicht in
 diese Berechnung einbezogen, da bei diesen Benchmarks ein niedrigerer Score eine
 bessere Leistung des Modells widerspiegelt.
 
-Die zusammengefassten Ergebnisse sind in der folgenden Tabelle
-dargestellt:
+Die zusammengefassten Ergebnisse sind in der folgenden Tabelle dargestellt:
 
 \begin{table}[h]
 	\centering
 	\resizebox{\textwidth}{!}{
 		\begin{tabular}{l l | c c | c c c c c | r}
+			\toprule
 			\toprule
 			\textbf{Pruning Ratio}      & \textbf{Method} & \textbf{WikiText2} &
 			\textbf{PTB}                & \textbf{BoolQ}  & \textbf{HellaSwag} &
@@ -37,13 +37,13 @@ dargestellt:
 			\midrule
 			\multirow{1}{*}{Pruned 0\%} & --              & 7.97               & 20.76 &
 			61.31                       & 46.15           & 60.30              &
-			30.12                       & 24.20           & 39,58                        \\
-			\midrule
+			30.12                       & 24.20           & 39.58                        \\
+			\bottomrule
+			\bottomrule
 		\end{tabular}}
 	\caption{Evaluierung des Basismodells}
 	\label{tab:pruning}
 \end{table}
-
 
 Wie hier zu erkennen ist, weist das Basismodell bereits einen vergleichsweise
 niedrigen Score von \emph{39,58} auf. Zum Vergleich: In den Ergebnissen des
@@ -60,12 +60,12 @@ Problem dar.
 
 \subsection{Tatsächliche Anzahl geprunter Parameter}\label{param_count}
 
-Anhand der Modellevaluierungen, die nach dem dem Pruning über das
-Evaluierungsskript erstellt wurden, lässt sich schnell erkennen, dass die im
-Befehl angegebene Menge an zu prunenden Parametern bzw. das definierte
-Verhältnis nicht exakt so vom \emph{LLM-Pruner} umgesetzt wird.
+Anhand der Modellevaluierungen, die nach dem Pruning über das Evaluierungsskript
+erstellt wurden, lässt sich schnell erkennen, dass die im Befehl angegebene
+Menge an zu prunenden Parametern bzw. das definierte Verhältnis nicht exakt vom
+\emph{LLM-Pruner} umgesetzt wird.
 
-Am Beispiel des \emph{30\%}-Prunings sieht dies wie folgt aus: Bei einer
+Am Beispiel des \emph{30\%}-Prunings zeigt sich dies wie folgt: Bei einer
 angegebenen Pruning-Ratio von \emph{30\%} wäre zu erwarten, dass nach dem
 Pruning noch \emph{70\%} der ursprünglichen Parameter des Basismodells erhalten
 bleiben. Tatsächlich sind es in diesem Fall jedoch \emph{73,06\%}, also
@@ -73,8 +73,8 @@ bleiben. Tatsächlich sind es in diesem Fall jedoch \emph{73,06\%}, also
 
 Noch deutlicher wird diese Abweichung bei einer Pruning-Ratio von \emph{70\%}.
 Hier sollten theoretisch nur noch \emph{30\%} der Parameter im Modell
-verbleiben, tatsächlich sind es jedoch noch \emph{55,08\%}, was einer Differenz
-von \emph{25,08\%} entspricht.
+verbleiben, tatsächlich sind es jedoch \emph{55,08\%}, was einer Differenz von
+\emph{25,08\%} entspricht.
 
 Diese Diskrepanz muss bei der Interpretation der nachfolgenden Ergebnisse
 berücksichtigt werden, da die angegebenen Verhältnisse nicht mit den
@@ -82,27 +82,32 @@ tatsächlichen übereinstimmen.
 
 \begin{table}[h]
 	\centering
-	\begin{tabular}{c | c c | c }
-		\toprule
-		\textbf{Specified ratio} & \textbf{\#Parameters before} & \textbf{\#Parameters after} & \textbf{Actual ratio} \\
-		\midrule
-		30\%                     & 1261.53 Mio                  & 921.65 Mio                  & 73.06\%               \\
-		40\%                     & 1261.53 Mio                  & 873.22 Mio                  & 69.21\%               \\
-		70\%                     & 1261.53 Mio                  & 694.83 Mio                  & 55,08\%               \\
-		\midrule
-	\end{tabular}
+	\resizebox{\textwidth}{!}{
+		\begin{tabular}{c | c c | c }
+			\toprule
+			\toprule
+			\textbf{Specified ratio} & \textbf{\#Parameters before} & \textbf{\#Parameters after} & \textbf{Actual ratio} \\
+			\midrule
+			30\%                     & 1261.53 Mio                  & 921.65 Mio                  & 73.06\%               \\
+			40\%                     & 1261.53 Mio                  & 873.22 Mio                  & 69.21\%               \\
+			70\%                     & 1261.53 Mio                  & 694.83 Mio                  & 55,08\%               \\
+			\bottomrule
+			\bottomrule
+		\end{tabular}}
 	\caption{Anzahl der vorhandenen Parameter nach dem Pruning}
 	\label{tab:actualparameters}
 \end{table}
 
 \newpage
 
-\subsection{Evaluierung Pruning zu 30\%}\label{evaluation-30}
+\subsection{Evaluierung der reduzierten Modelle}
+
+\subsubsection{Evaluierung Pruning zu 30\%}\label{evaluation-30}
 
 In Tabelle \ref{tab:pruning30} sind die Ergebnisse der geprunten Modelle sowie
 die des Basismodells dargestellt. Getestet wurden – wie in Kapitel
 \ref{methodik} beschrieben – die \emph{Tasks} BoolQ, HellaSwag, WinoGrande,
-Arc-Challenge und OpenBookQA. Zusätzlich wurde die \emph{Perplexity} anhand der
+ARC-Challenge und OpenBookQA. Zusätzlich wurde die \emph{Perplexity} anhand der
 Datensätze WikiText2 und PTB ermittelt.
 
 \vspace{1em}
@@ -151,8 +156,8 @@ Datensätze WikiText2 und PTB ermittelt.
 	\label{tab:pruning30}
 \end{table}
 
-Es ist wichtig zu beachten, dass die tatsächliche Anzahl an Parametern im
-Vergleich zum Basismodell nur um \emph{16,22\%} reduziert wurde – und nicht, wie
+Es ist wichtig zu beachten, dass die tatsächliche Anzahl der Parameter im
+Vergleich zum Basismodell nur um \emph{26,94\%} reduziert wurde – und nicht, wie
 ursprünglich erwartet, um volle \emph{30\%}. Die Tests wurden unmittelbar nach
 dem Pruning durchgeführt, ohne dass ein erneutes Fine-Tuning erfolgte.
 
@@ -165,10 +170,10 @@ schlechtere \emph{Perplexity} in beiden Datensätzen im Vergleich zur
 \emph{BoolQ}-Task um \emph{5,39} Prozentpunkte besser abgeschnitten hat als die
 \emph{Taylor}-Methode.
 
-Die \emph{Random}-Methode weist mit dessen Resultaten Ähnlichkeiten zu der
-\emph{L2}-Methode auf und schneidet somit ebenfalls schlechter als
-\emph{Taylor}-Methode ab. Hier sind somit keine weiteren Auffälligkeiten
-Hervorzuheben.
+Die \emph{Random}-Methode weist mit ihren Resultaten Ähnlichkeiten zur
+\emph{L2}-Methode auf und schneidet somit ebenfalls schlechter als die
+\emph{Taylor}-Methode ab. Hier sind keine weiteren Auffälligkeiten
+hervorzuheben.
 
 Am schlechtesten hat die \emph{L1}-Methode abgeschnitten: Das daraus
 resultierende Modell weist extrem schlechte \emph{Perplexity}-Werte auf, und
@@ -176,16 +181,17 @@ auch der Durchschnitt der \emph{Tasks} liegt im Vergleich zu den anderen
 Methoden deutlich niedriger.
 
 In der letzten Zeile der Tabelle sind zusätzlich die Ergebnisse des
-nachtrainierten Taylor-Modells zu sehen. Leider konnten hier nicht ähnliche
-Ergebnisse wie in der Dokumentation des \emph{LLM-Pruners} erzielt werden. Nach
-einem dreistündigen Post-Training ist der Durchschnittswert von 39,85 auf 37,79
-gesunken. Das Modell hat damit nach dem Post-Training schlechtere Ergebnisse
-geliefert als davor. Allein in den Evaluierungsaufgaben \emph{HellaSwag} und
-\emph{ARC-c} konnte eine leichte Steigerung erzielt werden.
+nachtrainierten Taylor-Modells zu sehen. Leider konnten hier keine
+vergleichbaren Ergebnisse wie in der Dokumentation des \emph{LLM-Pruners}
+erzielt werden. Nach einem dreistündigen Post-Training ist der Durchschnittswert
+von 39,85 auf 37,79 gesunken. Das Modell hat damit nach dem Post-Training
+schlechtere Ergebnisse geliefert als zuvor. Lediglich in den
+Evaluierungsaufgaben \emph{HellaSwag} und \emph{ARC-c} konnte eine leichte
+Steigerung erzielt werden.
 
 \newpage
 
-\subsection{Evaluierung Pruning zu 40\%}
+\subsubsection{Evaluierung Pruning zu 40\%}
 
 In Tabelle \ref{tab:pruning40} sind die Inhalte der Tabelle
 \ref{tab:pruning30} ergänzt um die Ergebnisse der Tests zu den Modellen, die mit
@@ -206,7 +212,7 @@ vier möglichen Methoden angewendet und getestet.
 
 			\multirow{1}{*}{Pruned 0\%}  & --              & 7.97               & 20.76
 			                             & 61.31           & 46.15              & 60.30
-			                             & 30.12           & 24.20              & 39,58            \\
+			                             & 30.12           & 24.20              & 39.58            \\
 
 			\midrule
 
@@ -257,12 +263,31 @@ vier möglichen Methoden angewendet und getestet.
 	\label{tab:pruning40}
 \end{table}
 
-Auch hier zeigt sich, dass die Taylor-Methode die vielversprechendsten Ergebnisse erzielt.
+Auch hier zeigt sich, dass die \emph{Taylor}-Methode die vielversprechendsten
+Ergebnisse erzielt. Mit einem durchschnittlichen Score von 37.89 übersteigt die
+Methode bei einer angegebenen Pruning-Ratio von 40\% bzw. tatsächlichen
+Pruning-Ratio von 30,79\% noch ein besseres Ergebnis als die nachtrainierte
+Version des 30\%-Modells.
+
+Ebenso erzielt die \emph{L1} erneut im Vergleich die schlechtesten Ergebnisse.
+Mit einer Perplexity von ca. 14.000 erreicht diese Methode ein extrem schlechtes
+Ergebnis. Deutlich schlechter in den Tests schneidet die Methode insbesondere
+bei den beiden Tasks \emph{BoolQ} und \emph{HellaSwag} ab.
+
+Die \emph{L2}-Methode erzielt wiederholt ähnliche, wenn auch leicht schlechtere,
+Ergebnisse als die \emph{Taylor}-Methode. Die \emph{Random}-Methode liegt ebenso
+erneut auf dem 3. Platz.
 
 \newpage
 
-\subsection{Evaluierung Pruning zu 70\%}
+\subsubsection{Evaluierung Pruning zu 70\%}
 
+Zuletzt wird das Modell betrachtet, das mit einer angegebenen Pruning-Ratio von
+70\% reduziert wurde (tatsächlich nur um 44,92\%). Zu sehen in Tabelle
+\ref{tab:pruning70} sind die vorherigen Ergebnisse erweitert um die Resultate
+der vier Methoden, mit denen das Modell reduziert wurde.
+
+\vspace{1em}
 \begin{table}[h]
 	\centering
 	\resizebox{\textwidth}{!}{
@@ -275,7 +300,7 @@ Auch hier zeigt sich, dass die Taylor-Methode die vielversprechendsten Ergebniss
 			\midrule
 			\multirow{1}{*}{Pruned 0\%}  & --              & 7.97               & 20.76
 			                             & 61.31           & 46.15              & 60.30
-			                             & 30.12           & 24.20              & 39,58            \\
+			                             & 30.12           & 24.20              & 39.58            \\
 
 			\midrule
 			\multirow{4}{*}{Pruned 30\%} & Taylor          & 15.19              & 43.19
@@ -343,33 +368,53 @@ Auch hier zeigt sich, dass die Taylor-Methode die vielversprechendsten Ergebniss
 	\label{tab:pruning70}
 \end{table}
 
+Die \emph{Taylor}-Methode schneidet hierbei bezüglich des durchschnittlichen
+Scores – abgesehen von der Perplexity – zum ersten Mal nicht am besten unter den
+vier zur Verfügung stehenden Methoden ab, sondern belegt Platz drei. Unter
+Berücksichtigung der Perplexity auf den beiden Testdatensätzen, die im Vergleich
+deutlich besser ist, lässt sich jedoch zusammenfassend sagen, dass sie auch hier
+die vielversprechendste Methode ist.
+
+Bezüglich der fünf Tests führt hierbei die \emph{L2}-Methode, erzielt jedoch,
+wie bereits erwähnt, hinsichtlich der Perplexity deutlich schlechtere Resultate.
+
+Interessant ist jedoch, dass bei einer so hohen Pruning-Ratio wie hier angegeben
+die Ergebnisse nicht wesentlich schlechter als die des Basismodells ausfallen.
+
 \newpage
 \subsection{Rechenanforderungen}
 
 Zuletzt werden die Auswirkungen des Prunings auf die Rechenkomplexität (engl.
-Computational Complexity) und benötigten Speicheranforderungen an die GPU (engl.
-GPU Memory Requirement) betrachtet. Die Ergebnisse der Evaluierungen sind in
-Tabelle \ref{tab:memory} dargestellt. Zu sehen ist, dass entsprechend der
-Abnahme der tatsächlichen Parametern ebenso ungefähr proportional die
-Rechenkomplexität abnimmt. Mit einem angegebenen Pruning-Verhältnis von 30\% und
-tatsächlich verbleibenden Parametern von 73,06\% konnte die Rechenkomplexität
+Computational Complexity) und die benötigten Speicheranforderungen an die GPU
+(engl. GPU Memory Requirement) betrachtet. Die Ergebnisse der Evaluierungen sind
+in Tabelle \ref{tab:memory} dargestellt. Zu sehen ist, dass mit der Abnahme der
+tatsächlichen Parameter auch die Rechenkomplexität ungefähr proportional sinkt.
+Bei einem angegebenen Pruning-Verhältnis von 30\% und tatsächlich verbleibenden
+73,06\% der Parameter konnte die Rechenkomplexität um 29,13\% reduziert werden.
 
+Gleiches gilt für die Speicheranforderungen an die GPU, die in etwa im selben
+Maße abnehmen, wie die Anzahl der Parameter im Modell reduziert wird.
 
 \begin{table}[h]
 	\centering
 	\resizebox{\textwidth}{!}{
-		\begin{tabular}{l | c c | c c | c }
+		\begin{tabular}{l c | c c | c c }
 			\toprule
 			\toprule
-			\textbf{Pruning ratio} & \textbf{Computational Complexity} & \textbf{Ratio} & \textbf{GPU Memory Requirement} & \textbf{Ratio} & \textbf{Ratio Parameters} \\
+			\textbf{Pruning ratio} & \textbf{Parameters left} & \textbf{Computational Complexity} & \textbf{Ratio} & \textbf{GPU Memory Requirement} & \textbf{Ratio} \\
 			\midrule
-			Pruned 0\%             & 77.32 GMac                        & 100\%          & 2427.31 MiB                     & 100\%          & 100\%                     \\
-			Pruned 30\%            & 54.8 GMac                         & 70.87\%        & 1793.30 MiB                     & 73,86\%        & 73.06\%                   \\
-			Pruned 40\%            & 51.7 GMac                         & 66.86\%        & 1709.30 MiB                     & 70,31\%        & 69.21\%                   \\
-			Pruned 70\%            & 40.28 GMac                        & 52,09\%        & 1337.05 MiB                     & 55,08\%        & 55,08\%                   \\
+			Pruned 0\%             & 100\%                    & 77.32 GMac                        & 100\%          & 2427.31 MiB                     & 100\%          \\
+			Pruned 30\%            & 73.06\%                  & 54.8 GMac                         & 70.87\%        & 1793.30 MiB                     & 73,86\%        \\
+			Pruned 40\%            & 69.21\%                  & 51.7 GMac                         & 66.86\%        & 1709.30 MiB                     & 70,31\%        \\
+			Pruned 70\%            & 55,08\%                  & 40.28 GMac                        & 52,09\%        & 1337.05 MiB                     & 55,08\%        \\
 			\bottomrule
 			\bottomrule
 		\end{tabular}}
 	\caption{Speicheransprüche nach dem Pruning}
 	\label{tab:memory}
 \end{table}
+
+Das ist insofern nicht weiter überraschend, als die Speicheranforderungen und
+die benötigte Rechenleistung von der Anzahl der Parameter abhängen, von der
+wiederum die Anzahl der durchzuführenden mathematischen Operationen bestimmt
+wird.

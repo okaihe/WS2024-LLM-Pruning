@@ -1,15 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'analyseprojekt.blg'
-[25] biber-darwin:340> INFO - === Sat Feb 22, 2025, 23:51:39
-[30] Biber.pm:419> INFO - Reading 'analyseprojekt.bcf'
-[58] Biber.pm:979> INFO - Found 18 citekeys in bib section 0
-[64] Biber.pm:4419> INFO - Processing section 0
-[67] Biber.pm:4610> INFO - Looking for bibtex file 'literatur.bib' for section 0
-[68] bibtex.pm:1713> INFO - LaTeX decoding ...
-[73] bibtex.pm:1519> INFO - Found BibTeX data source 'literatur.bib'
-[147] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[147] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[147] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'de-DE'
-[147] Biber.pm:4245> INFO - No sort tailoring available for locale 'de-DE'
-[158] bbl.pm:660> INFO - Writing 'analyseprojekt.bbl' with encoding 'UTF-8'
-[164] bbl.pm:763> INFO - Output to analyseprojekt.bbl
+[26] biber-darwin:340> INFO - === Sun Feb 23, 2025, 19:52:01
+[32] Biber.pm:419> INFO - Reading 'analyseprojekt.bcf'
+[59] Biber.pm:979> INFO - Found 19 citekeys in bib section 0
+[65] Biber.pm:4419> INFO - Processing section 0
+[69] Biber.pm:4610> INFO - Looking for bibtex file 'literatur.bib' for section 0
+[70] bibtex.pm:1713> INFO - LaTeX decoding ...
+[75] bibtex.pm:1519> INFO - Found BibTeX data source 'literatur.bib'
+[148] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[148] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[148] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'de-DE'
+[148] Biber.pm:4245> INFO - No sort tailoring available for locale 'de-DE'
+[160] bbl.pm:660> INFO - Writing 'analyseprojekt.bbl' with encoding 'UTF-8'
+[166] bbl.pm:763> INFO - Output to analyseprojekt.bbl

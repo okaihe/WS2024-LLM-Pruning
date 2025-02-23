@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.22)  22 FEB 2025 23:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.22)  23 FEB 2025 22:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -623,24 +623,24 @@ Package csquotes Info: Redefining alias 'default' -> 'ngerman'.
  (./analyseprojekt.aux (./sections/einleitung.aux) (./sections/theorie.aux) (./sections/methodik.aux) (./sections/ergebnisse.aux) (./sections/diskussion.aux) (./sections/fazit.aux))
 \openout1 = `analyseprojekt.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -649,16 +649,17 @@ LaTeX Font Info:    ... okay on input line 94.
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
+* bindingoffset: 14.45377pt
 * modes: 
-* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
-* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* h-part:(L,W,R)=(113.81102pt, 412.33759pt, 56.9055pt)
+* v-part:(T,H,B)=(85.35826pt, 674.33032pt, 85.35826pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=455.24411pt
-* \textheight=702.78308pt
-* \oddsidemargin=-1.1381pt
-* \evensidemargin=-1.1381pt
-* \topmargin=-38.1381pt
+* \textwidth=412.33759pt
+* \textheight=674.33032pt
+* \oddsidemargin=55.9948pt
+* \evensidemargin=41.54103pt
+* \topmargin=-23.91173pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=12.0pt
@@ -666,7 +667,7 @@ LaTeX Font Info:    ... okay on input line 94.
 * \marginparwidth=44.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \skip\footins=28.45274pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -695,7 +696,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 94.
+Package hyperref Info: Link coloring OFF on input line 101.
  (./analyseprojekt.out) (./analyseprojekt.out)
 \@outlinefile=\write4
 \openout4 = `analyseprojekt.out'.
@@ -704,19 +705,19 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \microtypecontext on input line 94.
-Package microtype Info: Applying patch `item' on input line 94.
-Package microtype Info: Applying patch `toc' on input line 94.
-Package microtype Info: Applying patch `eqnum' on input line 94.
-Package microtype Info: Applying patch `footnote' on input line 94.
-Package microtype Info: Applying patch `verbatim' on input line 94.
+LaTeX Info: Redefining \microtypecontext on input line 101.
+Package microtype Info: Applying patch `item' on input line 101.
+Package microtype Info: Applying patch `toc' on input line 101.
+Package microtype Info: Applying patch `eqnum' on input line 101.
+Package microtype Info: Applying patch `footnote' on input line 101.
+Package microtype Info: Applying patch `verbatim' on input line 101.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 94.
+LaTeX Info: Redefining \showhyphens on input line 101.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -746,44 +747,89 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'analyseprojekt.bbl' found.
  (./analyseprojekt.bbl)
-Package biblatex Info: Reference section=0 on input line 94.
-Package biblatex Info: Reference segment=0 on input line 94.
-<images/logo.png, id=128, 770.88pt x 770.88pt>
+Package biblatex Info: Reference section=0 on input line 101.
+Package biblatex Info: Reference segment=0 on input line 101.
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* bindingoffset: 14.45377pt
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 469.2431pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 702.78308pt, 85.35826pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=469.2431pt
+* \textheight=702.78308pt
+* \oddsidemargin=-0.91072pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-52.36449pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=56.9055pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=28.45274pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+<images/logo.png, id=132, 770.88pt x 770.88pt>
 File: images/logo.png Graphic file (type png)
 <use images/logo.png>
-Package pdftex.def Info: images/logo.png  used on input line 97.
+Package pdftex.def Info: images/logo.png  used on input line 112.
 (pdftex.def)             Requested size: 113.81102pt x 113.80379pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 97.
+(Font)              <14.4> on input line 112.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 97.
-LaTeX Font Info:    Calculating math sizes for size <14> on input line 102.
+(Font)              <7> on input line 112.
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 117.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14> on input line 102.
+(Font)              <14> on input line 117.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9.79996> on input line 102.
+(Font)              <9.79996> on input line 117.
  [1
 
-{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./images/logo.png>] (./analyseprojekt.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 3.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 3.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 3.
- [1])
-\tf@toc=\write5
-\openout5 = `analyseprojekt.toc'.
 
- [2]
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./images/logo.png>] (./analyseprojekt.lof
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 2.
+)
+\tf@lof=\write5
+\openout5 = `analyseprojekt.lof'.
+
+ [1
+
+
+] (./analyseprojekt.lot)
+\tf@lot=\write6
+\openout6 = `analyseprojekt.lot'.
+
+ [2] (./analyseprojekt.toc [3])
+\tf@toc=\write7
+\openout7 = `analyseprojekt.toc'.
+
+ [4]
 \openout2 = `sections/einleitung.aux'.
 
  (./sections/einleitung.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.44 	\item I
-             nwiefern [1
+l.39 	\item W
+             elche Frameworks bieten Unterstützung für das Pruning von [1
 
 ]) [2]
 \openout2 = `sections/theorie.aux'.
@@ -795,16 +841,16 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 
 
-] [4] [5] [6{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<images/pruning.png, id=261, 1169.36874pt x 856.19875pt>
+] [4] [5] [6]
+<images/pruning.png, id=289, 1169.36874pt x 856.19875pt>
 File: images/pruning.png Graphic file (type png)
 <use images/pruning.png>
 Package pdftex.def Info: images/pruning.png  used on input line 145.
-(pdftex.def)             Requested size: 409.71692pt x 299.9876pt.
- [7 <./images/pruning.png>] [8] [9] [10])
+(pdftex.def)             Requested size: 371.1013pt x 271.71597pt.
+ [7{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [8 <./images/pruning.png>] [9] [10] [11])
 \openout2 = `sections/methodik.aux'.
 
- (./sections/methodik.tex [11
+ (./sections/methodik.tex [12
 
 
 
@@ -813,7 +859,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 79.
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 81.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
@@ -821,54 +867,54 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [12] [13] [14] [15] [16] [17] [18] [19])
+ [13] [14] [15] [16] [17] [18] [19] [20] [21])
 \openout2 = `sections/ergebnisse.aux'.
 
- (./sections/ergebnisse.tex [20
+ (./sections/ergebnisse.tex [22
 
 
 
-] [21] [22] [23] [24] [25]) [26]
+] [23] [24] [25] [26] [27] [28]) [29]
 \openout2 = `sections/diskussion.aux'.
 
- (./sections/diskussion.tex [27
+ (./sections/diskussion.tex [30
 
 
 
 ])
 \openout2 = `sections/fazit.aux'.
 
- (./sections/fazit.tex) [28
+ (./sections/fazit.tex) [31
 
 
 
-] [29
+] [32
 
 
-] [30] [31] (./analyseprojekt.aux (./sections/einleitung.aux) (./sections/theorie.aux) (./sections/methodik.aux) (./sections/ergebnisse.aux) (./sections/diskussion.aux) (./sections/fazit.aux))
+] [33] [34] (./analyseprojekt.aux (./sections/einleitung.aux) (./sections/theorie.aux) (./sections/methodik.aux) (./sections/ergebnisse.aux) (./sections/diskussion.aux) (./sections/fazit.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `analyseprojekt.out' has not changed.
-(rerunfilecheck)             Checksum: A158752C5D9026B46F8CFA64B92AE015;5240.
+(rerunfilecheck)             Checksum: 79D4996AD8B230AAAAD09B5FC9E41E88;5618.
 Package logreq Info: Writing requests to 'analyseprojekt.run.xml'.
 \openout1 = `analyseprojekt.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24682 strings out of 474116
- 432553 string characters out of 5743682
- 1963187 words of memory out of 5000000
- 46298 multiletter control sequences out of 15000+600000
- 573890 words of font info for 177 fonts, out of 8000000 for 9000
+ 24736 strings out of 474116
+ 433345 string characters out of 5743682
+ 1962187 words of memory out of 5000000
+ 46319 multiletter control sequences out of 15000+600000
+ 574634 words of font info for 186 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 75i,11n,81p,1203b,2505s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,81p,1203b,2599s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
-Output written on analyseprojekt.pdf (34 pages, 1681928 bytes).
+Output written on analyseprojekt.pdf (39 pages, 1690377 bytes).
 PDF statistics:
- 649 PDF objects out of 1000 (max. 8388607)
- 574 compressed objects within 6 object streams
- 210 named destinations out of 1000 (max. 500000)
- 38659 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 697 PDF objects out of 1000 (max. 8388607)
+ 616 compressed objects within 7 object streams
+ 219 named destinations out of 1000 (max. 500000)
+ 38667 words of extra memory for PDF output out of 42996 (max. 10000000)
 

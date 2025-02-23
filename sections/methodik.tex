@@ -46,27 +46,29 @@ einen einfachen Start in das Arbeiten mit Programmen, die die GPU benötigen.
 
 \begin{table}[ht!]
 	\centering
-	\begin{tabular}{|p{3cm}|p{12cm}|}
-		\hline
-		\multicolumn{2}{|c|}{\textbf{Verwendete EC2-Instanz}}                 \\
-		\hline
-		Instanz-Typ   & gd4n.xlarge                                           \\
-		\hline
-		Hauptspeicher & 16GiB                                                 \\
-		\hline
-		vCPU          & 4                                                     \\
-		\hline
-		Clock Speed   & 2.5GHz                                                \\
-		\hline
-		GPU           & nvidia t4 tensor core                                 \\
-		\hline
-		CPU           & Intel Xeon Family                                     \\
-		\hline
-		AMI           & Deep Learning OSS Nvidia Driver AMI GPU PyTorch 2.5.1 \\
-		\hline
-		AMI-ID        & ami-0fa5e5fd27b3e163a                                 \\
-		\hline
-	\end{tabular}
+
+	\resizebox{\textwidth}{!}{
+		\begin{tabular}{|p{3cm}|p{12cm}|}
+			\hline
+			\multicolumn{2}{|c|}{\textbf{Verwendete EC2-Instanz}}                 \\
+			\hline
+			Instanz-Typ   & gd4n.xlarge                                           \\
+			\hline
+			Hauptspeicher & 16GiB                                                 \\
+			\hline
+			vCPU          & 4                                                     \\
+			\hline
+			Clock Speed   & 2.5GHz                                                \\
+			\hline
+			GPU           & nvidia t4 tensor core                                 \\
+			\hline
+			CPU           & Intel Xeon Family                                     \\
+			\hline
+			AMI           & Deep Learning OSS Nvidia Driver AMI GPU PyTorch 2.5.1 \\
+			\hline
+			AMI-ID        & ami-0fa5e5fd27b3e163a                                 \\
+			\hline
+		\end{tabular}}
 	\caption{Attribute der verwendeten Hardware}
 \end{table}
 
@@ -359,7 +361,8 @@ sieht wie folgt aus:
 $ export PYTHONPATH='.'
 $ python lm-evaluation-harness/main.py
     --model hf-causal-experimental
-    --model_args checkpoint=prune_log/tinyllama_30_0418_l1_prune_log/pytorch_model.bin,
+    --model_args
+        checkpoint=prune_log/tinyllama_30_0418_l1_prune_log/pytorch_model.bin,
         config_pretrained=TinyLlama/TinyLlama-1.1B-Chat-v1.0
     --tasks openbookqa,winogrande,hellaswag,arc_challenge,boolq
     --device cuda:0
@@ -367,27 +370,29 @@ $ python lm-evaluation-harness/main.py
     --output_path results/tinyllama_30_0418_l1
 \end{lstlisting}
 
-\subsubsection{Modellperfomance}
+\subsubsection{Speicherverbrauch und Rechenleistung}
 
-Neben den verbliebenen Fähigkeiten des geprunten LLMs soll zusätzlich dessen
-Performance getestet werden. Die Messung der Performance erfolgt durch die
-Durchführung der zuvor beschriebenen Benchmarks. Während dieser Tests werden
-sowohl die benötigte Zeit als auch der in Anspruch genommene Speicher
-berücksichtigt, um eine Bewertung der Effizienz des Modells zu ermöglichen.
+Neben den verbliebenen Fähigkeiten der geprunten LLMs sollen zusätzlich deren
+Speicherverbrauch und deren benötigte Rechenleistung analysiert werden. Diese
+Messung erfolgt über das im \emph{LLM-Pruner} integrierte Python-Skript
+\emph{test\_speedup.py}. Wie man dem Skript entnehmen kann, verwendet es intern
+das Python-Package \emph{ptflops}, das sich selbst als "Flops counting tool for
+neural networks in pytorch framework"\autocite[Vgl.][]{ptflops} beschreibt.
+Damit gemessen werden können die Anzahl an Parametern, die Rechenkomplexität in
+GMac und die GPU Speicheranforderungen. Die Zeit zu messen, die die Modelle für
+verschiedene Befehle benötigen, unterscheidet sich stark anhand der verwendeten
+Hardware und ist daher keine geeignete Größe anhand der die Modelle vergliche
+werden sollten.
 
-Für diese Messungen wird der in der \emph{zsh}-Shell integrierte
-\emph{time}-Befehl verwendet, der sowohl Angaben zur verbrauchten Zeit als auch
-zum genutzten Speicher liefert. Um diese Daten zu erfassen, wird der
-\emph{time}-Befehl einfach den zuvor beschriebenen Befehlen zur Durchführung der
-Benchmarks vorangestellt. Ein entsprechender Aufruf zur Messung der Performance
-sieht wie folgt aus:
+Das Skript wird auf die einzelnen Modelle angewendet und diese anhand der daraus
+generierten Resultate verglichen.
 
 \vspace{1em}
 \begin{lstlisting}
 $ export PYTHONPATH='.'
-$ time python lm-evaluation-harness/main.py
-    --model hf-causal-experimental
-    ...
+$ python test_speedup.py
+    --model_type pruneLLM
+    --ckpt [PATH_TO_PRUNED_MODEL]
 \end{lstlisting}
 
 \newpage
