@@ -2416,6 +2416,8 @@
     <bcf:citekey order="28" intorder="1">mihaylov2018armor</bcf:citekey>
     <bcf:citekey order="29" intorder="1">sakaguchi2019winogrande</bcf:citekey>
     <bcf:citekey order="30" intorder="1">ptflops</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">zhang2024tinyllama</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">zhang2023eval</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

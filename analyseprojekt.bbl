@@ -27,12 +27,12 @@
            given={Hongrong},
            giveni={H\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=65a6d2d755deef911f45c4634c09bdde}{%
+        {{un=1,uniquepart=given,hash=65a6d2d755deef911f45c4634c09bdde}{%
            family={Zhang},
            familyi={Z\bibinitperiod},
            given={Miao},
            giveni={M\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
         {{un=0,uniquepart=base,hash=3b41be9785cf572ff38427b40393464f}{%
            family={Shi},
            familyi={S\bibinitperiod},
@@ -912,12 +912,12 @@
     \endentry
     \entry{wang2025adapt}{online}{}
       \name{author}{7}{}{%
-        {{un=0,uniquepart=base,hash=a50fe23b037ab59fddd69da525ac6c8b}{%
+        {{un=1,uniquepart=given,hash=a50fe23b037ab59fddd69da525ac6c8b}{%
            family={Wang},
            familyi={W\bibinitperiod},
            given={Boyao},
            giveni={B\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
         {{un=0,uniquepart=base,hash=831f24760397af13941a5027ba822566}{%
            family={Pan},
            familyi={P\bibinitperiod},
@@ -1030,6 +1030,89 @@
       \endverb
       \verb{url}
       \verb https://arxiv.org/pdf/1905.07830
+      \endverb
+    \endentry
+    \entry{zhang2023eval}{misc}{}
+      \name{author}{1}{}{%
+        {{un=1,uniquepart=given,hash=8ba9f91b6e3e1ef5505313ec3a53c798}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Peiyuan},
+           giveni={P\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{8ba9f91b6e3e1ef5505313ec3a53c798}
+      \strng{fullhash}{8ba9f91b6e3e1ef5505313ec3a53c798}
+      \strng{bibnamehash}{8ba9f91b6e3e1ef5505313ec3a53c798}
+      \strng{authorbibnamehash}{8ba9f91b6e3e1ef5505313ec3a53c798}
+      \strng{authornamehash}{8ba9f91b6e3e1ef5505313ec3a53c798}
+      \strng{authorfullhash}{8ba9f91b6e3e1ef5505313ec3a53c798}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Abgerufen am 23.02.2025, vom 28.12.2023}
+      \field{title}{Evaluate TinyLlama}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://github.com/jzhang38/TinyLlama/blob/main/EVAL.md
+      \endverb
+      \verb{url}
+      \verb https://github.com/jzhang38/TinyLlama/blob/main/EVAL.md
+      \endverb
+    \endentry
+    \entry{zhang2024tinyllama}{article}{}
+      \name{author}{4}{}{%
+        {{un=1,uniquepart=given,hash=8ba9f91b6e3e1ef5505313ec3a53c798}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Peiyuan},
+           giveni={P\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=49691aa9e194bd1580f9b7c6e729e10a}{%
+           family={Zeng},
+           familyi={Z\bibinitperiod},
+           given={Guangtao},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=99d818f8cc63c9e6e6cfb60b791c3f62}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Tianduo},
+           giveni={T\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=cb550a145b27c55a56001120c672da49}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{14ab4b1b30f6349c75f0754b0e79093e}
+      \strng{fullhash}{8215d1e206791cfce05d877a8bdeb832}
+      \strng{bibnamehash}{8215d1e206791cfce05d877a8bdeb832}
+      \strng{authorbibnamehash}{8215d1e206791cfce05d877a8bdeb832}
+      \strng{authornamehash}{14ab4b1b30f6349c75f0754b0e79093e}
+      \strng{authorfullhash}{8215d1e206791cfce05d877a8bdeb832}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv}
+      \field{note}{Version 2 vom 04.06.2024, abgerufen am 23.02.2025}
+      \field{title}{TinyLlama: An Open-Source Small Language Model}
+      \field{version}{2}
+      \field{volume}{2401.02385}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/2401.02385
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/2401.02385
       \endverb
     \endentry
     \entry{zhu2022prune}{online}{}

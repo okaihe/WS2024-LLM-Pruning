@@ -30,4 +30,4 @@
 \contentsline {subsubsection}{\numberline {4.3.3}Evaluierung Pruning zu 70\%}{28}{subsubsection.4.3.3}%
 \contentsline {subsection}{\numberline {4.4}Rechenanforderungen}{29}{subsection.4.4}%
 \contentsline {section}{\numberline {5}Diskussion}{30}{section.5}%
-\contentsline {section}{\numberline {6}Fazit}{31}{section.6}%
+\contentsline {section}{\numberline {6}Fazit}{33}{section.6}%

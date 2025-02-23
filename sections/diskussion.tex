@@ -1,5 +1,70 @@
 \section{Diskussion}
 
-Hier kommt alles zur Diskussion hin!
+Für die Diskussion werden die zuvor gezeigten Tabellen \ref{tab:pruning70}:
+Evaluierungen bis 70\% Pruning und Tabelle \ref{tab:memory}: Speicheransprüche
+nach dem Pruning zu Rate gezogen. Begonnen wird mit der Analyse der Parameter
+Ratio.
+
+Wie bereits in Kapitel 4.2 dargelegt, weicht das tatsächliche Verhältnis von dem
+angegebenen Verhältnis ab. Die Differenz steigt dabei mit zunehmender
+Pruning-Rate an. Bei der höchsten Pruning-Ratio (70\%) ist mit einer actual
+ratio von 55,08\% eine Abweichung um 25,08 Prozentpunkte gegenüber dem
+Erwartungswert von 30\% zu beobachten. Wie in Kapitel 3.4 erklärt, besteht das
+neuronale Netz von TinyLlama-1.1B-Chat-v1.0 aus 22 Schichten. Dem Pruning wurden
+nur die Layer vier bis 18 unterzogen. Sieben Layer, also ungefähr ein Drittel,
+blieben somit auch nach dem Pruning vollständig erhalten. Im Umkehrschluss
+bedeutet dies, dass zur Erreichung der gewünschten specified ratio des
+Gesamtmodells die geprunten Layer noch stärker hätten reduziert werden müssen.
+Weitere mögliche Erklärungen für die abweichende actual ratio können sein, dass
+die analysierten Schichten für die Performance entscheidende Informationen
+enthielten und daher nicht aggressiv gepruned werden konnten. Hierfür spricht
+zusätzlich, dass das gewählte LLM bereits eine reduzierte Variante von Llama
+ist. Ebenso bleibt trotz Pruning häufig ein Overhead für Datenstrukturen und
+Kontrollmechanismen in gleichem Umfang bestehen. Denkbar ist auch, dass weitere
+architekturelle Besonderheiten, welche für die Gesamtfunktionalität notwendig
+sind, dem Pruning entgegenstehen.
+
+Bei den Benchmarks zeigt TinyLlama-1.1B bereits in seiner Urform ohne Pruning
+mit einem Durchschnittswert von 39,58\% eher mäßige Leistung. Erwähnenswert ist
+jedoch der Unterschied zwischen den einzelnen Tests. So schneiden BoolQ und
+WinoGrande mit \~ 60\% korrekt gelöster Aufgaben ab. ARC-c und OpenBookQA bilden
+mit 30,12\% und 24,2\% das Schlusslicht. Diese Verteilung bei der Erreichung von
+Güte lässt sich auch bei den reduzierten Modellen feststellen. Auffällig ist,
+dass ARC-c und OpenBookQA im Testverfahren auf zusätzlich separat
+bereitgestellte Informationen angewiesen sind. Dies scheint eine größere
+Herausforderung darzustellen. Um eine Fehlbedienung auszuschließen, wurden im
+Internet Testergebnisse zum Vergleich gesucht. Auch wenn die Ergebnisse in der
+Punktzahl besser ausfielen, stellten Zhang, Zeng et al. ebenfalls ein
+schlechteres Abschneiden bei ARC-c und OpenBookQA im Benchmarking
+fest.\autocite[Vgl.][S. 6]{zhang2024tinyllama} Zhang stellte zudem auf seinem
+Github-Account Messergebnisse von Betaversionen des LLMs bereit, die dasselbe
+Phänomen aufweisen.\autocite[Vgl.][]{zhang2023eval}
+
+Bereits bei einem moderaten Pruning mit einer Ratio von 30\% zeigt sich die
+L1-Norm mit Ø 31,77\% als ungeeignet. Die Werte fallen in allen Tests schlechter
+als beim Random-Pruning (Ø 37,17\%) aus. Gerade die Perplexity-Metriken fallen
+besonders negativ auf. Die Prunings mittels Taylor (Ø 39,10\%) und L2-Norm (Ø
+38,50\%) liegen leicht über dem Random-Verfahren. Bei einem stark aggressiven
+Pruning mit einer angesetzten Ration von 70\% zeigen alle vier Pruningverfahren
+ähnlich niedrige Durchschnittswerte.
+
+Bei einem leicht aggressiven Pruning von 40\% Ratio liegt der Referenzwert des
+Random-Verfahrens bei Ø 35,72\%. Der Taylor- und der L2-Ansatz platzieren sich
+in der Messung mit ca. zwei Prozentpunkten über dem Zufallsverfahren (Taylor: Ø
+37,89\%; L2: Ø 37,59\%). Für die gesamte Untersuchung betrachtet weisen die zwei
+Verfahren hier eine vertretbare Balance zwischen Reduktion des Modells und
+Vermeidung von Wissensverlust auf. Aufgrund weiter fehlender Messpunkte kann
+jedoch nicht abschließend konstatiert werden, dass 40\% Ratio in Verbindung mit
+dem Taylor-Verfahren die beste Pruning-Option für TinyLlama-1.1B-Chat-v1.0
+darstellt. Es wird daher empfohlen, weitere Testungen mit Quotienten von 35\%,
+45\% oder 50\% vorzunehmen und so den idealen Punkt besser einzugrenzen. Die
+L1-Norm kann bei den weiteren Messungen außen vorgelassen werden, da diese über
+alle Szenarien hinweg schlechtere Ergebnisse als der Zufall liefert.
+
+Erschwerend kommt für eine abschließende Bewertung hinzu, dass das mit Taylor um
+30\% geprunte LLM nach einem Posttraining schlechtere Werte aufweist. Dies
+entspricht nicht der erwarteten Veränderung. Warum das Posttraining die durchs
+Pruning entstandenen Defizite nicht glättet, sondern verstärkt, kann nicht
+erklärt werden und bedarf weiterer Analyse.
 
 \newpage
