@@ -314,12 +314,12 @@
            given={Weijiang},
            giveni={W\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=5df07c6cefaf645fc4f245d14e3b69d6}{%
+        {{un=1,uniquepart=given,hash=5df07c6cefaf645fc4f245d14e3b69d6}{%
            family={Ma},
            familyi={M\bibinitperiod},
            given={Weitao},
            giveni={W\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
         {{un=0,uniquepart=base,hash=1a3b6b1d786ba9037182438c6555736d}{%
            family={Zhong},
            familyi={Z\bibinitperiod},
@@ -555,6 +555,46 @@
       \verb{url}
       \verb https://arxiv.org/pdf/2305.05352v6
       \endverb
+    \endentry
+    \entry{llmpruner}{article}{}
+      \name{author}{3}{}{%
+        {{un=1,uniquepart=given,hash=150f36977e8a430fbe296c0977baf554}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Xinyin},
+           giveni={X\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=32c14b4f5bd8e1924552ad93bcdafbd2}{%
+           family={Fang},
+           familyi={F\bibinitperiod},
+           given={Gongfan},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=c6099353a059c45f68d1f48dac694cf8}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Xinchao},
+           giveni={X\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{78047a55a47d04d6916c1b7ca78afad7}
+      \strng{fullhash}{78047a55a47d04d6916c1b7ca78afad7}
+      \strng{bibnamehash}{78047a55a47d04d6916c1b7ca78afad7}
+      \strng{authorbibnamehash}{78047a55a47d04d6916c1b7ca78afad7}
+      \strng{authornamehash}{78047a55a47d04d6916c1b7ca78afad7}
+      \strng{authorfullhash}{78047a55a47d04d6916c1b7ca78afad7}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Advances in neural information processing systems}
+      \field{title}{Llm-pruner: On the structural pruning of large language models}
+      \field{volume}{36}
+      \field{year}{2023}
+      \field{pages}{21702\bibrangedash 21720}
+      \range{pages}{19}
     \endentry
     \entry{mihaylov2018armor}{online}{}
       \name{author}{4}{}{%
@@ -871,6 +911,49 @@
       \verb https://pypi.org/project/ptflops/
       \endverb
     \endentry
+    \entry{wanda}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=9279d295e99390a720420d4c23368f5c}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Mingjie},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f7eda249dc15ce9f452344ec95bbcc67}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Zhuang},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c00f46491273b18156fcf975c681d6b8}{%
+           family={Bair},
+           familyi={B\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0288715a83a3349e44f9292c5c2149f7}{%
+           family={Kolter},
+           familyi={K\bibinitperiod},
+           given={J\bibnamedelima Zico},
+           giveni={J\bibinitperiod\bibinitdelim Z\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{057f8a9378c184118775a2fe5d3c36dc}
+      \strng{fullhash}{e2f56b845f1ef58000ee30d6786b636f}
+      \strng{bibnamehash}{e2f56b845f1ef58000ee30d6786b636f}
+      \strng{authorbibnamehash}{e2f56b845f1ef58000ee30d6786b636f}
+      \strng{authornamehash}{057f8a9378c184118775a2fe5d3c36dc}
+      \strng{authorfullhash}{e2f56b845f1ef58000ee30d6786b636f}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2306.11695}
+      \field{title}{A simple and effective pruning approach for large language models}
+      \field{year}{2023}
+    \endentry
     \entry{vadera2022methods}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=b523893b9ad9d6b9afd2f7bab251addd}{%
@@ -909,6 +992,74 @@
       \verb{url}
       \verb https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9795013
       \endverb
+    \endentry
+    \entry{vaswani2017attention}{article}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=7f28e84700536646dd6620a0db07ad09}{%
+           family={Vaswani},
+           familyi={V\bibinitperiod},
+           given={Ashish},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=62efade83d70f0323fe248755e6c90c5}{%
+           family={Shazeer},
+           familyi={S\bibinitperiod},
+           given={Noam},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=06649ebab1ea5cac0250746a19764975}{%
+           family={Parmar},
+           familyi={P\bibinitperiod},
+           given={Niki},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=831027ee0ebf22375e2a86afc1881909}{%
+           family={Uszkoreit},
+           familyi={U\bibinitperiod},
+           given={Jakob},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2fd2982e30ebcec93ec1cf76e0d797fd}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Llion},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=27b07e4eacbf4ef7a1438e3badb7dd8d}{%
+           family={Gomez},
+           familyi={G\bibinitperiod},
+           given={Aidan\bibnamedelima N},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=540fcd72e1fa4bbed46604f4e6cff817}{%
+           family={Kaiser},
+           familyi={K\bibinitperiod},
+           given={{Ł}ukasz},
+           giveni={Ł\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=95595a0fefb86187cbc36e551017d332}{%
+           family={Polosukhin},
+           familyi={P\bibinitperiod},
+           given={Illia},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7cc810834e9ba19dd5f8b0a37be3172d}
+      \strng{fullhash}{cb26e47f6b8133865271fc8483132297}
+      \strng{bibnamehash}{cb26e47f6b8133865271fc8483132297}
+      \strng{authorbibnamehash}{cb26e47f6b8133865271fc8483132297}
+      \strng{authornamehash}{7cc810834e9ba19dd5f8b0a37be3172d}
+      \strng{authorfullhash}{cb26e47f6b8133865271fc8483132297}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Advances in neural information processing systems}
+      \field{title}{Attention is all you need}
+      \field{volume}{30}
+      \field{year}{2017}
     \endentry
     \entry{wang2025adapt}{online}{}
       \name{author}{7}{}{%

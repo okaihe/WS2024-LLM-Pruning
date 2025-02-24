@@ -143,12 +143,62 @@ Kategorien der Metastudie.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\textwidth]{images/pruning.png}
-    \caption[Pruning-Methoden nach Vadera und Ameen]{Aufteilung nach Vadera und Ameen\\Quelle: \cite{vadera2022methods}}
+	\caption[Pruning-Methoden nach Vadera und Ameen]{Aufteilung nach Vadera und Ameen\\Quelle: \cite{vadera2022methods}}
 	\label{fig:vadera}
 \end{figure}
 
+\subsection{Frameworks}
 
-\newpage
+\subsubsection{LLM-Pruner}
+
+In dieser Arbeit wird das \emph{LLM-Pruner}-Framework verwendet. Das Framework
+stellt einen strukturellen Ansatz zum Pruning von LLMs dar, das die
+Multi-Tasking-Fähigkeiten der Modelle weitestgehend erhalten soll und im
+Vergleich mit anderen Frameworks deutlich schneller arbeitet. Die
+Multi-Tasking-Fähigkeit soll dabei erhalten bleiben, indem der \emph{LLM-Pruner}
+ohne aufgabenspezifisches Feintuning auskommt. Im Andere Frameworks verwenden im
+Gegensatz dazu Methoden zur Modellkomprimierung, die sich darauf konzentrieren,
+ein Modell für eine bestimmte Aufgabe zu optimieren.\autocite[Vgl.][]{llmpruner}
+
+Wie bereits erwähnt, arbeitet der \emph{LLM-Pruner} mit einem strukturellen
+Pruning. Dabei werden zusammenhängende Modellstrukturen analysiert und nur die
+weniger wichtigen entfernt, sodass der Kern des Modells möglichst erhalten
+bleibt. Der Prozess läuft in drei Schritten ab:
+
+\begin{itemize}
+	\item \emph{Dependency Discovery}: Zunächst wird untersucht, welche Teile
+	      des Modells stark miteinander verbunden sind, sodass nichts entfernt
+	      wird, das für die Modellarchitektur essenziell ist.
+
+	\item \emph{Importance Estimation}: Anschließend wird bewertet, welche
+	      Komponenten besonders wichtig für die Gesamtleistung des Modells sind –
+	      basierend auf Gradienten- und Hessian-Informationen.
+
+	\item \emph{Fast Recovery mit LoRA}: Schließlich wird das geprunte Modell
+	      mithilfe von Low-Rank Approximation (LoRA) nachtrainiert, um mögliche
+	      Leistungseinbußen zu minimieren.
+\end{itemize}
+
+Im Paper des \emph{LLM-Pruners} wird damit geworben, bei einer Reduktion von
+20\% immer noch rund 95\% der ursprünglichen Performance beibehalten zu können.
+
+\subsubsection{Wanda}
+
+Ein weiteres mögliches Framework, das aufgrund technischer Probleme nicht im
+praktischen Teil der arbeit zum Einsatz gekommen ist, ist \emph{Wanda} (Pruning
+by Weights and Activation), dessen dazugehöriges Paper "A Simple and Effective
+Pruning Approach for Large Language Models" auf der ICLR 2024 veröffentlicht
+wurde. Das Besondere hierbei ist, dass diese Pruning-Methode ohne Retraining,
+also ohne nachträgliches Training des Modells gute Resultate erzielen
+soll.\autocite[Vgl.][]{wanda}
+
+Die Wanda-Methode basiert auf der Beobachtung, dass in LLMs einige
+Aktivierungswerte außergewöhnlich hoch sind. Statt Gewichte nur anhand ihrer
+absoluten Werte zu bewerten, wie man es bei den magnitudenbasierten Verfahren
+der Fall ist, kombiniert Wanda die Gewichtsmagnitude mit der Norm der
+zugehörigen Aktivierungen. So werden jene Gewichte entfernt, die den geringsten
+Einfluss auf die Modellleistung haben.
+
 \subsection{Bewertungskriterien}
 
 Um die Effizienz der unterschiedlichen Pruning-Ansätze zu ermitteln, ist das
@@ -159,7 +209,7 @@ umgesetzt werden kann:
 \begin{itemize}
 	\item \textbf{Vollständig zufällig:} Das Pruning findet zufällig und ohne weitere Vorgaben statt.
 	\item \textbf{Eingeschränkt zufällig:} Das Pruning-Verhältnis wird je Schicht vorgegeben. Innerhalb der Schicht erfolgt das Pruning jedoch weiterhin zufällig.
-    \item \textbf{Zufällige Kanalanzahlauswahl:} Das Pruning-Verhältnis wird je Schicht zufällig ausgewählt.\autocite[Vgl.][]{li2022random}
+	\item \textbf{Zufällige Kanalanzahlauswahl:} Das Pruning-Verhältnis wird je Schicht zufällig ausgewählt.\autocite[Vgl.][]{li2022random}
 \end{itemize}
 
 Sowohl He und Xiao als auch Li, Adamczewski et al. konstatieren in ihren
@@ -179,15 +229,15 @@ Folgenden kurz vorgestellt.
 
 
 \begin{itemize}
-    \item \textbf{BoolQ (Boolean Questions):} Der Datensatz enthält 15.942 Ja-/Nein-Fragen. Die Fragen sind realen Kontexten entnommen und nicht generiert worden. Neben der Fragestellung wird dem LLM ein Begleittext mitgegeben, welcher die Antwort auf die Frage bzw. Hilfestellungen enthält. Hierbei wird jedoch oft auf komplexere Schlussfolgerungen durch die KI gesetzt. Als einfaches Beispiel zum Verständnis sei folgender Begleittext gegeben: Spanien hat die Fußball-EM 2024 gewonnen. Die zugehörige Frage lautet: Hat Harry Kane die EM 2024 gewonnen? Die KI muss nun trotz ihres reduzierten neuronalen Netzes erkennen, dass Harry Kane zwar ein Fußballspieler ist, aber als Nationalspieler für England und nicht für Spanien im Finale antrat. Die Antwort muss daher Nein lauten.\autocite[Vgl.][S. 1-2]{clark2019boolq}
-    
-    \item \textbf{Arc-C (AI2 Reasoning Challenge):} Der Datensatz enthält 7.787 Multiple-Choice-Fragen aus dem naturwissenschaftlichen Bereich auf amerikanischem Grundschulniveau (Klassen 3 bis 9). 2.590 der Fragen werden als besonders herausfordernd klassifiziert. Sie gelten als nicht beantwortbar für abrufbasierte oder Wort-Koexistenz-Algorithmen. Optional wird ein Datensatz mit 14 Millionen wissenschaftlichen Sätzen angeboten, welcher der KI zur Beantwortung der Fragen als Hilfestellung gereicht werden kann.\autocite[Vgl.][S. 1]{clark2019arc}
+	\item \textbf{BoolQ (Boolean Questions):} Der Datensatz enthält 15.942 Ja-/Nein-Fragen. Die Fragen sind realen Kontexten entnommen und nicht generiert worden. Neben der Fragestellung wird dem LLM ein Begleittext mitgegeben, welcher die Antwort auf die Frage bzw. Hilfestellungen enthält. Hierbei wird jedoch oft auf komplexere Schlussfolgerungen durch die KI gesetzt. Als einfaches Beispiel zum Verständnis sei folgender Begleittext gegeben: Spanien hat die Fußball-EM 2024 gewonnen. Die zugehörige Frage lautet: Hat Harry Kane die EM 2024 gewonnen? Die KI muss nun trotz ihres reduzierten neuronalen Netzes erkennen, dass Harry Kane zwar ein Fußballspieler ist, aber als Nationalspieler für England und nicht für Spanien im Finale antrat. Die Antwort muss daher Nein lauten.\autocite[Vgl.][S. 1-2]{clark2019boolq}
 
-    \item \textbf{HellaSwag:} Bei HellaSwag handelt es sich um die Weiterentwicklung von Swag. Der Datensatz enthält 39.905 Trainingsdatensätze und 5.021 Datensätze für Test und Validierung. Bei HellaSwag ist für das LLM die Aufgabe, einen gegebenen Satz sinnvoll fortzusetzen. Dem LLM werden dabei 4 mögliche Fortsetzungen angeboten, wovon nur eine richtig ist. Das LLM wird somit auf richtige Schlussfolgerungen basierend auf Alltagswissen getestet. Die drei falschen Antwortmöglichkeiten wurden mittels des Adversarial-Filtering-Verfahrens generiert. Auf Basis von iterativ eingesetzten Diskriminatoren werden die negativen Antworten so gestaltet, dass sie für künstliche Intelligenz schwer zu erkennen sind. Der Mensch hingegen kann die falschen Antworten leicht erkennen.\autocite[Vgl.][S. 1-3]{zellers2019hellaswag}
+	\item \textbf{Arc-C (AI2 Reasoning Challenge):} Der Datensatz enthält 7.787 Multiple-Choice-Fragen aus dem naturwissenschaftlichen Bereich auf amerikanischem Grundschulniveau (Klassen 3 bis 9). 2.590 der Fragen werden als besonders herausfordernd klassifiziert. Sie gelten als nicht beantwortbar für abrufbasierte oder Wort-Koexistenz-Algorithmen. Optional wird ein Datensatz mit 14 Millionen wissenschaftlichen Sätzen angeboten, welcher der KI zur Beantwortung der Fragen als Hilfestellung gereicht werden kann.\autocite[Vgl.][S. 1]{clark2019arc}
 
-    \item \textbf{OpenBookQA:} Der Datensatz enthält 5.957 Multiple-Choice-Fragen mit je vier Antwortmöglichkeiten. Wie der Name bereits nahelegt, empfindet der Test Open-Book-Prüfungen nach, bei denen die Prüflinge freien Zugang zu Informationen haben. Das Modell enthält daher zu jeder Frage auch ein \textit{core fact}, welches die unterstützende Wissensquelle imitieren soll. Die Fragen sind so gestaltet, dass eine mehrschrittige Schlussfolgerung unter Einbeziehung von externem Wissen notwendig ist.\autocite[Vgl.][S. 1-2]{mihaylov2018armor}
+	\item \textbf{HellaSwag:} Bei HellaSwag handelt es sich um die Weiterentwicklung von Swag. Der Datensatz enthält 39.905 Trainingsdatensätze und 5.021 Datensätze für Test und Validierung. Bei HellaSwag ist für das LLM die Aufgabe, einen gegebenen Satz sinnvoll fortzusetzen. Dem LLM werden dabei 4 mögliche Fortsetzungen angeboten, wovon nur eine richtig ist. Das LLM wird somit auf richtige Schlussfolgerungen basierend auf Alltagswissen getestet. Die drei falschen Antwortmöglichkeiten wurden mittels des Adversarial-Filtering-Verfahrens generiert. Auf Basis von iterativ eingesetzten Diskriminatoren werden die negativen Antworten so gestaltet, dass sie für künstliche Intelligenz schwer zu erkennen sind. Der Mensch hingegen kann die falschen Antworten leicht erkennen.\autocite[Vgl.][S. 1-3]{zellers2019hellaswag}
 
-    \item \textbf{WinoGrande:} Bei WinoGrande handelt es sich um die Weiterentwicklung der Winograd Schema Challenge (WSC). Während das Original nur 273 Aufgaben beinhaltet, setzt die Erweiterung auf 44.000 Problemstellungen. Diese wurden auf Basis von Crowdsourcing erstellt und geprüft. Die Aufgaben sind als \textit{fill-in-the-blank}-Probleme gestellt, wo Pronomen durch ihre richtige Referenz ersetzt werden müssen. Um den Schwierigkeitsgrad anzuheben, wurde zusätzlich AfLite (Adversarial Filtering) angewendet. Dies verhindert die Ausnutzung einfacher Wortassoziationen durch das LLM bei der Beantwortung der Fragen.\autocite[Vgl.][S. 1-3]{sakaguchi2019winogrande}
+	\item \textbf{OpenBookQA:} Der Datensatz enthält 5.957 Multiple-Choice-Fragen mit je vier Antwortmöglichkeiten. Wie der Name bereits nahelegt, empfindet der Test Open-Book-Prüfungen nach, bei denen die Prüflinge freien Zugang zu Informationen haben. Das Modell enthält daher zu jeder Frage auch ein \textit{core fact}, welches die unterstützende Wissensquelle imitieren soll. Die Fragen sind so gestaltet, dass eine mehrschrittige Schlussfolgerung unter Einbeziehung von externem Wissen notwendig ist.\autocite[Vgl.][S. 1-2]{mihaylov2018armor}
+
+	\item \textbf{WinoGrande:} Bei WinoGrande handelt es sich um die Weiterentwicklung der Winograd Schema Challenge (WSC). Während das Original nur 273 Aufgaben beinhaltet, setzt die Erweiterung auf 44.000 Problemstellungen. Diese wurden auf Basis von Crowdsourcing erstellt und geprüft. Die Aufgaben sind als \textit{fill-in-the-blank}-Probleme gestellt, wo Pronomen durch ihre richtige Referenz ersetzt werden müssen. Um den Schwierigkeitsgrad anzuheben, wurde zusätzlich AfLite (Adversarial Filtering) angewendet. Dies verhindert die Ausnutzung einfacher Wortassoziationen durch das LLM bei der Beantwortung der Fragen.\autocite[Vgl.][S. 1-3]{sakaguchi2019winogrande}
 \end{itemize}
 
 \newpage

@@ -1,5 +1,12 @@
 \section{Einleitung}
 
+\subsection{Problemstellung}
+
+Mit dem berühmten Paper \emph{Attention is all you need}, in dem 2017 erstmals
+die Transformer-Architektur beschrieben wurde, wurde der Grundstein für die
+modernen Large Language Models (LLM) gelegt.
+\autocite[Vlg.][]{vaswani2017attention} 
+
 \subsection{Forschungsfragen}
 
 Die vorliegende Projektarbeit setzt sich mit insgesamt vier Forschungsfragen
@@ -45,3 +52,21 @@ Zusammenfassend ergeben sich daraus die folgenden Forschungsfragen:
 	      beeinflusst das Pruning eines Modells dessen Speicherverbrauch sowie die
 	      benötigte Rechenzeit?
 \end{enumerate}
+
+
+\subsection{Aufbau der Arbeit}
+
+Die Arbeit beschäftigt sich nachfolgend zunächst mit dem derzeitigen Stand der
+Forschung im Bereich des Prunings von LLMs und den Möglichkeiten zur Evaluieren
+deren Performances. Um die gewonnen Erkenntnisse in einem praktischen Versuch
+selbst anwenden zu können, wird sich anschließend für eine geeignete Bibliothek
+und ein geeignetes Large Language Model entschieden und darauf ein Pruning
+unterschiedlicher Intensitäten durchgeführt. Das dafür verwendete Vorgehen wird
+im Methodik-Teil genauer erläutert.
+
+Von den geprunten Modellen wird eines nachtrainiert, mit dem Ziel die
+Performance des reduzierten Modells zu verbessern.
+
+Um die geprunten Modelle zu vergleichen, werden sie anhand verschiedener
+Datensätze getestet. Die daraus entstehenden Resultate werden schließlich als
+Grundlage für eine Diskussion verwendet.
