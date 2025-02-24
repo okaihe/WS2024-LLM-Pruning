@@ -5,7 +5,25 @@
 Mit dem berühmten Paper \emph{Attention is all you need}, in dem 2017 erstmals
 die Transformer-Architektur beschrieben wurde, wurde der Grundstein für die
 modernen Large Language Models (LLM) gelegt.
-\autocite[Vlg.][]{vaswani2017attention} 
+\autocite[Vlg.][]{vaswani2017attention} Nach weiteren Innovationen wie dem
+Sprachmodell \emph{BERT} von Google, das erstmals tiefere Kontextverständnisse
+ermöglichte\autocite[Vgl.][]{bertgoogle} fanden die LLMs spätestens mit der
+Veröffentlichung von GPT-3, das mit 175 Milliarden Parametern einen großen
+Sprung in der Sprachgenerierung machte, Einzug in Anwendungen vieler
+verschiedener Bereiche.\autocite[Vgl.][]{gpt3} Diese Anzahl an verwendeter
+Parametern und damit die Größe dieser Sprachmodelle steigt stetig an. Das
+derzeit moderne GPT-4 soll laut verschiedener Quellen bereits mit ungefähr 1,8
+Milliarden Parametern arbeiten.\autocite[Vgl.][]{gpt4size}
+
+Das bedeutet jedoch, dass umso größer die Modelle werden umso mehr Parameter
+beim Training angepasst werden müssen und die Berechnungen beziehungsweise die
+Textgenerierung mit einem erheblichen Ressourcenverbrauch daherkommt. Abhilfe
+soll hier das \emph{Pruning} dieser Modelle verschaffen, also das Entfernen von
+Parametern möglichst ohne die Reduzierung der Performance der geprunten
+Modelle.\autocite[Vgl.][]{llmpruner} Hierzu gibt es bereits verschiedene Ansätze
+und Frameworks, die in dieser Hausarbeit betrachtet und erläutert werden sollen.
+In einem eigenen praktischen Versuch soll dabei ein Large Language Model mit
+einem dieser Frameworks geprunt und anschließend evaluiert werden.
 
 \subsection{Forschungsfragen}
 
