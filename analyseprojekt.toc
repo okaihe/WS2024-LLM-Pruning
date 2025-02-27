@@ -17,22 +17,22 @@
 \contentsline {section}{\numberline {3}Methodik (Kai Herbst)}{14}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Literaturrecherche}{14}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Arbeitsorganisation}{14}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Entwicklungsumgebung}{14}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Verwendetes Large Language Model}{15}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Pruning}{17}{subsection.3.5}%
-\contentsline {subsubsection}{\numberline {3.5.1}Verwendetes Framework}{17}{subsubsection.3.5.1}%
-\contentsline {subsubsection}{\numberline {3.5.2}Durchführung des Prunings}{18}{subsubsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.6}Fine-Tuning}{20}{subsection.3.6}%
-\contentsline {subsection}{\numberline {3.7}Evaluierung der Modelle}{20}{subsection.3.7}%
-\contentsline {subsubsection}{\numberline {3.7.1}Modell-Benchmarks}{21}{subsubsection.3.7.1}%
-\contentsline {subsubsection}{\numberline {3.7.2}Speicherverbrauch und Rechenleistung}{22}{subsubsection.3.7.2}%
-\contentsline {section}{\numberline {4}Ergebnisse (Kai Herbst)}{24}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Evaluierung Basismodell}{24}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Tatsächliche Anzahl geprunter Parameter}{25}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Evaluierung der reduzierten Modelle}{26}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}Evaluierung Pruning zu 30\%}{26}{subsubsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.2}Evaluierung Pruning zu 40\%}{27}{subsubsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.3}Evaluierung Pruning zu 70\%}{28}{subsubsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.4}Rechenanforderungen}{29}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Diskussion (Sebastian Viet)}{30}{section.5}%
-\contentsline {section}{\numberline {6}Fazit (Sebastian Viet)}{33}{section.6}%
+\contentsline {subsection}{\numberline {3.3}Entwicklungsumgebung}{15}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Verwendetes Large Language Model}{16}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Pruning}{18}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Verwendetes Framework}{18}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Durchführung des Prunings}{19}{subsubsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.6}Fine-Tuning}{21}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Evaluierung der Modelle}{21}{subsection.3.7}%
+\contentsline {subsubsection}{\numberline {3.7.1}Modell-Benchmarks}{22}{subsubsection.3.7.1}%
+\contentsline {subsubsection}{\numberline {3.7.2}Speicherverbrauch und Rechenleistung}{23}{subsubsection.3.7.2}%
+\contentsline {section}{\numberline {4}Ergebnisse (Kai Herbst)}{25}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Evaluierung Basismodell}{25}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Tatsächliche Anzahl geprunter Parameter}{26}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Evaluierung der reduzierten Modelle}{27}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Evaluierung Pruning zu 30\%}{27}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Evaluierung Pruning zu 40\%}{28}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Evaluierung Pruning zu 70\%}{29}{subsubsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.4}Rechenanforderungen}{30}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Diskussion (Sebastian Viet)}{31}{section.5}%
+\contentsline {section}{\numberline {6}Fazit (Sebastian Viet)}{34}{section.6}%

@@ -1,3 +1,25 @@
 \section{Fazit (Sebastian Viet)}
 
-Hier kommt das Fazit hin!
+In der vorliegenden Arbeit wurde der aktuelle Forschungsstand zum Thema Pruning
+dargestellt. Zunächst wurden verschiedene Pruning-Ansätze beleuchtet. Darüber
+hinaus wurde die Bedeutung des Prunings für die Weiterentwicklung künstlicher
+Intelligenz erörtert. Im empirischen Teil der Arbeit wurde untersucht, wie sich
+die verschiedenen Pruning-Methoden bei variierenden Kompressionsraten
+auswirken. Hierfür wurden bei TinyLlama-1.1B-Chat-v1.0 unterschiedlich starke
+Prunings mittels L1- und L2-Norm als auch mit Taylor und randomisiert
+durchgeführt. Im Anschluss wurden die geprunten Versionen zur
+Leistungsbewertung Benchmarks unterzogen. Die Untersuchung konnte aufzeigen,
+dass die Wahl der Pruning-Methode mit Bedacht vorgenommen werden sollte. Es
+zeigte sich, dass Taylor-Methode über alle Ratios hinweg die besten Ergebnisse
+lieferte, während L1 hingegen nicht empfohlen werden kann. Für die Bestimmung
+der besten Ratio werden weitere Analysen mit Kompressionen von 35\% bzw. 45\%
+empfohlen. Es kann jedoch bereits konstatiert werden, dass moderates bis leicht
+aggressives Pruning einen guten Kompromiss zwischen Performance-Erhaltung und
+Steigerung der Effizienz bietet. Da die Reduktion sich unterschiedlich stark
+auf die von der KI bewältigbare Komplexitätsstufen auswirkt, sollten die
+späteren Anforderungen bei der Festlegung der Pruning-Parameter
+mitberücksichtigt werden. Mit Blick auf die wachsende Verbreitung von
+KI-Modellen stellt Pruning auch zukünftig einen wichtigen Forschungsbereich
+dar. Die höhere Nachfrage und der Einsatz von KI auf leistungsschwachen Geräten
+lassen die Auseinandersetzung mit effizienter Modellkompression an Bedeutung
+gewinnen.
